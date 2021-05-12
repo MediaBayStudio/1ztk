@@ -1,0 +1,72 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+html body .bvi-body[data-bvi-theme] {
+  .hdr.fixed {
+    top: 97px;
+  }
+}
+
+.hdr {
+  // padding-top: 35px;
+  // padding-bottom: 35px;
+
+  &__logo {}
+
+  &__logo-img {
+    // width: 293px;
+  }
+
+  &__burger {}
+
+  &__burger-box {}
+
+  &__burger-inner {}
+
+  &__nav {
+
+    &-list {
+      font-size: 14px;
+
+      >.hdr__nav-li {
+
+        &:not(:last-child) {
+        }
+      }
+    }
+
+    &-li {
+      >.sub-menu {
+        // $submenuItemSidePadding: 20px;
+        // $submenuItemVericalPadding: 15px;
+        font-size: 16px;
+
+        >.hdr__nav-li {
+          &:first-child {}
+
+          &:last-child {}
+        }
+      }
+
+      &.has-submenu {
+        >.nav-link {
+
+          &::after {
+            margin: 0 0 0 7px;
+          }
+        }
+
+        &:hover {
+          >.nav-link::after {}
+
+          >.sub-menu {}
+        }
+      }
+    }
+  }
+}
+
+#bvi-panel-hide {
+  display: none !important;
+}

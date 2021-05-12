@@ -1,0 +1,16 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.system-sect {
+  &__title {}
+
+  &__list {}
+
+  &__li {
+    width: calc((100% - 60px) / 3);
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+}

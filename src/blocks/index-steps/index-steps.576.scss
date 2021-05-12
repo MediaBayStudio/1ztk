@@ -1,0 +1,24 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+
+.steps-sect {
+  &__title {}
+
+  &__list {}
+
+  &__li {
+    &:not(:last-child) {}
+
+    &::before {}
+  }
+
+  &__li-descr {}
+
+  &__note {}
+
+  &__note-title {}
+
+  &__note-text {}
+}

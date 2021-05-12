@@ -1,0 +1,31 @@
+
+@import '../assets/colors';
+@import '../assets/mixins';
+@import '../assets/variables';
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: bold 12px/100% SourceSerifPro, sans-serif;
+  text-transform: uppercase;
+  transition: background .5s, border-color .5s, color .5s;
+}
+
+.btn-blue {
+  background: $green;
+  border-color: $green;
+  color: $white;
+}
+
+.btn.btn-blue {
+  &:active {
+    background: $darkBlue;
+    border-color: $darkBlue;
+    transition: none;
+  }
+}
+
+.btn-ol {
+
+}

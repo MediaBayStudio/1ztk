@@ -1,0 +1,39 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.index-hero-sect {
+  padding-bottom: 145px;
+  &::before {
+    width: 550px;
+    height: 550px;
+    // right: 40px;
+    right: responsive('1280->1920', '40->270');
+  }
+
+  &__text {
+    max-width: 485px;
+  }
+
+  &__title {}
+
+  &__descr {
+    font-size: 18px;
+  }
+
+  &__slider {
+    width: 600px;
+    height: 375px;
+  }
+
+  &__nav {}
+
+  &__counter {}
+
+  &__prev,
+  &__next {}
+
+  &__prev {}
+
+  &__next {}
+}

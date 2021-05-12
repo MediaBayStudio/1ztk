@@ -1,0 +1,46 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+
+.descr-sect {
+  &__title {}
+
+  &__descr {}
+
+  &__pic {}
+
+  &__img {}
+}
+
+.descr-sect-1,
+.descr-sect-2 {
+  >.descr-sect__descr {
+    width: 410px;
+  }
+
+  >.descr-sect__pic {
+    // На пол высоты первой строки
+    margin-top: calc(15px * 1.4);
+    grid-row: 1/span 3;
+    // margin-top: -105px;
+    padding: 0 0 50px 30px;
+    width: 495px;
+    height: 370px;
+  }
+}
+
+.descr-sect-3 {
+  >.descr-sect__pic {
+    margin: 0 80px 0 0;
+    width: 465px;
+    height: 395px + 50px + 50px;
+    &::before {
+      left: -35px;
+      width: 395px;
+    }
+  }
+  >.descr-sect__descr {
+    width: 410px;
+  }
+}

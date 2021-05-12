@@ -1,0 +1,27 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.features-sect {
+  &__title {}
+
+  &__list {}
+
+  &__li {
+    &:not(:last-child) {}
+  }
+
+  &__li-bg {}
+
+  &__li-pic {
+    &::before {}
+  }
+
+  &__li-img {}
+
+  &__li-title {}
+
+  &__li-descr {}
+}@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';

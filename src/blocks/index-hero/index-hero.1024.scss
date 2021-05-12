@@ -1,0 +1,43 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.index-hero-sect {
+  padding-top: 120px;
+  padding-bottom: 125px;
+  align-items: center;
+  background: linear-gradient(to right, $lightGreen 0 56%, $green 56% 100%);
+  &::before {
+    width: 460px;
+    height: 500px;
+    right: 0;
+  }
+
+  &__text {
+    max-width: 400px;
+  }
+
+  &__title {
+    margin: 0 0 30px;
+    // font-size: 30px;
+  }
+
+  &__descr {}
+
+  &__slider {
+    margin: 0;
+    width: 495px;
+    height: 300px;
+  }
+
+  &__nav {}
+
+  &__counter {}
+
+  &__prev,
+  &__next {}
+
+  &__prev {}
+
+  &__next {}
+}

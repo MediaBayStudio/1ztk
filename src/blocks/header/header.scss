@@ -1,0 +1,93 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+html body .bvi-body[data-bvi-theme] {
+  .hdr.fixed {
+    top: 48px;
+  }
+  .hdr.cloned {
+    +.menu {
+      padding: 100px 0 0;
+    }
+  }
+}
+
+.hdr {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  align-items: center;
+  background: $white;
+  position: relative;
+  z-index: 2;
+
+  &.fixed {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    animation: translateToBottom .5s;
+
+    >.hdr__logo {
+      display: none;
+    }
+  }
+
+  &.cloned {
+    +.menu {
+      padding-top: 40px;
+    }
+  }
+
+  &__logo {
+    flex-shrink: 0;
+  }
+
+  &__logo-img {
+    width: 70px;
+  }
+
+  &__burger {
+    margin: 0 0 0 25px;
+  }
+
+  &__login {
+    // margin: 0 0 0 auto;
+    // width: 22px;
+    // height: 22px;
+    // background: url('../img/icon-login.svg') center/contain no-repeat;
+  }
+
+  &__burger-box {}
+
+  &__burger-inner {}
+
+  >.bvi-link-shortcode {
+    margin: 0 0 0 auto;
+    display: block;
+    width: 24px;
+    height: 16px;
+    background: url('../img/icon-bvi.svg') center/contain no-repeat !important;
+    > svg {
+      display: none !important;
+    }
+  }
+
+  &__vk,
+  &__instagram,
+  &__nav {
+    display: none;
+
+    &-list {}
+
+    &-li {}
+  }
+}
+
+.hdr>.bvi-panel-close,
+#bvi-toggler-menu-hide {
+  display: none !important;
+}

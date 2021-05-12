@@ -1,0 +1,418 @@
+@import '../assets/colors';
+@import '../assets/mixins';
+@import '../assets/variables';
+
+html body .bvi-panel {
+  margin: 0 !important;
+}
+
+// Класс добавляется при вызове попапов и мобильного меню
+body.no-scroll {
+  overflow: hidden;
+
+  >#page-wrapper {
+    overflow: hidden;
+  }
+
+  .hdr.fixed {
+    overflow-y: scroll;
+  }
+}
+
+.nav-link {
+  transition: color .5s;
+}
+
+body {
+  color: $black;
+}
+
+html[lang] {
+  margin-top: 0 !important;
+}
+
+#wpadminbar {
+  display: none;
+}
+
+// Обертка для всего контента
+// фиксит горизонтальную прокрутку на некоторых iOS
+#page-wrapper {
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: auto;
+  display: flex;
+  flex-flow: column;
+}
+
+.nav-link[href="#"] {
+  pointer-events: none;
+}
+
+.has-submenu {
+  >.nav-link {
+    display: flex;
+    align-items: center;
+
+    &::after {
+      content: '';
+      flex-shrink: 0;
+      background: url('img/icon-darr.svg') center/contain no-repeat;
+      transition: transform .25s;
+    }
+
+    &:hover {
+      >.nav-link::after {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
+
+.menu__nav-li.has-submenu,
+.ftr__nav-li.has-submenu {
+  overflow: hidden;
+  transition: max-height .5s;
+
+  &.collapse {
+    >.nav-link {
+      &::after {
+        transform: rotate(0);
+      }
+    }
+
+    >.sub-menu {
+      pointer-events: none;
+    }
+  }
+
+  >.nav-link {
+    pointer-events: auto;
+
+    &:focus {
+      outline: 0;
+    }
+
+    &::after {
+      // margin: 0 0 0 auto;
+      // width: 13px;
+      // height: 8px;
+      transform: rotate(180deg);
+    }
+  }
+}
+
+
+// img.lazy {
+//   background: url('../img/img-placeholder.svg') center/cover no-repeat;
+// }
+
+// a[href="#"] {
+//   opacity: .5;
+//   pointer-events: none;
+// }
+
+/* loader */
+// Лоадер в основном для форм
+
+.loader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .5s, visibility .5s;
+  // background: $color;
+
+  &__circle {
+    margin: auto;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    animation: spin .5s linear infinite;
+    // border-top-color: $color;
+    // border-left-color: $color;
+  }
+}
+
+.loader-green {
+  background: $lightGreen;
+
+  >.loader__circle {
+    border-top-color: $green;
+    border-left-color: $green;
+  }
+}
+
+.loading>.loader {
+  opacity: .75;
+  visibility: visible;
+}
+
+/* loader */
+
+// Поле contact form 7 honeypot
+.cf7-form-field {
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0;
+  position: absolute;
+}
+
+// Блок с прокруткой, который показывается на всю ширину и высоту страницы страницы
+// нужен для незаметного overflow:hidden у body
+// при вызове мобильного меню или попапов
+#fake-scrollbar {
+  display: none;
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  z-index: 9999;
+  background: 0 0 !important;
+
+  &.active {
+    display: block;
+  }
+}
+
+// Блокирование текущей ссылки в меню
+// .nav__list-item {
+//   &.current {
+//     cursor: not-allowed;
+//     > .nav__link {
+//       pointer-events: none;
+//       > .nav__link-text {
+//         border-bottom: 1px solid;
+//       }
+//     }
+//   }
+// }
+
+// Скрытие стандартных сообщений от contact form 7
+div.wpcf7-response-output,
+span.wpcf7-not-valid-tip,
+.screen-reader-response {
+  display: none !important;
+}
+
+.tel,
+.email,
+.address {
+  transition: color .5s;
+
+  &::before {
+    content: '';
+    display: inline-block;
+    background: center/contain no-repeat;
+  }
+}
+
+.vk,
+.instagram {
+  background: center/contain no-repeat;
+}
+
+.vk-green:not(.lazy),
+.vk-green.lazyloaded {
+  background-image: url(img/icon-vk-green.svg);
+}
+
+.instagram-green:not(.lazy),
+.instagram-green.lazyloaded {
+  background-image: url(img/icon-instagram-green.svg);
+}
+
+// Чтобы не было пробела перед шапкой
+.hdr,
+.menu {
+  +section {
+    margin-top: 0;
+  }
+}
+
+// Заголовок в секциях
+.sect-title {
+  font: bold 20px/140% SourceSerifPro, serif;
+  letter-spacing: 0.05em;
+}
+
+// Главный заголовок в секциях
+.sect-h1 {
+  font: bold 20px/140% SourceSerifPro, serif;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+// Заголовок у "карточек"
+.sect-h2 {
+  display: block;
+  font: bold 16px/140% SourceSerifPro, serif;
+}
+
+// Заголовок в секции с линией
+.sect-title-underline {
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: block;
+    max-width: 90%;
+    width: 100px;
+    height: 3px;
+    background: $green;
+  }
+}
+
+// Секция без фона
+.sect {
+  margin: $sectionVerticalPadding320 0;
+  font: 14px/140% OpenSans, sans-serif;
+  color: $black;
+}
+
+// Секция с фоном
+.sect-green-bg,
+.sect-lightgreen-bg {
+  margin: $sectionVerticalPadding320 0;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  font: 14px/140% OpenSans, sans-serif;
+}
+
+.sect-green-bg {
+  >.sect-title-underline {
+    &::after {
+      background: $greyGreen;
+    }
+  }
+}
+
+.sect-lightgreen-bg {
+  background: $lightGreen;
+}
+
+.sect-green-bg {
+  background: $green;
+  color: $white;
+}
+
+// Если за секцией с фоном идет футер, то скорректируем отступ
+.sect-green-bg+.ftr,
+.sect-lightgreen-bg+.ftr,
+.sect-green-bg~.popup+.ftr,
+.sect-lightgreen-bg~.popup+.ftr {
+  margin-top: -$sectionVerticalPadding320;
+}
+
+@media (min-width:767.98px) {
+  .sect-title {
+    font-size: 28px;
+  }
+
+  .sect-h1 {
+    font-size: 28px;
+  }
+
+  .sect-h2 {
+    font-size: 20px;
+  }
+
+  .sect-title-underline {
+    margin-bottom: 40px;
+    padding-bottom: 30px;
+  }
+
+  .sect {
+    margin: $sectionVerticalPadding768 0;
+    font-size: 15px;
+  }
+
+  .sect-green-bg,
+  .sect-lightgreen-bg {
+    margin: $sectionVerticalPadding768 0;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    font-size: 15px;
+  }
+
+  .sect-green-bg+.ftr,
+  .sect-lightgreen-bg+.ftr,
+  .sect-green-bg~.popup+.ftr,
+  .sect-lightgreen-bg~.popup+.ftr {
+    margin-top: -$sectionVerticalPadding768;
+  }
+}
+
+@media (min-width:1023.98px) {
+  .sect-title {
+    font-size: 30px;
+  }
+
+  .sect-h1 {
+    font-size: 30px;
+  }
+
+  .sect-title-underline {
+    margin-bottom: 50px;
+  }
+
+  .sect {
+    margin: $sectionVerticalPadding1024 0;
+    font-size: 16px;
+  }
+
+  .sect-green-bg,
+  .sect-lightgreen-bg {
+    margin: $sectionVerticalPadding1024 0;
+    font-size: 16px;
+  }
+
+  .sect-green-bg+.ftr,
+  .sect-lightgreen-bg+.ftr,
+  .sect-green-bg~.popup+.ftr,
+  .sect-lightgreen-bg~.popup+.ftr {
+    margin-top: -$sectionVerticalPadding1024;
+  }
+}
+
+@media (min-width:1279.98px) {
+  .sect-title {
+    font-size: 36px;
+  }
+
+  .sect-h1 {
+    font-size: 36px;
+  }
+
+  .sect {
+    margin: $sectionVerticalPadding1280 0;
+  }
+
+  .sect-green-bg,
+  .sect-lightgreen-bg {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .sect-green-bg+.ftr,
+  .sect-lightgreen-bg+.ftr,
+  .sect-green-bg~.popup+.ftr,
+  .sect-lightgreen-bg~.popup+.ftr {
+    margin-top: -$sectionVerticalPadding1280;
+  }
+}

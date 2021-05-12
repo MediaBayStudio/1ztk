@@ -1,0 +1,27 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.principles-sect {
+  &::before {
+    width: 700px;
+    height: 700px;
+    right: 10%;
+  }
+  &__title {
+  }
+  &__list {
+  }
+  &__li {
+  }
+  &__li-img {
+  }
+  &__li-text {
+  }
+  &__li-title {
+  }
+  &__li-descr {
+    margin-right: 140px;
+    max-width: 560px;
+  }
+}

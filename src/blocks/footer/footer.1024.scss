@@ -1,0 +1,54 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.ftr {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  &__logo {
+    margin: 0 75px 0 0;
+  }
+
+  &__logo-img {
+    width: 145px;
+    height: 145px;
+  }
+
+  &__nav {}
+
+  &__nav-list {
+    display: flex;
+  }
+
+  &__nav-li {
+    &.has-submenu {
+      &:first-child {
+        margin: 0 50px 0 0;
+      }
+      > .nav-link {
+        cursor: default;
+        &::after {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__contacts {}
+
+  &__tel {}
+
+  &__email {}
+
+  &__address {}
+
+  &__copyright {}
+
+  &__copy {}
+
+  &__policy {}
+
+  &__dev {}
+
+  &__dev-link {}
+}

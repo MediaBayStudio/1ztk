@@ -1,0 +1,16 @@
+@import 'assets/colors';
+@import 'assets/mixins';
+@import 'assets/variables';
+
+.create-images-block {
+  display: flex;
+  align-items: center;
+  > .success {
+    text-align: center;
+    color: #008a20;
+    margin: 0 10px;
+  }
+  > .spinner.hidden {
+    display: none;
+  }
+}

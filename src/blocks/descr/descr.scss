@@ -1,0 +1,76 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+
+.descr-sect {
+  display: flex;
+  flex-flow: column;
+  overflow: hidden;
+
+  &__title {}
+
+  &__descr {
+
+    &:first-of-type {
+      margin: 0 0 30px;
+    }
+  }
+
+  &__pic {
+    margin: 0 0 30px;
+    display: block;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      background: $greyGreen;
+      pointer-events: none;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    position: relative;
+    min-height: responsive('320->575', '192->367');
+    background: url('../img/img-placeholder.svg') center/cover;
+  }
+}
+
+.descr-sect-1 {
+  >.descr-sect__pic {
+    padding: 0 0 20px;
+    &::before {
+      left: -20px;
+      bottom: 0;
+      width: 70px;
+      height: 170px;
+    }
+  }
+}
+
+.descr-sect-2 {
+  >.descr-sect__pic {    
+    &::before {
+      width: 100vw;
+      height: calc(100% - 60px);
+      left: -20px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+.descr-sect-3 {
+  >.descr-sect__pic {    
+    padding: 0 0 30px;
+    &::before {
+      width: 170px;
+      height: 185px;
+      bottom: 0;
+      right: -20px;
+      background: $green;
+    }
+  }
+}

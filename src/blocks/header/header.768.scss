@@ -1,0 +1,147 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.hdr {
+  // padding-top: 30px;
+  // padding-bottom: 30px;
+  &.fixed {
+    // padding-top: 20px;
+    // padding-bottom: 20px;
+  }
+
+  &__logo {}
+
+  &__logo-img {
+    width: 125px;
+    // width: 235px;
+  }
+
+  &__burger {
+    display: none;
+  }
+
+  &__burger-box {}
+
+  &__burger-inner {}
+
+  &__login {
+    margin: 0;
+  }
+
+  &__vk,
+  &__instagram {
+    margin: 0 20px 0 0;
+    // display: block;
+    width: 24px;
+    height: 24px;
+  }
+
+  &__vk {
+    
+  }
+
+  &__instagram {
+    
+  }
+
+  // >.bvi-link-shortcode {
+  //   margin: 0 0 0 30px;
+  //   display: block;
+  //   width: 24px;
+  //   height: 16px;
+  //   background: url('../img/icon-bvi.svg') center/contain no-repeat !important;
+  //   > svg {
+  //     display: none !important;
+  //   }
+  // }
+
+  &__nav {
+    margin: -1px auto 0 auto;
+    display: block;
+    align-self: stretch;
+
+    &-list {
+      height: 100%;
+      display: flex;
+      font: bold 12px/140% SourceSerifPro, serif;
+      text-transform: uppercase;
+      color: $black;
+
+      >.hdr__nav-li {
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        &:not(:last-child) {
+          margin: 0 60px 0 0;
+        }
+      }
+    }
+
+    &-li {
+      $submenuItemSidePadding: 20px;
+      $submenuItemVericalPadding: 15px;
+
+      >.sub-menu {
+        padding: 4px 0 0 0;
+        position: absolute;
+        top: 100%;
+        left: -$submenuItemSidePadding;
+        font: 15px/140% OpenSans, sans-serif;
+        text-transform: none;
+        white-space: nowrap;
+        background: $white;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity .5s;
+
+        >.hdr__nav-li {
+
+          >.nav-link {
+            padding: 10px $submenuItemSidePadding;
+            display: block;
+            transition: background .5s;
+
+            &:hover {
+              // background: lighten($lightGreen, 25%);
+              background: $light;
+            }
+
+            &:first-child {
+              padding-top: $submenuItemVericalPadding;
+            }
+
+            &:last-child {
+              padding-bottom: $submenuItemVericalPadding;
+            }
+          }
+        }
+      }
+
+      &.has-submenu {
+        >.nav-link {
+          // display: flex;
+          // align-items: center;
+
+          &::after {
+            margin: 0 0 0 5px;
+            width: 8px;
+            height: 5px;
+          }
+        }
+
+        &:hover {
+          >.nav-link::after {
+            transform: rotate(180deg);
+          }
+
+          >.sub-menu {
+            opacity: 1;
+            pointer-events: auto;
+          }
+        }
+      }
+    }
+  }
+}

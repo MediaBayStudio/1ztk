@@ -1,0 +1,34 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+
+.steps-sect {
+  &__title {}
+
+  &__list {
+    background-size: 160px 435px;
+    &::before {
+      width: 325px;
+      height: 325px;
+    }
+  }
+
+  &__li {
+    max-width: 655px;
+    &:not(:last-child) {}
+
+    &::before {}
+  }
+
+  &__li-descr {}
+
+  &__note {
+    margin: 60px 0 0;
+    max-width: 560px;
+  }
+
+  &__note-title {}
+
+  &__note-text {}
+}

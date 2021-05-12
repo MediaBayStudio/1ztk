@@ -1,0 +1,97 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.index-contacts-sect {
+  display: flex;
+  flex-flow: wrap;
+  &__title {
+    width: 100%;
+  }
+
+  &__form {
+    flex-flow: column;
+    .form-title {}
+
+    .field {
+      &__inp {}
+
+      &__text {}
+
+      &__textarea {
+        height: 190px;
+      }
+    }
+
+    .form-group {
+      margin: 0 0 30px;
+      width: 100%;
+    }
+
+    .field-name,
+    .field-tel,
+    .field-msg {
+
+    }
+
+    .field-name {}
+
+    .field-tel {}
+
+    .field-msg {
+      width: 100%;
+    }
+
+    .form-bottom {
+      margin-top: 30px;
+      width: 465px;
+    }
+
+    .check {
+      font-size: 12px;
+      &__inp {}
+
+      &__pseudo-inp {}
+
+      &__text {}
+
+      &__link {}
+    }
+
+    .check-tick {
+      max-width: 255px;
+    }
+
+    .btn {
+      height: 55px;
+    }
+
+    .loader {
+      &__circle {}
+    }
+  }
+}
+
+.index-contacts {
+  &__bottom {
+    margin: 0 0 0 auto;
+    width: 415px;
+    flex-flow: column;
+  }
+
+  &__contacts {}
+
+  &__title {}
+
+  &__tel,
+  &__email,
+  &__address {
+    max-width: none;
+  }
+}
+
+#index-contacts-map {
+  margin-top: auto;
+  width: 100%;
+  height: 273px;
+}

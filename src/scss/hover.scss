@@ -1,0 +1,34 @@
+
+@import 'assets/colors';
+@import 'assets/mixins';
+@import 'assets/variables';
+
+.sub-menu > .ftr__nav-li > .nav-link,
+.ftr__dev-link,
+.ftr__tel,
+.ftr__email,
+.ftr__address,
+.index-contacts__tel,
+.index-contacts__email,
+.index-contacts__address {
+  &:hover {
+    color: $yellow;
+  }
+}
+
+.ftr__policy {
+  &:hover {
+    border-bottom-color: transparent;
+  }
+}
+
+.btn-blue:hover {
+  background: $darkGreen;
+  border-color: $darkGreen;
+}
+
+.thanks-popup__close {
+  &:hover {
+    color: $yellow;
+  }
+}

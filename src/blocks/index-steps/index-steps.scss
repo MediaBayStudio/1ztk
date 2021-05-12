@@ -1,0 +1,54 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+
+.steps-sect {
+  &__title {}
+
+  &__list {
+    counter-reset: list;
+
+  }
+
+  &__li {
+    display: flex;
+    align-items: flex-start;
+    &:not(:last-child) {
+      margin: 0 0 25px;
+    }
+
+    &::before {
+      margin: 0 15px 0 0;
+      counter-increment: list;
+      content: '0' counter(list);
+      font: bold 24px/100% SourceSerifPro, serif;
+      letter-spacing: 0.05em;
+      color: $green;
+    }
+  }
+
+  &__li-descr {}
+
+  &__note {
+    margin: 30px 0 0;
+    padding: 20px 0 0;
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: $sectionHorizontalPaddingMinus320;
+      width: 55px;
+      height: 73%;
+      z-index: -1;
+      background: $lightGreen;
+    }
+  }
+
+  &__note-title {
+    font: bold 1.15em/140% SourceSerifPro, serif;
+  }
+
+  &__note-text {}
+}

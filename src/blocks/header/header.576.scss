@@ -1,0 +1,23 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.hdr {
+  &__logo {}
+
+  &__logo-img {
+    // width: 180px;
+    width: 100px;
+  }
+
+  &__burger {}
+
+  &__burger-box {}
+
+  &__burger-inner {}
+
+  &__nav {
+    &-list {}
+    &-li {}
+  }
+}

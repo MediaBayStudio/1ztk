@@ -1,0 +1,85 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.ftr {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  display: flex;
+  flex-flow: wrap;
+  &__logo {}
+
+  &__logo-img {
+    margin: 0 40px 0 0;
+    width: 125px;
+    height: 125px;
+  }
+
+  &__nav {
+    margin: 0 55px 0 0;
+  }
+
+  &__nav-list {}
+
+  &__nav-li {
+    &.has-submenu {
+      &:first-child {
+        margin-bottom: 30px;
+      }
+      >.sub-menu {
+        font-size: 15px;
+      }
+    }
+  }
+
+  &__nav-li.has-submenu,
+  &__contacts-title {
+    font-size: 14px;
+  }
+
+  &__contacts-title {
+    margin: 0 0 15px;
+  }
+
+  &__contacts {
+    max-width: 170px;
+    font-size: 15px;
+  }
+
+  &__tel {}
+
+  &__email {}
+
+  &__address {
+    align-items: flex-start;
+  }
+
+  &__tel,
+  &__email,
+  &__address {
+    &:not(:last-child) {
+      margin: 0 0 15px;
+    }
+  }
+
+  &__copyright {
+    margin: 50px 0 0 0;
+  }
+
+  &__copy {
+    font-size: 16px;
+  }
+
+  &__policy {
+    font-size: 16px;
+  }
+
+  &__dev {
+    margin: auto 0 0 auto;
+    font-size: 16px;
+  }
+
+  &__dev-link {
+    font-size: 16px;
+  }
+}

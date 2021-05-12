@@ -1,0 +1,68 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.features-sect {
+  &__title {}
+
+  &__list {}
+
+  &__li {
+    padding-bottom: 35px;
+    width: calc((100% - 30px) / 2);
+    &:not(:last-child) {
+
+    }
+    &:nth-child(odd) {
+      margin-right: 30px;
+    }
+    &:nth-child(1),
+    &:nth-child(2) {
+      margin-bottom: 30px;
+    }
+
+    &:nth-child(1) {
+      >.features-sect__li-bg {
+        top: -65px;
+        right: -145px;
+      }
+    }
+
+    &:nth-child(2) {
+      >.features-sect__li-bg {
+        top: -25px;
+        right: -25px;
+      }
+    }
+
+    &:nth-child(3) {
+      >.features-sect__li-bg {
+        top: -50px;
+        right: -50px;
+      }
+    }
+
+    &:nth-child(4) {
+      >.features-sect__li-bg {
+      }
+    }
+  }
+
+  &__li-bg {}
+
+  &__li-pic {
+    &::before {
+      width: 60px;
+      height: 60px;
+    }
+  }
+
+  &__li-img {
+    width: 80px;
+    height: 80px;
+  }
+
+  &__li-title {}
+
+  &__li-descr {}
+}

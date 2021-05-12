@@ -1,0 +1,33 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.system-sect {
+  &__title {}
+
+  &__list {
+    counter-reset: list;
+  }
+
+  &__li {
+    padding-top: 40px;
+    position: relative;
+    &::before {
+      counter-increment: list;
+      content: '0' counter(list);
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      font: bold 64px/100% SourceSerifPro, sans-serif;
+      letter-spacing: 0.05em;
+      color: $darkGreen;
+      z-index: 0;
+    }
+    &:not(:last-child) {
+      margin: 0 0 20px;
+    }
+    &-text {
+      position: relative;
+    }
+  }
+}

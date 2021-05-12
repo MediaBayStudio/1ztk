@@ -1,0 +1,20 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.system-sect {
+  &__title {}
+
+  &__list {
+    display: flex;
+  }
+
+  &__li {
+    padding-top: 35px;
+    width: calc((100% - 40px) / 3);
+    &:not(:last-child) {
+      margin: 0 20px 0 0;
+    }
+    &::before {}
+  }
+}

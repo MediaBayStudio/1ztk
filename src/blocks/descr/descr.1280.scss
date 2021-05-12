@@ -1,0 +1,53 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+
+.descr-sect {
+  &__title {
+    max-width: 600px;
+  }
+
+  &__descr {}
+
+  &__pic {}
+
+  &__img {}
+}
+
+.descr-sect-1,
+.descr-sect-2 {
+  >.descr-sect__descr {
+    width: 460px;
+  }
+
+  >.descr-sect__pic {
+    // margin-top: -145px;
+    width: 500px + 30px;
+    height: 340px + 50px;
+  }
+}
+
+.descr-sect-2 {
+  >.descr-sect__pic {
+    margin-top: 0;
+    grid-row: 2/span 2;
+  }
+}
+
+.descr-sect-3 {
+  >.descr-sect__title {
+    margin-top: 50px;
+  }
+  >.descr-sect__pic {
+    grid-row: 1/span 3;
+    margin: 0 160px 0 0;
+    padding: 60px 0;
+    width: 500px;
+    height: 420px + 60px + 60px;
+    &::before {
+      left: -140px;
+      width: 400px;
+    }
+  }
+}

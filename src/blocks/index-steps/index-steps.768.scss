@@ -1,0 +1,56 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+
+.steps-sect {
+  &.lazyloaded {
+    >.steps-sect__list::before {
+      background-image: url('../img/logo-three.svg');
+    }
+  }
+
+  &__title {}
+
+  &__list {
+    position: relative;
+    background: linear-gradient(to left, $lightGreen 0 0, $lightGreen 0 0) right center/120px 320px no-repeat;
+
+    &::before {
+      content: '';
+      width: 220px;
+      height: 220px;
+      position: absolute;
+      right: 40px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: center/contain no-repeat;
+      opacity: 0.4;
+    }
+  }
+
+  &__li {
+    max-width: 410px;
+    &:not(:last-child) {}
+
+    &::before {
+      margin: 0 20px 0 0;
+    }
+  }
+
+  &__li-descr {}
+
+  &__note {
+    margin: 50px 0 0 0;
+    padding: 25px 0;
+    max-width: 550px;
+    &::before {
+      height: 100%;
+      width: 60px;
+    }
+  }
+
+  &__note-title {}
+
+  &__note-text {}
+}

@@ -1,0 +1,104 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.index-contacts-sect {
+  &__title {}
+
+  &__form {
+    display: flex;
+    flex-flow: wrap;
+
+    .form-title {
+      margin: 0 0 30px;
+      width: 100%;
+    }
+
+    .field {
+      &__inp {}
+
+      &__text {}
+
+      &__textarea {
+        height: 134px;
+      }
+    }
+
+    .form-group {
+      margin: 0 20px 0 0;
+    }
+
+    .field-msg,
+    .form-group {
+      width: calc((100% - 20px) / 2);
+    }
+
+    .field-name,
+    .form-group {}
+
+    .field-name,
+    .field-tel,
+    .field-msg {}
+
+    .field-name {}
+
+    .field-tel {}
+
+    .field-msg {}
+
+    .form-bottom {
+      margin-top: 25px;
+      width: 100%;
+      display: flex;
+      align-items: flex-start;
+    }
+
+    .check {
+      font-size: 11px;
+      &__inp {}
+
+      &__pseudo-inp {}
+
+      &__text {}
+
+      &__link {}
+    }
+
+    .check-tick {
+      max-width: 300px;
+    }
+
+    .btn {
+      margin-top: 0;
+      width: 165px;
+      height: 50px;
+    }
+
+    .loader {
+      &__circle {}
+    }
+  }
+}
+
+.index-contacts {
+  &__bottom {
+    margin-top: 60px;
+    display: flex;
+  }
+
+  &__contacts {}
+
+  &__title {}
+
+  &__tel {}
+
+  &__email {}
+
+  &__address {}
+}
+
+#index-contacts-map {
+  margin: 0 0 0 auto;
+  width: 430px;
+  height: 270px;
+}

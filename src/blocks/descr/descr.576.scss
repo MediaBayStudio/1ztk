@@ -1,0 +1,24 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+
+.descr-sect {
+  &__title {}
+
+  &__descr {
+    &.first-p {}
+  }
+
+  &__pic {}
+
+  &__img {}
+
+  &.pic-at-first {
+    >.descr-sect__pic {
+      &::before {
+        left: $sectionHorizontalPaddingMinus576;
+      }
+    }
+  }
+}

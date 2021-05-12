@@ -1,0 +1,42 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.principles-sect {
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    display: block;
+    width: 500px;
+    height: 600px;
+    background: center/contain no-repeat;
+    transform: translate(50%, -50%);
+    opacity: .4;
+    pointer-events: none;
+  }
+  &.lazyloaded {
+    &::before {
+      background-image: url('../img/logo-three.svg');
+    }
+  }
+  &__title {
+  }
+  &__list {
+  }
+  &__li {
+    flex-flow: row;
+    position: relative;
+  }
+  &__li-img {
+    margin: 0 45px 0 0;
+  }
+  &__li-text {
+  }
+  &__li-title {
+  }
+  &__li-descr {
+  }
+}

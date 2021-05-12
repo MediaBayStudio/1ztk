@@ -1,0 +1,25 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.index-hero-sect {
+  &::before {}
+
+  &__text {}
+
+  &__title {}
+
+  &__descr {}
+
+  &__slider {}
+  &__nav {}
+
+  &__counter {}
+
+  &__prev,
+  &__next {}
+
+  &__prev {}
+
+  &__next {}
+}

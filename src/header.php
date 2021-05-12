@@ -137,15 +137,20 @@
       echo do_shortcode( '[bvi]' ) ?>
       <script>
         document.addEventListener('DOMContentLoaded', function() {
-          document.querySelector('.bvi-link-shortcode').addEventListener('click', function() {
-            let src = '<?php echo plugins_url() ?>' + '/button-visually-impaired/assets/css/bvi.min.css',
-              link = document.createElement('link');
+          let src = '<?php echo plugins_url() ?>' + '/button-visually-impaired/assets/css/bvi.min.css',
+            link = document.createElement('link');
 
-            link.setAttribute('rel', 'stylesheet');
-            link.setAttribute('href', src);
+          link.setAttribute('rel', 'stylesheet');
+          link.setAttribute('href', src);
 
+          if (document.cookie.indexOf('bvi') === 0) {
+            document.querySelector('.bvi-link-shortcode').addEventListener('click', function() {
+              document.head.appendChild(link);
+            });
+          } else {
             document.head.appendChild(link);
-          });
+          }
+
         });
       </script>
       <button type="button" class="hdr__burger">

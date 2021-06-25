@@ -5,12 +5,14 @@
 .index-contacts-sect {
   display: flex;
   flex-flow: wrap;
+
   &__title {
     width: 100%;
   }
 
   &__form {
     flex-flow: column;
+
     .form-title {}
 
     .field {
@@ -30,9 +32,7 @@
 
     .field-name,
     .field-tel,
-    .field-msg {
-
-    }
+    .field-msg {}
 
     .field-name {}
 
@@ -49,6 +49,7 @@
 
     .check {
       font-size: 12px;
+
       &__inp {}
 
       &__pseudo-inp {}
@@ -82,6 +83,12 @@
   &__contacts {}
 
   &__title {}
+
+  &__tel {}
+
+  &__email {}
+
+  &__address {}
 
   &__tel,
   &__email,

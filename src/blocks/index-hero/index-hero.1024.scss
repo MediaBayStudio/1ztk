@@ -18,11 +18,17 @@
   }
 
   &__title {
-    margin: 0 0 30px;
     // font-size: 30px;
   }
 
-  &__descr {}
+  &__descr {
+    margin: 30px 0 0;
+  }
+
+  &__btn {
+    width: 280px;
+    height: 54px;
+  }
 
   &__slider {
     margin: 0;

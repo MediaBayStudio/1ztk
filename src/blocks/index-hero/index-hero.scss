@@ -24,12 +24,17 @@
     margin: 0 0 30px;
   }
 
-  &__title {
-    margin: 0 0 20px;
-  }
+  &__title {}
 
   &__descr {
-    text-transform: uppercase;
+    margin: 20px 0 0;
+    max-width: 280px;
+  }
+
+  &__btn {
+    margin-top: 30px;
+    width: 280px;
+    height: 45px;
   }
 
   &__slider {
@@ -83,6 +88,7 @@
 
   &__prev {
     margin-left: -5px;
+
     &:hover {
       transform: translateX(-2px);
     }
@@ -90,6 +96,7 @@
 
   &__next {
     margin-right: -5px;
+
     &:hover {
       transform: translateX(2px);
     }

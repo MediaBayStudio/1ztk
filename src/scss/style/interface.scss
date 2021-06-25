@@ -406,7 +406,9 @@ span.wpcf7-not-valid-tip,
 .sect-green-bg+.ftr,
 .sect-lightgreen-bg+.ftr,
 .sect-green-bg~.popup+.ftr,
-.sect-lightgreen-bg~.popup+.ftr {
+.sect-lightgreen-bg~.popup+.ftr
+.sect-green-bg~script+.ftr,
+.sect-lightgreen-bg~script+.ftr {
   margin-top: -$sectionVerticalPadding320;
 }
 
@@ -444,7 +446,9 @@ span.wpcf7-not-valid-tip,
   .sect-green-bg+.ftr,
   .sect-lightgreen-bg+.ftr,
   .sect-green-bg~.popup+.ftr,
-  .sect-lightgreen-bg~.popup+.ftr {
+  .sect-lightgreen-bg~.popup+.ftr
+  .sect-green-bg~script+.ftr,
+  .sect-lightgreen-bg~script+.ftr {
     margin-top: -$sectionVerticalPadding768;
   }
 }
@@ -476,7 +480,9 @@ span.wpcf7-not-valid-tip,
   .sect-green-bg+.ftr,
   .sect-lightgreen-bg+.ftr,
   .sect-green-bg~.popup+.ftr,
-  .sect-lightgreen-bg~.popup+.ftr {
+  .sect-lightgreen-bg~.popup+.ftr
+  .sect-green-bg~script+.ftr,
+  .sect-lightgreen-bg~script+.ftr {
     margin-top: -$sectionVerticalPadding1024;
   }
 }
@@ -503,7 +509,9 @@ span.wpcf7-not-valid-tip,
   .sect-green-bg+.ftr,
   .sect-lightgreen-bg+.ftr,
   .sect-green-bg~.popup+.ftr,
-  .sect-lightgreen-bg~.popup+.ftr {
+  .sect-lightgreen-bg~.popup+.ftr
+  .sect-green-bg~script+.ftr,
+  .sect-lightgreen-bg~script+.ftr {
     margin-top: -$sectionVerticalPadding1280;
   }
 }

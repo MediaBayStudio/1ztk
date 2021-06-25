@@ -1,7 +1,12 @@
 <section class="index-hero-sect sect container"<?php echo $section_id ?>>
   <div class="index-hero-sect__text">
-    <h2 class="index-hero-sect__title sect-h1"><?php echo $section['title'] ?></h2>
-    <p class="index-hero-sect__descr"><?php echo $section['descr'] ?></p>
+    <h2 class="index-hero-sect__title sect-h1"><?php echo $section['title'] ?></h2> <?php
+    if ( $section['descr'] ) : ?>
+      <p class="index-hero-sect__descr"><?php echo $section['descr'] ?></p> <?php
+    endif;
+    if ( $section['btn'] ) : ?>
+      <button type="button" class="index-hero-sect__btn btn btn-blue" id="hero-btn"><?php echo $section['btn'] ?></button> <?php
+    endif ?>
   </div>
   <div class="index-hero-sect__slider"> <?php
   $slides_count = count( $section['images'] );

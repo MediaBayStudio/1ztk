@@ -1,3 +1,31 @@
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+
+.menu {
+  &__cnt {
+    padding: 65px 25px;
+  }
+  &__logo {
+    margin: 25px 0 0;
+    width: 180px;
+    height: 180px;
+  }
+  &__nav {
+    margin: 40px 0 60px;
+    font-size: 20px;
+  }
+  &__nav-li {
+    &:not(:last-child) {
+      margin: 0 0 35px;
+    }
+  }
+
+  .bvi-link-shortcode,
+  &__login {
+    flex-shrink: 0;
+    width: 266px;
+    height: 48px;
+  }
+}

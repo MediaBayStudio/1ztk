@@ -829,6 +829,8 @@ document.addEventListener('DOMContentLoaded', function() {
     HTMLCollection.prototype.forEach = Array.prototype.forEach;
   }
 
+  id('bvi-style-inline-css').remove();
+
   fakeScrollbar = id('fake-scrollbar');
 
   hdr = q('.hdr');
@@ -849,7 +851,7 @@ document.addEventListener('DOMContentLoaded', function() {
     menu: q('.menu'),
     menuCnt: q('.menu__cnt'),
     openBtn: burger,
-    closeBtn: burger,
+    closeBtn: q('.menu__burger'),
     toRight: true,
     fade: false,
     allowPageScroll: false

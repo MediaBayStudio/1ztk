@@ -32,3 +32,29 @@
     color: $yellow;
   }
 }
+
+.contact-link-tel-grey,
+.contact-link-email-grey,
+.contact-link-address-grey {
+  &:hover {
+    color: $darkGreen;
+  }
+}
+
+.hdr__nav-list {
+  .nav-link {
+    &:hover {
+      &::after {
+        width: 50%;
+      }
+    }
+  }
+}
+
+.hdr {
+  .bvi-link-shortcode {
+    &:hover {
+      border: 1px solid $black;
+    }
+  }
+}

@@ -1,5 +1,6 @@
 <?php
   global
+    $is_webp_support,
     $site_url,
     $address,
     $tel,
@@ -12,72 +13,31 @@
     $instagram_link,
     $vk_link,
     $template_directory;
-    $page_style = str_replace( '.php', '', get_page_template_slug( $post->ID ) ) ?>
+
+    if ( is_page_template( 'index.php' ) || is_front_page() ) {
+      $style_name = 'style-index';
+      $script_name = 'script-index';
+    }
+
+    $GLOBALS['page_script_name'] = $script_name;
+    $GLOBALS['page_style_name'] = $style_name;
+    $page_style = $GLOBALS['page_style_name'] ?>
+    
 <!DOCTYPE html>
 <html <?php language_attributes() ?>>
 <head>
-  <script>
-    var browser = {
-      // Opera 8.0+
-      isOpera: (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0,
-      // Firefox 1.0+
-      isFirefox: typeof InstallTrigger !== 'undefined',
-      // Safari 3.0+ "[object HTMLElementConstructor]"
-      isSafari: /constructor/i.test(window.HTMLElement) || (function(p) {
-        return p.toString() === "[object SafariRemoteNotification]";
-      })(!window['safari'] || (typeof safari !== 'undefined' && safari.pushNotification)),
-      // Internet Explorer 6-11
-      isIE: /*@cc_on!@*/ false || !!document.documentMode,
-      // Edge 20+
-      isEdge: !( /*@cc_on!@*/ false || !!document.documentMode) && !!window.StyleMedia,
-      // Chrome 1+
-      isChrome: !!window.chrome && !!window.chrome.webstore,
-      isYandex: !!window.yandex,
-      isMac: window.navigator.platform.toUpperCase().indexOf('MAC') >= 0
-    };
-    (function(){
-      let polyfills = {
-          'custom-events': typeof window.CustomEvent !== 'function',
-          'intersection-observer': 'IntersectionObserver' in window === false,
-          'closest': !Element.prototype.closest,
-          'svg4everybody': browser.isIE,
-          'picturefill': !window.HTMLPictureElement
-        },
-        scriptText = '',
-        url = '<?php echo $template_directory ?>/js-polyfills.php',
-        getParams = [];
-      for (let name in polyfills) {
-        // Проверяем услвоие
-        if (polyfills[name]) {
-          getParams[getParams.length] = name + '.min.js';
-          console.log('Будет загружен ' + name);
-        }
-      }
-      if (getParams.length > 0) {
-        let xhr = new XMLHttpRequest();
-        xhr.open('GET', url + '?polyfills=' + getParams.join('|'));
-        xhr.send();
-        xhr.addEventListener('readystatechange', function() {
-          if (xhr.readyState === 4 && xhr.status === 200) {
-            scriptText = xhr.response;
-            let script = document.createElement('script');
-            script.text = scriptText;
-            document.head.appendChild(script).parentNode.removeChild(script);
-          }
-        });
-      }
-    })();
-  </script>
   <meta charset="<?php bloginfo( 'charset' ) ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no, viewport-fit=cover">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <!-- styles preload -->
-  <link rel="preload" as="style" href="<?php echo $template_directory ?>/style.css" />
-	<link rel="preload" as="style" href="<?php echo $template_directory ?>/css/style-<?php echo $page_style ?>.css" />
-	<link rel="preload" as="style" href="<?php echo $template_directory ?>/css/style-<?php echo $page_style ?>.576.css" media="(min-width:575.98px)" />
-	<link rel="preload" as="style" href="<?php echo $template_directory ?>/css/style-<?php echo $page_style ?>.768.css" media="(min-width:767.98px)" />
-	<link rel="preload" as="style" href="<?php echo $template_directory ?>/css/style-<?php echo $page_style ?>.1024.css" media="(min-width:1023.98px)" />
-	<link rel="preload" as="style" href="<?php echo $template_directory ?>/css/style-<?php echo $page_style ?>.1280.css" media="(min-width:1279.98px)" />
+  <link rel="preload" as="style" href="<?php echo $template_directory ?>/style.css" /> <?php
+if ( $page_style  ) : ?>
+	<link rel="preload" as="style" href="<?php echo $template_directory ?>/css/<?php echo $page_style ?>.css" />
+	<link rel="preload" as="style" href="<?php echo $template_directory ?>/css/<?php echo $page_style ?>.576.css" media="(min-width:575.98px)" />
+	<link rel="preload" as="style" href="<?php echo $template_directory ?>/css/<?php echo $page_style ?>.768.css" media="(min-width:767.98px)" />
+	<link rel="preload" as="style" href="<?php echo $template_directory ?>/css/<?php echo $page_style ?>.1024.css" media="(min-width:1023.98px)" />
+	<link rel="preload" as="style" href="<?php echo $template_directory ?>/css/<?php echo $page_style ?>.1280.css" media="(min-width:1279.98px)" /> <?php
+endif ?>
   <link rel="preload" as="style" href="<?php echo $template_directory ?>/css/hover.css" media="(hover) and (min-width:1024px)" />
   <!-- fonts preload --> <?php
 	$fonts = [
@@ -97,7 +57,23 @@
     $preload = get_field( 'preload' );
   }
 
-  $preload[] = $logo_url;
+  if ( $is_webp_support ) {
+    $logo_url_webp = str_replace( '.png', '.webp', $logo_url );
+    $logo_preload = $logo_url_webp;
+  } else {
+    $logo_preload = $logo_url; 
+  }
+
+  $preload[] = [
+    'filepath' => $logo_preload,
+    'media' => '(min-width:1023.98px)',
+    'upload' => true
+  ];
+
+  $preload[] = [
+    'filepath' => '/img/logo-with-text.svg',
+    'media' => '(max-width:1023.98px)'
+  ];
 
   if ( $preload ) {
     foreach ( $preload as $item ) {
@@ -123,18 +99,35 @@
   </noscript>
   <div id="page-wrapper">
     <header class="hdr container">
-      <a href="<?php echo $site_url ?>" class="hdr__logo"><img src="<?php echo $logo_url ?>" alt="Логотип" class="hdr__logo-img"></a> <?php 
-      wp_nav_menu( [
-        'theme_location'  => 'header_menu',
-        'container'       => 'nav',
-        'container_class' => 'hdr__nav',
-        'menu_class'      => 'hdr__nav-list',
-        'items_wrap'      => '<ul class="%2$s">%3$s</ul>'
-      ] ) ?>
-      <a href="<?php echo $vk_link ?>" traget="_blank" class="vk vk-green hdr__vk"></a>
-      <a href="<?php echo $instagram_link ?>" traget="_blank" class="instagram instagram-green hdr__instagram"></a>
-      <button type="button" class="hdr__login"></button><?php
-      echo do_shortcode( '[bvi]' ) ?>
+      <a href="<?php echo $site_url ?>" class="hdr__logo">
+        <picture class="hdr__logo-pic"> <?php
+          if ( $logo_url_webp ) : ?>
+            <source type="image/webp" media="(min-width:1023.98px)" srcset="<?php echo $logo_url_webp ?>"> <?php
+          endif ?>
+          <source type="image/svg+xml" media="(max-width:1023.98px)" srcset="<?php echo $template_directory ?>/img/logo-with-text.svg">
+          <img src="<?php echo $logo_url ?>" alt="Логотип" class="hdr__logo-img">
+        </picture>
+      </a>
+      <div class="hdr__right">
+        <div class="hdr__contacts">
+          <a href="tel:<?php echo $tel_dry ?>" class="hdr__tel contact-link contact-link-tel-grey"><?php echo $tel ?></a>
+          <a href="mailto:<?php echo $email ?>" class="hdr__email contact-link contact-link-email-grey"><?php echo $email ?></a>
+          <a href="<?php echo $address_link ?>" target="_blank" class="hdr__address contact-link contact-link-address-grey"><?php echo $address ?></a>
+          <a href="<?php echo $vk_link ?>" traget="_blank" class="hdr__vk vk vk-grey"></a>
+          <a href="<?php echo $instagram_link ?>" traget="_blank" class="hdr__instagram instagram instagram-grey"></a>
+        </div>
+        <div class="hdr__buttons"> <?php
+          echo do_shortcode( '[bvi]' ) ?>
+          <button type="button" class="hdr__login btn btn-blue">Личный кабинет</button>
+        </div> <?php 
+        wp_nav_menu( [
+          'theme_location'  => 'header_menu',
+          'container'       => 'nav',
+          'container_class' => 'hdr__nav',
+          'menu_class'      => 'hdr__nav-list',
+          'items_wrap'      => '<ul class="%2$s">%3$s</ul>'
+        ] ) ?>
+      </div>
       <script>
         document.addEventListener('DOMContentLoaded', function() {
           let src = '<?php echo plugins_url() ?>' + '/button-visually-impaired/assets/css/bvi.min.css',

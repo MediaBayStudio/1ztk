@@ -30,9 +30,40 @@ add_action( 'admin_head', 'print_site_data' );
 add_action( 'wp_body_open', 'print_site_data' );
 
 function print_site_data() {
-  global $site_url, $template_directory, $template_dir;
-  echo '<script id="page-data">var siteUrl = "' . $site_url . '", templateDirectoryUri = "' . $template_directory . '", templateDirectory = "' . $template_dir . '"</script>';
+  global $site_url, $template_directory_uri, $template_directory;
+  echo '<script id="page-data">var siteUrl = "' . $site_url . '", templateDirectoryUri = "' . $template_directory_uri . '", templateDirectory = "' . $template_directory . '"</script>';
 }
+
+// Запрет обновления плагинов
+add_filter( 'site_transient_update_plugins', function( $value ) {
+  unset(
+    $value->response['contact-form-7/wp-contact-form-7.php'],
+    $value->response['contact-form-7-honeypot/honeypot.php'],
+    $value->response['advanced-custom-fields-pro/acf.php']
+  );
+
+  return $value;
+} );
+
+add_filter( 'template_include', function( $template ) {
+  global $post;
+  
+  $GLOBALS['current_template'] = pathinfo( $template )['filename'];
+
+  if ( $post->post_type === 'page' ) {
+    $page_template_id = $post->ID;
+  } else {
+    $page = get_pages( [
+      'meta_key' => '_wp_page_template',
+      'meta_value' => $GLOBALS['current_template'] . '.php'
+    ] )[0];
+
+    $page_template_id = $page->ID;
+  }
+
+  $GLOBALS['sections'] = get_field( 'sections', $page_template_id );
+  return $template;
+} );
 
 // Функция объединения путей
 require $template_dir . '/inc/php-path-join.php';

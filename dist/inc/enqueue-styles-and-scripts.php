@@ -43,21 +43,14 @@ add_action( 'wp_enqueue_scripts', function() {
   // подключаем стили с помощью своей функции
   // enqueue_style( 'style', $screen_widths );
 
-  if ( is_page_template( 'index.php' ) || is_front_page() ) {
-		$style_name = 'style-index';
-		$script_name = 'script-index';
-	}
-
-	enqueue_style( $style_name, $screen_widths );
+	enqueue_style( $GLOBALS['page_style_name'], $screen_widths );
 
   enqueue_style( 'hover', '' ); // подключаем стили для эффектов при наведении
 
   // Подключаем скрипты циклом
   
 
-	$scripts = ['lazy.min', 'Popup.min', 'slick.min', 'script', $script_name];
-
-  $GLOBALS['page_script_name'] = $script_name;
+	$scripts = ['lazy.min', 'Popup.min', 'slick.min', 'script', $GLOBALS['page_script_name']];
 
   foreach ( $scripts as $script ) {
     wp_enqueue_script( "{$script}", $template_directory . "/js/{$script}.js", [], null );

@@ -49,25 +49,26 @@ html[lang] {
   pointer-events: none;
 }
 
-.has-submenu {
-  >.nav-link {
-    display: flex;
-    align-items: center;
+// .has-submenu {
+//   >.nav-link {
+//     display: flex;
+//     align-items: center;
 
-    &::after {
-      content: '';
-      flex-shrink: 0;
-      background: url('img/icon-darr.svg') center/contain no-repeat;
-      transition: transform .25s;
-    }
+//     &::after {
+//       content: '';
+//       flex-shrink: 0;
+//       background: url('img/icon-darr.svg') center/contain no-repeat;
+//       transition: transform .25s;
+//     }
 
-    &:hover {
-      >.nav-link::after {
-        transform: rotate(180deg);
-      }
-    }
-  }
-}
+//     &:hover {
+//       >.nav-link::after {
+//         transform: rotate(180deg);
+//       }
+//     }
+//   }
+// }
+
 
 .menu__nav-li.has-submenu,
 .ftr__nav-li.has-submenu {
@@ -205,6 +206,61 @@ span.wpcf7-not-valid-tip,
   display: none !important;
 }
 
+.contact-link {
+  display: flex;
+  align-items: center;
+  transition: color .5s;
+
+  &::before {
+    content: '';
+    flex-shrink: 0;
+    background: center/contain no-repeat;
+  }
+
+  &-tel-grey,
+  &-address-grey,
+  &-email-grey {
+    &::before {
+      margin: 0 10px 0 0;
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  &-address-grey {
+    align-items: flex-start;
+  }
+
+  &-tel-grey {
+    &.lazyloaded,
+    &:not(.lazy) {
+      &::before {
+        background-image: url('./img/icon-tel-grey.svg');
+      }
+    }
+  }
+
+
+  &-email-grey {
+    &.lazyloaded,
+    &:not(.lazy) {
+      &::before {
+        background-image: url('./img/icon-email-grey.svg');
+      }
+    }
+  }
+
+  &-address-grey {
+    &.lazyloaded,
+    &:not(.lazy) {
+      &::before {
+        background-image: url('./img/icon-geo-grey.svg');
+      }
+    }
+  }
+
+}
+
 .tel,
 .email,
 .address {
@@ -227,9 +283,19 @@ span.wpcf7-not-valid-tip,
   background-image: url(img/icon-vk-green.svg);
 }
 
+.vk-grey:not(.lazy),
+.vk-grey.lazyloaded {
+  background-image: url(img/icon-vk-grey.svg);
+}
+
 .instagram-green:not(.lazy),
 .instagram-green.lazyloaded {
   background-image: url(img/icon-instagram-green.svg);
+}
+
+.instagram-grey:not(.lazy),
+.instagram-grey.lazyloaded {
+  background-image: url(img/icon-instagram-grey.svg);
 }
 
 // Чтобы не было пробела перед шапкой

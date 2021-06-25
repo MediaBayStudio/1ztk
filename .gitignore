@@ -1,4 +1,7 @@
-scripts
+scripts/
+
+!scripts/config.js
+
 .jshintrc
 *.txt
 

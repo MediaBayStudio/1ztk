@@ -3,7 +3,7 @@ add_action( 'post_updated', function( $post_ID, $post_after, $post_before ) {
   if ( !function_exists( 'get_field' ) ) {
     return;
   }
-  global $template_dir;
+  global $template_directory;
 
   $sections = get_field( 'sections', $post_ID );
 
@@ -13,19 +13,22 @@ add_action( 'post_updated', function( $post_ID, $post_after, $post_before ) {
     $cnt .= PHP_EOL;
 
     // Получаем ярлык шаблона и убираем .php в нем (будет index, about и т.д.)
-    $template_slug = preg_replace( '/.*(?:\\\|\/)/', '', get_page_template_slug( $post_ID ) );
-    $template_slug = str_replace( '.php', '', $template_slug );    
+    $template_slug = str_replace( '.php', '', get_page_template_slug( $post_ID ) );
 
     $sections_names = [];
 
     foreach ( $sections as $section ) {
+      if ( !$template_slug ) {
+        break;
+      }
+      
       $section_name = $section['acf_fc_layout'];
 
       if ( !in_array( $section_name, $sections_names ) ) {
 
         $filename = $section_name . '.js';
         
-        $filepath = php_path_join( $template_dir, 'blocks', $section_name, $filename );
+        $filepath = $template_directory . '/blocks/' . $section_name . '/' . $filename;
         
         if ( file_exists( $filepath ) ) {
           $cnt .= file_get_contents( $filepath );
@@ -36,7 +39,7 @@ add_action( 'post_updated', function( $post_ID, $post_after, $post_before ) {
 
     }
 
-    $dest = php_path_join( $template_dir, 'js', 'script-' . $template_slug . '.js' );
+    $dest = $template_directory . '/js/script-' . $template_slug . '.js';
 
     if ( file_exists( $dest ) ) {
       unlink( $dest );

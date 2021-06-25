@@ -1,6 +1,13 @@
 <aside class="menu" style="display:none">
   <div class="menu__cnt">
-    <a href="<?php echo $site_url ?>" class="hdr__logo"><img src="<?php echo $logo_url ?>" alt="Логотип" class="hdr__logo-img"></a> <?php
+    <a href="<?php echo $site_url ?>" class="menu__logo">
+      <picture class="hdr__logo-pic lazy"> <?php
+        if ( $logo_url_webp ) : ?>
+          <source type="image/webp" srcset="#" data-srcset="<?php echo $logo_url_webp ?>"> <?php
+        endif ?>
+        <img src="#" data-src="<?php echo $logo_url ?>" alt="Логотип" class="menu__logo-img">
+      </picture>
+    </a> <?php
     wp_nav_menu( [
       'theme_location'  => 'header_menu',
       'container'       => 'nav',

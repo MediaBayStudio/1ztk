@@ -9,7 +9,13 @@ function create_link_preload( $item ) {
     $filepath = $item;
   } else {
     if ( $item['filepath'] ) {
-      $filepath = php_path_join( $template_directory, $item['filepath'] );
+
+      if ( $item['upload'] ) {
+        $filepath = $item['filepath'];
+      } else {
+        $filepath = php_path_join( $template_directory, $item['filepath'] );
+      } // endif $item['upload']
+
       $media = $item['media'] ? ' media="' . $item['media'] . '"' : '';
     } else if ( $item['file'] ) {
       $fields = get_fields( $item['file']['ID'] );
@@ -40,9 +46,9 @@ function create_link_preload( $item ) {
           'path' => $item['file']['url'],
           'media' => $media_queries['1x']
         ]; 
-      }
-    }
-  }
+      } // endif $is_webp_support
+    } // endif $item['file']
+  } // endif is_string( $item )
 
   if ( $filepaths ) {
     foreach ( $filepaths as $path ) {
@@ -50,6 +56,6 @@ function create_link_preload( $item ) {
     }
   } else {
     echo '<link rel="preload" as="image" href="' . $filepath . '"' . $media . ' />' . PHP_EOL;
-  }
+  } // endif $filepaths
 
 }

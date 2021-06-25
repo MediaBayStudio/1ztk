@@ -12,9 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 //=include ../blocks/index-features/index-features.js
 
-//=include ../blocks/index-principles/index-principles.js
-
-//=include ../blocks/index-steps/index-steps.js
+//=include ../blocks/index-faq/index-faq.js
 
 //=include ../blocks/index-contacts/index-contacts.js
 

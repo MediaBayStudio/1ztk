@@ -40,7 +40,7 @@
         balloonContent: mapAddress
       }, {
         iconLayout: 'default#image',
-        iconImageHref: templateDirectoryUri + '/img/icon-geo.svg',
+        iconImageHref: templateDirectory + '/img/icon-placement.svg',
         iconImageSize: [30, 30]
       });
 

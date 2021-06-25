@@ -1,0 +1,33 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.index-faq-sect {
+  &__title {}
+
+  &__list {}
+}
+
+.faq {
+  &__item {
+    &:not(:last-child) {}
+  }
+
+  &__question {
+    &.active {
+      .faq__question-cross {}
+    }
+  }
+
+  &__question-cross {
+
+    &::after,
+    &::before {}
+
+    &::after {}
+
+    &::before {}
+  }
+
+  &__answer {}
+}

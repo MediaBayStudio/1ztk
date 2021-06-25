@@ -17,6 +17,9 @@
     if ( is_page_template( 'index.php' ) || is_front_page() ) {
       $style_name = 'style-index';
       $script_name = 'script-index';
+    } else if ( is_page_template( 'applications.php' ) ) {
+      $style_name = 'style-applications';
+      $script_name = 'script-applications';
     }
 
     $GLOBALS['page_script_name'] = $script_name;

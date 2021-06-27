@@ -18,9 +18,14 @@
     if ( is_page_template( 'index.php' ) || is_front_page() ) {
       $style_name = 'style-index';
       $script_name = 'script-index';
-    } else if ( is_page_template( 'applications.php' ) ) {
-      $style_name = 'style-applications';
-      $script_name = 'script-applications';
+    } else if ( is_page_template( 'applicants.php' ) ) {
+      $style_name = 'style-applicants';
+      $script_name = 'script-applicants';
+    } else if ( is_page_template( 'about.php' ) ) {
+      $style_name = 'style-about';
+      $script_name = 'script-about';
+      $about_img = $GLOBALS['sections'][0]['img']['url'];
+      $about_img_webp = str_replace( '.jpg', '.webp', $about_img );
     }
 
     $GLOBALS['page_script_name'] = $script_name;
@@ -64,8 +69,20 @@ endif ?>
   if ( $is_webp_support ) {
     $logo_url_webp = str_replace( '.png', '.webp', $logo_url );
     $logo_preload = $logo_url_webp;
+    if ( $about_img_webp ) {
+      $preload[] = [
+        'filepath' => $about_img_webp,
+        'upload' => true
+      ];
+    }
   } else {
-    $logo_preload = $logo_url; 
+    $logo_preload = $logo_url;
+    if ( $about_img ) {
+      $preload[] = [
+        'filepath' => $about_img,
+        'upload' => true
+      ];
+    }
   }
 
   $preload[] = [
@@ -78,6 +95,7 @@ endif ?>
     'filepath' => '/img/logo-with-text.svg',
     'media' => '(max-width:1023.98px)'
   ];
+
 
   if ( $preload ) {
     foreach ( $preload as $item ) {

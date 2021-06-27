@@ -1,6 +1,6 @@
 <section class="index-hero-sect sect container"<?php echo $section_id ?>>
   <div class="index-hero-sect__text">
-    <h2 class="index-hero-sect__title sect-h1"><?php echo $section['title'] ?></h2> <?php
+    <h1 class="index-hero-sect__title sect-h1"><?php echo $section['title'] ?></h1> <?php
     if ( $section['descr'] ) : ?>
       <p class="index-hero-sect__descr"><?php echo $section['descr'] ?></p> <?php
     endif;
@@ -25,4 +25,3 @@
   </div>
 </section> <?php
 unset( $section_id, $start, $slides_count ) ?>
-

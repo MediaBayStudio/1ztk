@@ -33,11 +33,12 @@
   }
 }
 
+.faq__question,
 .contact-link-tel-grey,
 .contact-link-email-grey,
 .contact-link-address-grey {
   &:hover {
-    color: $darkGreen;
+    color: $green;
   }
 }
 
@@ -52,9 +53,9 @@
 }
 
 .hdr {
-  .bvi-link-shortcode {
+  a.bvi-link-shortcode {
     &:hover {
-      border: 1px solid $black;
+      border-color: $black;
     }
   }
 }

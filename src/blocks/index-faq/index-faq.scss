@@ -31,6 +31,8 @@
     display: flex;
     align-items: center;
     font: bold 16px/140% SourceSerifPro, serif;
+    cursor: pointer;
+    transition: color .5s;
   }
 
   &__question-text {

@@ -7,6 +7,7 @@ $site_url = site_url();
 $address = get_option( 'contacts_address' );
 $address_link = get_option( 'contacts_address_link' );
 $instagram_link = get_option( 'contacts_instagram' );
+$youtube_link = get_option( 'contacts_youtube' );
 $vk_link = get_option( 'contacts_vk' );
 $tel = get_option( 'contacts_tel' );
 $tel_dry = preg_replace( '/\s/', '', $tel );

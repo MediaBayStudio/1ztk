@@ -1,0 +1,18 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.enjoy-sect {
+  margin-top: -$sectionVerticalPadding1280;
+  &__title {}
+
+  &__links {}
+}
+
+.enjoy-links {
+  &__li {}
+
+  &__link {}
+
+  &__img {}
+}

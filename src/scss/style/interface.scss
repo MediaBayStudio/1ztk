@@ -54,8 +54,8 @@ a.bvi-link-shortcode {
   align-items: center;
   justify-content: center;
   background: #f9f9f9;
-  border: 1px solid transparent;
-  transition: border-color .5s;
+  border: 1px solid #f9f9f9;
+  transition: border-color .5s !important;
   &::before {
     margin: 1px 7px 0 0;
     flex-shrink: 0;

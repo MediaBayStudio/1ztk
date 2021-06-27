@@ -1,7 +1,7 @@
 <?php
 
 /*
-	Template name: applications
+	Template name: applicants
 */
 
 get_header();

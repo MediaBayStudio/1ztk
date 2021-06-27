@@ -4,7 +4,7 @@
     register_nav_menus( [
       'header_menu' =>  'Меню в шапке сайта',
       // 'mobile_menu' =>  'Мобильное меню на сайте',
-      // 'footer_menu' =>  'Меню в подвале сайта'
+      'footer_menu' =>  'Меню в подвале сайта'
     ] );
   } );
 

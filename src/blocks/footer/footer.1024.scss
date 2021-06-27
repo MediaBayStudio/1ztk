@@ -4,51 +4,136 @@
 
 .ftr {
   padding-top: 60px;
-  padding-bottom: 60px;
+  padding-bottom: 30px;
+
   &__logo {
-    margin: 0 75px 0 0;
+    margin: 0 30px 0 0;
+    width: 130px;
+    height: 130px;
   }
 
+  &__logo-pic,
   &__logo-img {
-    width: 145px;
-    height: 145px;
   }
 
-  &__nav {}
+  &__nav {
+    margin: 0 0 100px 0;
+    width: 100%;
+    order: -1;
+  }
 
   &__nav-list {
+    max-width: 100%;
     display: flex;
   }
 
   &__nav-li {
     &.has-submenu {
-      &:first-child {
-        margin: 0 50px 0 0;
+      &:nth-child(n) {
+        margin: 0;
       }
-      > .nav-link {
-        cursor: default;
-        &::after {
-          display: none;
+      &:not(:last-child) {
+        margin: 0 70px 0 0;
+      }
+
+
+      >.sub-menu {
+        display: flex;
+        flex-flow: column;
+        align-items: flex-start;
+        padding-top: 15px;
+        font: 16px/140% OpenSans, sans-serif;
+        text-transform: none;
+      }
+
+      .ftr__nav-li {
+        &:not(:last-child) {
+          margin: 0 0 10px;
         }
       }
     }
   }
 
-  &__contacts {}
+  &__nav-li.has-submenu {
+  }
 
-  &__tel {}
+  &__bottom {
+    margin: 0;
+    flex: 1;
+    grid-template-rows: auto 15px auto;
+    grid-template-columns: auto auto;
+  }
 
-  &__email {}
+  &__copyright {
+    font-size: 16px;
+    grid-row: 3;
+  }
 
-  &__address {}
+  &__policy {
+    margin: 0 auto 0 0;
+    grid-row: 1;
+    grid-column: 1;
+  }
 
-  &__copyright {}
+  &__dev {
+    margin: 0 0 0 auto;
+    grid-row: 3;
+    font-size: 16px;
+  }
 
-  &__copy {}
-
-  &__policy {}
-
-  &__dev {}
-
-  &__dev-link {}
+  &__dev-link {
+    font-size: 17px;
+  }
 }
+
+
+// .ftr {
+//   padding-top: 60px;
+//   padding-bottom: 60px;
+//   &__logo {
+//     margin: 0 75px 0 0;
+//   }
+
+//   &__logo-img {
+//     width: 145px;
+//     height: 145px;
+//   }
+
+//   &__nav {}
+
+//   &__nav-list {
+//     display: flex;
+//   }
+
+//   &__nav-li {
+//     &.has-submenu {
+//       &:first-child {
+//         margin: 0 50px 0 0;
+//       }
+//       > .nav-link {
+//         cursor: default;
+//         &::after {
+//           display: none;
+//         }
+//       }
+//     }
+//   }
+
+//   &__contacts {}
+
+//   &__tel {}
+
+//   &__email {}
+
+//   &__address {}
+
+//   &__copyright {}
+
+//   &__copy {}
+
+//   &__policy {}
+
+//   &__dev {}
+
+//   &__dev-link {}
+// }

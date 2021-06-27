@@ -133,14 +133,16 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 })();
 
+//=include ../blocks/index-enjoy/index-enjoy.js
+
 thanksPopup = new Popup('.thanks-popup', {
   closeButtons: '.thanks-popup__close'
 });
 
 // thanksPopup.openPopup();
 
-if (media('(max-width:1023.98px)')) {
-  initDropdownLinks(qa('.ftr__nav-list .has-submenu'));
-}
+// if (media('(max-width:1023.98px)')) {
+//   initDropdownLinks(qa('.ftr__nav-list .has-submenu'));
+// }
 
 });

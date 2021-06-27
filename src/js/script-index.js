@@ -16,6 +16,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
 //=include ../blocks/index-contacts/index-contacts.js
 
+//=include ../blocks/index-enjoy/index-enjoy.js
+
 //=include ../blocks/thanks-popup/thanks-popup.js
 
 //=include ../blocks/footer/footer.js

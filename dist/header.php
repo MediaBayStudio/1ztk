@@ -11,6 +11,7 @@
     $zoom,
     $coords,
     $instagram_link,
+    $youtube_link,
     $vk_link,
     $template_directory;
 

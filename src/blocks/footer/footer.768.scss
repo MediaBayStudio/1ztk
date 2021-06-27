@@ -2,84 +2,205 @@
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
 
+
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
 .ftr {
   padding-top: 50px;
   padding-bottom: 50px;
-  display: flex;
   flex-flow: wrap;
-  &__logo {}
+  text-align: left;
 
-  &__logo-img {
-    margin: 0 40px 0 0;
+  &__logo {
+    margin: 0 125px 0 0;
     width: 125px;
     height: 125px;
   }
 
+  &__logo-pic,
+  &__logo-img {}
+
   &__nav {
-    margin: 0 55px 0 0;
+    margin: 0;
   }
 
-  &__nav-list {}
+  &__nav-list {
+    display: grid;
+    grid-template-columns: auto 75px auto;
+    grid-template-rows: auto 20px auto;
+  }
 
   &__nav-li {
     &.has-submenu {
-      &:first-child {
-        margin-bottom: 30px;
+      margin: 0;
+      justify-self: start;
+      font-size: 14px;
+
+      &:nth-child(odd) {
+        // margin: 0 75px 0;
       }
+
+      &:nth-child(1) {
+        grid-row: 1;
+        grid-column: 1;
+      }
+
+      &:nth-child(2) {
+        grid-row: 1;
+        grid-column: 3;
+      }
+
+      &:nth-child(3) {
+        grid-row: 3;
+        grid-column: 1;
+      }
+
+      &:nth-child(4) {
+        grid-row: 3;
+        grid-column: 3;
+      }
+
+      >.nav-link {
+        &::after {
+          // margin: 0 0 0 10px;
+          // width: 11px;
+          // height: 7px;
+          // filter: brightness(5);
+        }
+      }
+
       >.sub-menu {
-        font-size: 15px;
+        display: none;
+        // padding-top: 15px;
+        // font: 14px/140% OpenSans, sans-serif;
+        // text-transform: none;
       }
+
+      // .ftr__nav-li {
+      //   &:not(:last-child) {
+      //     margin: 0 0 10px;
+      //   }
+      // }
     }
   }
 
-  &__nav-li.has-submenu,
-  &__contacts-title {
-    font-size: 14px;
-  }
+  &__nav-li.has-submenu {}
 
-  &__contacts-title {
-    margin: 0 0 15px;
-  }
-
-  &__contacts {
-    max-width: 170px;
-    font-size: 15px;
-  }
-
-  &__tel {}
-
-  &__email {}
-
-  &__address {
-    align-items: flex-start;
-  }
-
-  &__tel,
-  &__email,
-  &__address {
-    &:not(:last-child) {
-      margin: 0 0 15px;
-    }
+  &__bottom {
+    margin: 50px 0 0 0;
+    width: 100%;
+    display: grid;
+    grid-template-rows: auto 5px auto;
+    grid-template-columns: auto 120px auto;
   }
 
   &__copyright {
-    margin: 50px 0 0 0;
-  }
-
-  &__copy {
-    font-size: 16px;
+    margin: 0 auto 0 0;
+    grid-row: 1/span 2;
+    grid-column: 1;
+    font-size: 15px;
   }
 
   &__policy {
-    font-size: 16px;
+    margin: 0 0 0 auto;
+    grid-row: 3;
+    grid-column: 3;
+    font-size: 15px;
   }
 
   &__dev {
-    margin: auto 0 0 auto;
-    font-size: 16px;
+    margin: 0 0 0 auto;
+    grid-row: 1;
+    grid-column: 3;
+    font-size: 15px;
   }
 
   &__dev-link {
     font-size: 16px;
   }
 }
+
+
+// .ftr {
+//   padding-top: 50px;
+//   padding-bottom: 50px;
+//   display: flex;
+//   flex-flow: wrap;
+//   &__logo {}
+
+//   &__logo-img {
+//     margin: 0 40px 0 0;
+//     width: 125px;
+//     height: 125px;
+//   }
+
+//   &__nav {
+//     margin: 0 55px 0 0;
+//   }
+
+//   &__nav-list {}
+
+//   &__nav-li {
+//     &.has-submenu {
+//       &:first-child {
+//         margin-bottom: 30px;
+//       }
+//       >.sub-menu {
+//         font-size: 15px;
+//       }
+//     }
+//   }
+
+//   &__nav-li.has-submenu,
+//   &__contacts-title {
+//     font-size: 14px;
+//   }
+
+//   &__contacts-title {
+//     margin: 0 0 15px;
+//   }
+
+//   &__contacts {
+//     max-width: 170px;
+//     font-size: 15px;
+//   }
+
+//   &__tel {}
+
+//   &__email {}
+
+//   &__address {
+//     align-items: flex-start;
+//   }
+
+//   &__tel,
+//   &__email,
+//   &__address {
+//     &:not(:last-child) {
+//       margin: 0 0 15px;
+//     }
+//   }
+
+//   &__copyright {
+//     margin: 50px 0 0 0;
+//   }
+
+//   &__copy {
+//     font-size: 16px;
+//   }
+
+//   &__policy {
+//     font-size: 16px;
+//   }
+
+//   &__dev {
+//     margin: auto 0 0 auto;
+//     font-size: 16px;
+//   }
+
+//   &__dev-link {
+//     font-size: 16px;
+//   }
+// }

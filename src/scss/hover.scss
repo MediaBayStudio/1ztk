@@ -3,7 +3,7 @@
 @import 'assets/mixins';
 @import 'assets/variables';
 
-.sub-menu > .ftr__nav-li > .nav-link,
+.ftr__nav-li.has-submenu > .nav-link,
 .ftr__dev-link,
 .ftr__tel,
 .ftr__email,
@@ -57,5 +57,13 @@
     &:hover {
       border-color: $black;
     }
+  }
+}
+
+
+.ftr__nav-li.has-submenu .sub-menu .nav-link,
+.ftr__policy {
+  &:hover {
+    border-bottom-color: currentColor;
   }
 }

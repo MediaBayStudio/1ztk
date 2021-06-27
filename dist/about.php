@@ -1,12 +1,10 @@
 <?php
 
 /*
-	Template name: applications
+	Template name: about
 */
 
 get_header();
-
-$sections = get_field( 'sections' );
 
 foreach ( $GLOBALS['sections'] as $section ) {
 	if ( $section['is_visible'] ) {

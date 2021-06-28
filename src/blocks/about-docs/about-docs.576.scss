@@ -1,0 +1,21 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.about-docs-sect {
+  &__title {}
+
+  &__list {}
+}
+
+.docs {
+  &__item {
+    &:not(:last-child) {}
+  }
+
+  &__item-link {}
+
+  &__item-title {}
+
+  &__item-icon {}
+}

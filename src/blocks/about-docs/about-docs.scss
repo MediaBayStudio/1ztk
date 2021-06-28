@@ -1,0 +1,42 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.about-docs-sect {
+  &__title {}
+
+  &__list {
+    margin: 0 0 -20px;
+    font: bold 14px/140% OpenSans, sans-serif;
+  }
+}
+
+.docs {
+  &__item {
+    margin: 0 0 20px;
+    display: flex;
+    background: $lightGreen;
+    border: 1px solid transparent;
+    transition: border-color .5s;
+  }
+
+  &__item-link {
+    padding: 30px 20px;
+    display: flex;
+    flex-flow: column-reverse;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__item-title {
+    max-width: 220px;
+  }
+
+  &__item-icon {
+    flex-shrink: 0;
+    margin: 0 0 15px;
+    width: 30px;
+    height: 30px;
+  }
+}

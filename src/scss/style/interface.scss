@@ -241,6 +241,9 @@ span.wpcf7-not-valid-tip,
     background: center/contain no-repeat;
   }
 
+  &-tel-green,
+  &-address-green,
+  &-email-green,
   &-tel-grey,
   &-address-grey,
   &-email-grey {
@@ -279,6 +282,34 @@ span.wpcf7-not-valid-tip,
     &:not(.lazy) {
       &::before {
         background-image: url('./img/icon-geo-grey.svg');
+      }
+    }
+  }
+
+  &-tel-green {
+    &.lazyloaded,
+    &:not(.lazy) {
+      &::before {
+        background-image: url('./img/icon-tel-green.svg');
+      }
+    }
+  }
+
+
+  &-email-green {
+    &.lazyloaded,
+    &:not(.lazy) {
+      &::before {
+        background-image: url('./img/icon-email-green.svg');
+      }
+    }
+  }
+
+  &-address-green {
+    &.lazyloaded,
+    &:not(.lazy) {
+      &::before {
+        background-image: url('./img/icon-geo-green.svg');
       }
     }
   }

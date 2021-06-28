@@ -67,3 +67,20 @@
     border-bottom-color: currentColor;
   }
 }
+
+.hdr__tel,
+.hdr__email,
+.hdr__address {
+  &:hover {
+    &::before {
+      filter: brightness(1);
+    }
+  }
+  color: $green;
+}
+
+.docs__item {
+  &:hover {
+    border-color: $green;
+  }
+}

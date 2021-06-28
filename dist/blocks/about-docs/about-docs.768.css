@@ -1,0 +1,1 @@
+@charset "UTF-8";.about-docs-sect__list{display:flex;flex-wrap:wrap}.docs__item{margin:0 20px 20px 0;width:calc((100% - 20px)/ 2)}.docs__item:nth-child(2n){margin-right:0}.docs__item-link{padding:40px 30px;flex-flow:row;align-items:center}.docs__item-icon{margin:0 0 0 auto;width:45px;height:45px}

@@ -50,7 +50,8 @@ endif ?>
   <link rel="preload" as="style" href="<?php echo $template_directory ?>/css/hover.css" media="(hover) and (min-width:1024px)" />
   <!-- fonts preload --> <?php
 	$fonts = [
-		'OpenSans-Regular.woff',
+		'OpenSans-Bold.woff',
+    'OpenSans-Regular.woff',
 		'SourceSerifPro-Bold.woff',
     'SourceSerifPro-Regular-numbers.woff',
 		'SegoeUI-SemiBold.woff'
@@ -132,9 +133,9 @@ endif ?>
       </a>
       <div class="hdr__right">
         <div class="hdr__contacts">
-          <a href="tel:<?php echo $tel_dry ?>" class="hdr__tel contact-link contact-link-tel-grey"><?php echo $tel ?></a>
-          <a href="mailto:<?php echo $email ?>" class="hdr__email contact-link contact-link-email-grey"><?php echo $email ?></a>
-          <a href="<?php echo $address_link ?>" target="_blank" class="hdr__address contact-link contact-link-address-grey"><?php echo $address ?></a>
+          <a href="tel:<?php echo $tel_dry ?>" class="hdr__tel contact-link contact-link-tel-green"><?php echo $tel ?></a>
+          <a href="mailto:<?php echo $email ?>" class="hdr__email contact-link contact-link-email-green"><?php echo $email ?></a>
+          <a href="<?php echo $address_link ?>" target="_blank" class="hdr__address contact-link contact-link-address-green"><?php echo $address ?></a>
           <a href="<?php echo $vk_link ?>" traget="_blank" class="hdr__vk vk vk-grey"></a>
           <a href="<?php echo $instagram_link ?>" traget="_blank" class="hdr__instagram instagram instagram-grey"></a>
         </div>

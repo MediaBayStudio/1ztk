@@ -1,0 +1,36 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.about-docs-sect {
+  &__title {}
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.docs {
+  &__item {
+    margin: 0 20px 20px 0;
+    width: calc((100% - 20px) / 2);
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+  }
+
+  &__item-link {
+    padding: 40px 30px;
+    flex-flow: row;
+    align-items: center;
+  }
+
+  &__item-title {}
+
+  &__item-icon {
+    margin: 0 0 0 auto;
+    width: 45px;
+    height: 45px;
+  }
+}

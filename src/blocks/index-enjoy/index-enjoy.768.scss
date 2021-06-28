@@ -2,8 +2,11 @@
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
 
-.enjoy-sect {
+.index-contacts + .enjoy-sect {
   margin-top: -$sectionVerticalPadding768;
+}
+
+.enjoy-sect {
   &__title {}
 
   &__links {}

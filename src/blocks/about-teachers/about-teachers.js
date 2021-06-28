@@ -1,22 +1,3 @@
-document.addEventListener('DOMContentLoaded', function() {
-
-//=include ../blocks/header/header.js
-
-(function() {
-  let menuInitDropdownLinks = function() {
-    initDropdownLinks(qa('.menu__nav-list .has-submenu', menu.menu));
-    menu.menu.removeEventListener('menubeforeopen', menuInitDropdownLinks);
-  };
-
-  menu.menu.addEventListener('menubeforeopen', menuInitDropdownLinks);
-})()
-
-//=include ../blocks/about-hero/about-hero.js
-
-//=include ../blocks/index-principles/index-principles.js
-
-//=include ../blocks/about-docs/about-docs.js
-
 ;
 (function() {
   let teachersSlider = q('.about-teachers-sect__teachers'),
@@ -87,11 +68,3 @@ document.addEventListener('DOMContentLoaded', function() {
   buildTeachersSlider();
   windowFuncs.resize.push(buildTeachersSlider);
 })();
-
-//=include ../blocks/index-enjoy/index-enjoy.js
-
-// if (media('(max-width:1023.98px)')) {
-//   initDropdownLinks(qa('.ftr__nav-list .has-submenu'));
-// }
-
-});

@@ -1,0 +1,31 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.about-teachers-sect {
+  &__title {}
+
+  &__descr {}
+
+  &__teachers {}
+}
+
+.teachers {
+  &__nav {}
+
+  &__counter {}
+
+  &__teacher {}
+}
+
+.teacher {
+  &__pic {}
+
+  &__img {}
+
+  &__title {}
+
+  &__descr {}
+
+  &__email {}
+}

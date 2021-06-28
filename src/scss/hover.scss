@@ -72,15 +72,21 @@
 .hdr__email,
 .hdr__address {
   &:hover {
+    color: $green;
     &::before {
       filter: brightness(1);
     }
   }
-  color: $green;
 }
 
 .docs__item {
   &:hover {
     border-color: $green;
+  }
+}
+
+.teacher__email {
+  &:hover {
+    border-bottom-color: currentColor;
   }
 }

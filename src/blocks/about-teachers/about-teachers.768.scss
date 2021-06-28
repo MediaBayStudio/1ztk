@@ -1,0 +1,65 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.about-teachers-sect {
+  &__title {}
+
+  &__descr {
+    max-width: 560px;
+  }
+
+  &__teachers {
+    margin-top: 50px;
+    max-width: 100%;
+    .slick-list {
+    }
+    &:not(.slick-slider) {
+      display: flex;
+      .teachers__nav {
+        display: none;
+      }
+      .teachers__teacher {
+        width: calc((100% - 40px) / 3);
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
+
+.teachers {
+  &__nav {}
+
+  &__counter {
+    margin: 0 30px;
+    font-size: 18px;
+  }
+
+  &__counter-current {
+    font-size: 24px;
+  }
+
+  &__teacher {
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+}
+
+.teacher {
+  &__pic {}
+
+  &__img {}
+
+  &__title {
+    font-size: 18px;
+  }
+
+  &__descr {
+    margin-top: 10px;
+  }
+
+  &__email {}
+}

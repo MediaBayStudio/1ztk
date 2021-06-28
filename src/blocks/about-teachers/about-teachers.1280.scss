@@ -1,0 +1,43 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.about-teachers-sect {
+  &__title {}
+
+  &__descr {}
+
+  &__teachers {
+    &:not(.slick-slider) {
+      .teachers__teacher {
+        width: calc((100% - 80px) / 3);
+      }
+    }
+  }
+}
+
+.teachers {
+  &__nav {}
+
+  &__counter {}
+
+  &__teacher {
+    &:not(:last-child) {
+      margin-right: 40px;
+    }
+  }
+}
+
+.teacher {
+  &__pic {}
+
+  &__img {}
+
+  &__title {
+    font-size: 20px;
+  }
+
+  &__descr {}
+
+  &__email {}
+}

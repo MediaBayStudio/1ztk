@@ -1,0 +1,64 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.about-teachers-sect {
+  &__title {}
+
+  &__descr {}
+
+  &__teachers {
+    max-width: 360px;
+    .slick-list {
+      overflow: hidden;
+    }
+  }
+}
+
+.teachers {
+  margin: 30px auto 0;
+  &__nav {
+    margin: 0 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  &__counter {
+    margin: 0 10px;
+    font: 14px/140% SourceSerifPro, serif;
+  }
+
+  &__counter-current {
+    font: 18px/140% SourceSerifPro, serif;
+    color: $green;
+  }
+
+  &__teacher {
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+  }
+}
+
+.teacher {
+  &__pic {}
+
+  &__img {}
+
+  &__title {
+    margin-top: 20px;
+    font: bold 16px SourceSerifPro, serif;
+  }
+
+  &__descr {
+    margin-top: 20px;
+  }
+
+  &__email {
+    margin-top: 10px;
+    font: bold 14px/140% OpenSans, sans-serif;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom-color .5s;
+  }
+}

@@ -1,3 +1,27 @@
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+.about-gallery-sect {
+  &__title {}
+
+  &__list {}
+}
+
+.gallery {
+  &__nav {}
+
+  &__counter {}
+
+  &__counter-current {}
+
+  &__item {
+    &:not(:last-child) {
+      margin: 0 30px 0 0;
+    }
+  }
+
+  &__item-pic {}
+
+  &__item-img {}
+}

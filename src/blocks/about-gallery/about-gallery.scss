@@ -1,3 +1,41 @@
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+.about-gallery-sect {
+  &__title {}
+
+  &__list {
+    .slick-list {
+      overflow: hidden;
+    }
+  }
+}
+
+.gallery {
+  &__nav {
+    margin: 0 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  &__counter {
+    margin: 0 10px;
+    font: 14px/140% SourceSerifPro, serif;
+  }
+
+  &__counter-current {
+    color: $green;
+    font: 18px/140% SourceSerifPro, serif;
+  }
+
+  &__item {
+    cursor: zoom-in;
+    &:not(:last-child) {}
+  }
+
+  &__item-pic {}
+
+  &__item-img {}
+}

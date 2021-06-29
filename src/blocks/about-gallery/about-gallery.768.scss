@@ -1,3 +1,34 @@
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+.about-gallery-sect {
+  &__title {}
+
+  &__list {}
+}
+
+.gallery {
+  &__nav {
+    margin: 0 0 20px;
+  }
+
+  &__counter {
+    margin: 0 30px;
+    font-size: 18px;
+  }
+
+  &__counter-current {
+    font-size: 24px;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin: 0 20px 0 0;
+    }
+  }
+
+  &__item-pic {}
+
+  &__item-img {}
+}

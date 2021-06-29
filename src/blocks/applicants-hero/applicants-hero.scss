@@ -18,17 +18,17 @@
   &__pic {
     padding: 0 0 25px;
     display: block;
-    position: relative;
-    &::before {
-      content: '';
-      display: inline-block;
-      width: 50%;
-      height: 80%;
-      position: absolute;
-      bottom: 0;
-      right: -20px;
-      background: $lightGreen;
-    }
+    // position: relative;
+    // &::before {
+    //   content: '';
+    //   display: inline-block;
+    //   width: 50%;
+    //   height: 80%;
+    //   position: absolute;
+    //   bottom: 0;
+    //   right: -20px;
+    //   background: $lightGreen;
+    // }
   }
   &__img {
     position: relative;

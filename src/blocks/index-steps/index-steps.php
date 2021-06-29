@@ -1,4 +1,4 @@
-<section class="steps-sect sect container lazy" data-src="#"<?php echo $section_id ?>>
+<section class="steps-sect sect-lightgreen-bg container lazy" data-src="#"<?php echo $section_id ?>>
   <h2 class="steps-sect__title sect-title sect-title-underline"><?php echo $section['title'] ?></h2>
   <ul class="steps-sect__list"> <?php
     foreach ( $section['list'] as $li ) : ?>

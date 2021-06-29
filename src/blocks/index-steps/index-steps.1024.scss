@@ -4,28 +4,48 @@
 
 
 .steps-sect {
+  &.lazyloaded {
+    >.steps-sect__list::before {
+      background-image: url('../img/logo-three.svg');
+    }
+  }
+
   &__title {}
 
   &__list {
     background-position: top right;
     background-size: 165px 365px;
+    position: relative;
+
     &::before {
-      width: 280px;
-      height: 280px;
-      right: 50px;
+      content: '';
+      width: 620px;
+      height: 620px;
+      position: absolute;
+      right: -675px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: center/contain no-repeat;
+      opacity: 0.4;
     }
   }
 
   &__li {
-    max-width: 550px;
-    &:not(:last-child) {}
+
+    // max-width: 550px;
+    &:not(:last-child) {
+      margin: 0 0 40px;
+    }
 
     &::before {}
   }
 
   &__li-descr {}
 
-  &__note {}
+  &__note {
+    padding-left: 50px;
+    max-width: 590px;
+  }
 
   &__note-title {}
 

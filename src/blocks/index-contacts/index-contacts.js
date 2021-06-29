@@ -1,4 +1,4 @@
-(function() {
+;(function() {
   mapBlock = id('index-contacts-map');
 
   if (mapBlock) {

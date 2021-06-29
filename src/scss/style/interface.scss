@@ -433,6 +433,10 @@ span.wpcf7-not-valid-tip,
 }
 
 // Если за секцией с фоном идет футер, то скорректируем отступ
+.sect-lightgreen-bg+.sect-green-bg,
+.sect-green-bg+.sect-lightgreen-bg,
+.sect-lightgreen-bg+script+.sect-green-bg,
+.sect-green-bg+script+.sect-lightgreen-bg,
 .sect-green-bg+.ftr,
 .sect-lightgreen-bg+.ftr,
 .sect-green-bg~.popup+.ftr,
@@ -473,6 +477,10 @@ span.wpcf7-not-valid-tip,
     font-size: 15px;
   }
 
+  .sect-lightgreen-bg+.sect-green-bg,
+  .sect-green-bg+.sect-lightgreen-bg,
+  .sect-lightgreen-bg+script+.sect-green-bg,
+  .sect-green-bg+script+.sect-lightgreen-bg,
   .sect-green-bg+.ftr,
   .sect-lightgreen-bg+.ftr,
   .sect-green-bg~.popup+.ftr,
@@ -507,6 +515,10 @@ span.wpcf7-not-valid-tip,
     font-size: 16px;
   }
 
+  .sect-lightgreen-bg+.sect-green-bg,
+  .sect-green-bg+.sect-lightgreen-bg,
+  .sect-lightgreen-bg+script+.sect-green-bg,
+  .sect-green-bg+script+.sect-lightgreen-bg,
   .sect-green-bg+.ftr,
   .sect-lightgreen-bg+.ftr,
   .sect-green-bg~.popup+.ftr,
@@ -536,6 +548,10 @@ span.wpcf7-not-valid-tip,
     padding-bottom: 60px;
   }
 
+  .sect-lightgreen-bg+.sect-green-bg,
+  .sect-green-bg+.sect-lightgreen-bg,
+  .sect-lightgreen-bg+script+.sect-green-bg,
+  .sect-green-bg+script+.sect-lightgreen-bg,
   .sect-green-bg+.ftr,
   .sect-lightgreen-bg+.ftr,
   .sect-green-bg~.popup+.ftr,

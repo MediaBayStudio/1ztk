@@ -21,11 +21,13 @@
     } else if ( is_page_template( 'applicants.php' ) ) {
       $style_name = 'style-applicants';
       $script_name = 'script-applicants';
+      $preload_img = $GLOBALS['sections'][0]['img']['url'];
+      $preload_img_webp = str_replace( '.jpg', '.webp', $preload_img );
     } else if ( is_page_template( 'about.php' ) ) {
       $style_name = 'style-about';
       $script_name = 'script-about';
-      $about_img = $GLOBALS['sections'][0]['img']['url'];
-      $about_img_webp = str_replace( '.jpg', '.webp', $about_img );
+      $preload_img = $GLOBALS['sections'][0]['img']['url'];
+      $preload_img_webp = str_replace( '.jpg', '.webp', $preload_img );
     }
 
     $GLOBALS['page_script_name'] = $script_name;
@@ -70,17 +72,17 @@ endif ?>
   if ( $is_webp_support ) {
     $logo_url_webp = str_replace( '.png', '.webp', $logo_url );
     $logo_preload = $logo_url_webp;
-    if ( $about_img_webp ) {
+    if ( $preload_img_webp ) {
       $preload[] = [
-        'filepath' => $about_img_webp,
+        'filepath' => $preload_img_webp,
         'upload' => true
       ];
     }
   } else {
     $logo_preload = $logo_url;
-    if ( $about_img ) {
+    if ( $preload_img ) {
       $preload[] = [
-        'filepath' => $about_img,
+        'filepath' => $preload_img,
         'upload' => true
       ];
     }

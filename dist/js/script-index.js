@@ -115,7 +115,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 })();
 
-(function() {
+;(function() {
   mapBlock = id('index-contacts-map');
 
   if (mapBlock) {

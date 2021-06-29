@@ -1,0 +1,31 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.applicants-hero-sect {
+  padding-top: 60px;
+  padding-bottom: 15px;
+  margin-bottom: 50px;
+  font-size: 16px;
+
+  &__title {
+    margin-bottom: 30px;
+  }
+
+  &__descr {
+    margin: 0 90px 0 0;
+  }
+
+  &__pic {
+    margin-top: -30px;
+    width: 465px;
+    height: 350px;
+    &::before {
+      // decor bg
+      width: 330px;
+      right: calc(50vw - 515px);
+    }
+  }
+
+  &__img {}
+}

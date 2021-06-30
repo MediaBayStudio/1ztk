@@ -25,7 +25,7 @@ $checkbox_margin_right: 10px;
 $checkbox_text_width: calc(100% - #{$checkbox_size + $checkbox_margin_right});
 // $checkbox_border_radius: 0;
 
-.index-contacts-sect.lazyloaded {
+.lazyloaded {
   .check-tick > .check__pseudo-inp {
     background-image: url('img/check.svg');
   }

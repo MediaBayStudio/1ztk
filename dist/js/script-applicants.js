@@ -15,6 +15,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
 //=include ../blocks/index-steps/index-steps.js
 
+//=include ../blocks/applicants-start/applicants-start.js
+
 ;
 (function() {
   let faqList = q('.faq'),

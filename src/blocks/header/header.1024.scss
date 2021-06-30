@@ -50,6 +50,7 @@
   &__email,
   &__address {
     margin: 0 auto 0 0;
+
     &::before {
       filter: brightness(0.5);
       transition: filter .5s;
@@ -168,6 +169,14 @@
   //     }
   //   }
   // }
+}
+
+.hdr__nav-list {
+  .nav-link[aria-current="page"] {
+    &::after {
+      width: 50%;
+    }
+  }
 }
 
 // #bvi-panel-hide {

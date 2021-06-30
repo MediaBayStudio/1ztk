@@ -1,3 +1,58 @@
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+.applicants-start-sect {
+  &__pic {
+    margin: auto 0 0 195px;
+    padding: 0 0 45px 45px;
+    width: 505px;
+    height: 325px;
+    &::before {
+      // decor bg
+      width: 260px;
+      height: 300px;
+    }
+  }
+
+  &__img {}
+
+  &__text {}
+
+  &__title {}
+
+  &__form {
+    .form-title {}
+
+    .field {
+      &__inp {}
+    }
+
+    .field-name,
+    .field-tel {}
+
+    .field-name,
+    .field-tel,
+    .field-email {}
+
+    .field-name {}
+
+    .field-tel {}
+
+    .field-email {}
+
+    .form-bottom {}
+
+    .check {
+      &__inp {}
+
+      &__pseudo-inp {}
+
+      &__text {}
+
+      &__link {}
+    }
+
+    .btn {}
+  }
+}

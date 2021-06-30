@@ -3,6 +3,7 @@
 @import '../../scss/assets/variables';
 
 .contacts-hero-sect {
+  padding-bottom: $sectionVerticalPadding1024;
   &__title {
     max-width: 600px;
   }

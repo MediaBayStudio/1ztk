@@ -7,7 +7,7 @@
       <a href="tel:<?php echo $tel_dry ?>" class="contacts-hero-sect__tel contact-link contact-link-tel-green"><?php echo $tel ?></a>
       <a href="mailto:<?php echo $email ?>" class="contacts-hero-sect__email contact-link contact-link-email-green"><?php echo $email ?></a>
     </div>
-    <div class="contacts-hero-sect__map" id="contacts-hero-map"></div>
+    <div class="contacts-hero-sect__map" id="contacts-hero-map" data-zoom="<?php echo $zoom ?>" data-coords="<?php echo $coords ?>"></div>
     <div class="contacts-hero-sect__route-block">
       <span class="contacts-hero-sect__route-title">Как добраться</span>
       <a href="<?php echo $address_link ?>" class="contacts-hero-sect__address contact-link contact-link-address-green"><?php echo $address ?></a>
@@ -30,7 +30,7 @@
   function ymapsOnload() {
     let mapBlockId = 'contacts-hero-map',
       mapBlock = document.querySelector('#' + mapBlockId),
-      mapAddress = document.querySelector('.contacts-hero__address', mapBlock.parentElement).textContent,
+      mapAddress = document.querySelector('.contacts-hero-sect__address', mapBlock.parentElement).textContent,
       mapZoom = mapBlock.getAttribute('data-zoom'),
       dataCoords = mapBlock.getAttribute('data-coords').split(/, |,/),
       mapCoords = {

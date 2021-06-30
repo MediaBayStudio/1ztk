@@ -47,6 +47,22 @@
       &__circle {}
     }
   }
+
+  &__pic {
+    padding: 0 40px 65px 0;
+    height: 400px;
+    width: 600px;
+    &::before {
+      right: 0;
+      width: 440px;
+      height: 300px;
+    }
+  }
+
+  &__img {
+    height: 100%;
+    width: 100%;
+  }
 }
 
 .index-contacts {

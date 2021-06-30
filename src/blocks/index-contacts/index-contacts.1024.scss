@@ -71,6 +71,33 @@
       &__circle {}
     }
   }
+
+  &.without-map {
+    .index-contacts__bottom {
+      display: block;
+    }
+  }
+
+  &__pic {
+    padding: 0 0 65px 0;
+    display: block;
+    width: 410px;
+    height: 300px;
+    position: relative;
+    &::before {
+      content: '';
+      width: 400px;
+      height: 200px;
+      position: absolute;
+      bottom: 0;
+      right: -35px;
+      background: $greyGreen;
+    }
+  }
+
+  &__img {
+    position: relative;
+  }
 }
 
 .index-contacts {

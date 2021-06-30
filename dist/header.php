@@ -28,6 +28,9 @@
       $script_name = 'script-about';
       $preload_img = $GLOBALS['sections'][0]['img']['url'];
       $preload_img_webp = str_replace( '.jpg', '.webp', $preload_img );
+    } else if ( is_page_template( 'contacts.php' ) ) {
+      $style_name = 'style-contacts';
+      $script_name = 'script-contacts';
     }
 
     $GLOBALS['page_script_name'] = $script_name;

@@ -1,0 +1,115 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.contacts-hero-sect {
+  padding-top: 30px;
+  padding-bottom: $sectionVerticalPadding768;
+  font-size: 15px;
+
+  &__title {
+    margin: 0 0 30px;
+    grid-row: 1;
+    grid-column: 1;
+  }
+
+  &__descr {
+    grid-row: 2;
+    grid-column: 1;
+    padding: 0;
+    max-width: 460px;
+    font-size: 15px;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  &__bottom {
+    padding: 30px 0 0 0;
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: auto auto;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 310px;
+      height: 100%;
+      background: $light;
+    }
+  }
+
+  &__contacts {
+    grid-row: 1;
+    grid-column: 1;
+  }
+
+  &__contacts-title,
+  &__route-title,
+  &__places-block-title {
+    font-size: 20px;
+  }
+
+  &__tel {}
+
+  &__email {}
+
+  &__map {
+    margin: 0 30px 30px auto;
+    grid-row: 1;
+    grid-column: 1/span 2;
+    width: 380px;
+    height: 220px;
+    position: relative;
+  }
+
+  &__route-block {
+    margin: 0 0 0 auto;
+    padding: 0 30px 30px 0;
+    grid-row: 2;
+    grid-column: 2;
+    max-width: 280px;
+    background: 0 0;
+    position: relative;
+  }
+
+  &__route-title {
+    margin: 0 0 20px;
+    // font-size: 20px;
+  }
+
+  &__address {}
+
+  &__route {}
+
+  &__places-block {
+    margin: 0;
+    padding: 0;
+    grid-row: 2;
+    grid-column: 1;
+    display: flex;
+    flex-flow: wrap;
+    align-items: flex-start;
+    align-content: flex-start;
+  }
+
+  &__places-block-title {
+    // font-size: 20px;
+  }
+
+  &__place {
+    width: calc((100% - 40px) / 2);
+
+    &:nth-of-type(odd) {
+      margin-right: 30px;
+    }
+  }
+
+  &__place-ittle {}
+
+  &__place-descr {}
+}

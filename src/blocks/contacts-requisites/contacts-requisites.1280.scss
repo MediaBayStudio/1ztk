@@ -1,3 +1,17 @@
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+.contacts-requisites-sect {
+  &::before {}
+
+  &.lazyloaded {
+    &::before {}
+  }
+
+  &__title {}
+
+  &__descr {
+    max-width: 500px;
+  }
+}

@@ -1,3 +1,32 @@
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+.contacts-requisites-sect {
+  position: relative;
+  font-size: 15px;
+  &::before {
+    content: '';
+    // width: 590px;
+    // height: 590px;
+    width: 76%;
+    height: 86%;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(50%, -50%);
+    background: center/contain no-repeat;
+    opacity: 0.1;
+    pointer-events: none;
+  }
+  &.lazyloaded {
+    &::before {
+      background-image: url('../img/logo-three.svg');
+    }
+  }
+  &__title {
+  }
+  &__descr {
+    max-width: 465px;
+  }
+}

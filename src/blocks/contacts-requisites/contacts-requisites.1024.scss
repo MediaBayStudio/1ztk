@@ -1,3 +1,19 @@
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+.contacts-requisites-sect {
+  font-size: 16px;
+  &::before {
+    right: -50px;
+    transform: translate(0, -50%);
+  }
+
+  &.lazyloaded {
+    &::before {}
+  }
+
+  &__title {}
+
+  &__descr {}
+}

@@ -31,6 +31,9 @@
     } else if ( is_page_template( 'contacts.php' ) ) {
       $style_name = 'style-contacts';
       $script_name = 'script-contacts';
+    } else if ( is_page_template( 'studying-programs.php' ) ) {
+      $style_name = 'style-studying-programs';
+      $script_name = 'script-studying-programs';
     }
 
     $GLOBALS['page_script_name'] = $script_name;

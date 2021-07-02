@@ -6,6 +6,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
 //=include ../blocks/contacts-hero/contacts-hero.js
 
+//=include ../blocks/contacts-requisites/contacts-requisites.js
+
 //=include ../blocks/index-contacts/index-contacts.js
 
 //=include ../blocks/index-enjoy/index-enjoy.js

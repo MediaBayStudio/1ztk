@@ -3,7 +3,7 @@ add_action( 'post_updated', function( $post_ID, $post_after, $post_before ) {
   if ( !function_exists( 'get_field' ) ) {
     return;
   }
-  global $template_directory;
+  global $template_directory, $template_dir;
 
   $screen_widths = ['0', '576', '768', '1024', '1280'];
 
@@ -19,7 +19,7 @@ add_action( 'post_updated', function( $post_ID, $post_after, $post_before ) {
     array_push( $sections, ['acf_fc_layout' => 'footer'] );
 
     // Получаем ярлык шаблона и убираем .php в нем (будет index, about и т.д.)
-    $template_slug = str_replace( '.php', '', get_page_template_slug( $post_ID ) );
+    file_put_contents( php_path_join( $template_dir, 'file.php' ), $template_slug );
 
     foreach ( $screen_widths as $width ) {
       if ( !$template_slug ) {
@@ -46,7 +46,7 @@ add_action( 'post_updated', function( $post_ID, $post_after, $post_before ) {
           $filename = $section_name . '.' . $width . '.css';
         }
         
-        $filepath = $template_directory . '/blocks/' . $section_name . '/' . $filename;
+        $filepath = php_path_join( $template_dir, 'blocks', $section_name, $filename );
         
         if ( file_exists( $filepath ) ) {
           $cnt .= file_get_contents( $filepath );
@@ -56,7 +56,7 @@ add_action( 'post_updated', function( $post_ID, $post_after, $post_before ) {
       // Делаем массив с информацией секций уникальным
       // $page_info_cnt[ $template_slug ] = array_unique( $page_info_cnt[ $template_slug ] );
 
-      $dest = $template_directory . '/css/style-' . $slug . '.css';
+      $dest = php_path_join($template_dir, 'css', 'style-' . $slug . '.css' );
 
       if ( file_exists( $dest ) ) {
         unlink( $dest );

@@ -2,15 +2,27 @@
 @import 'assets/mixins';
 @import 'assets/variables';
 
-.create-images-block {
-  display: flex;
-  align-items: center;
-  > .success {
-    text-align: center;
-    color: #008a20;
-    margin: 0 10px;
+// .create-images-block {
+//   display: flex;
+//   align-items: center;
+//   > .success {
+//     text-align: center;
+//     color: #008a20;
+//     margin: 0 10px;
+//   }
+//   > .spinner.hidden {
+//     display: none;
+//   }
+// }
+
+
+body.post-type-studying_program {
+  #edit-slug-box {
+    opacity: 0;
+    pointer-events: none;
   }
-  > .spinner.hidden {
-    display: none;
+  .view {
+    opacity: 0;
+    pointer-events: none;
   }
 }

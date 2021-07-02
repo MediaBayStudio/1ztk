@@ -3,7 +3,7 @@ add_action( 'post_updated', function( $post_ID, $post_after, $post_before ) {
   if ( !function_exists( 'get_field' ) ) {
     return;
   }
-  global $template_directory;
+  global $template_directory, $template_dir;
 
   $sections = get_field( 'sections', $post_ID );
 
@@ -28,7 +28,7 @@ add_action( 'post_updated', function( $post_ID, $post_after, $post_before ) {
 
         $filename = $section_name . '.js';
         
-        $filepath = $template_directory . '/blocks/' . $section_name . '/' . $filename;
+        $filepath = php_path_join( $template_dir, 'blocks', $section_name, $filename );
         
         if ( file_exists( $filepath ) ) {
           $cnt .= file_get_contents( $filepath );
@@ -39,7 +39,7 @@ add_action( 'post_updated', function( $post_ID, $post_after, $post_before ) {
 
     }
 
-    $dest = $template_directory . '/js/script-' . $template_slug . '.js';
+    $dest = php_path_join( $template_dir, 'js', 'script-' . $template_slug . '.js' );
 
     if ( file_exists( $dest ) ) {
       unlink( $dest );

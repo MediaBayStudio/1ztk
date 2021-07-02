@@ -15,17 +15,12 @@
   На размерах экранов от 320 до 575, нижний отступ будет
   уменьшаться от 0 до -100.
 */
-.create-images-block {
-  display: flex;
-  align-items: center;
+body.post-type-studying_program #edit-slug-box {
+  opacity: 0;
+  pointer-events: none;
 }
 
-.create-images-block > .success {
-  text-align: center;
-  color: #008a20;
-  margin: 0 10px;
-}
-
-.create-images-block > .spinner.hidden {
-  display: none;
+body.post-type-studying_program .view {
+  opacity: 0;
+  pointer-events: none;
 }

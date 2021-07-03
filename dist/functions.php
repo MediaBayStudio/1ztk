@@ -115,5 +115,7 @@ if ( is_super_admin() || is_admin_bar_showing() ) {
 	// Удаление лишних пунктов из меню админ-панели
 	require $template_dir . '/inc/remove-admin-menu.php';
 
+  // Автоматическое создание webp и сжатие для загружаемых изображений
+  require $template_dir . '/inc/generate-webp-and-compress-images.php';
 
 }

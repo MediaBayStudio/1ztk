@@ -1,0 +1,274 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.studying-programs-sect {
+  padding-top: 30px;
+  padding-bottom: 45px;
+
+  &__title {}
+
+  &__descr {}
+
+  &__programms {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__programm {
+    margin: 30px 20px 0 0;
+    padding: 20px;
+    width: calc((100% - 40px) / 3);
+
+    &:nth-child(3n+3) {
+      margin-right: 0;
+    }
+  }
+
+  &__programm-number {
+    font-size: 64px;
+  }
+
+  &__programm-text {}
+}
+
+
+.studying-program {
+  display: grid;
+  // grid-template-rows: auto auto auto;
+  grid-template-rows: auto auto auto;
+  grid-template-columns: auto auto;
+
+  &__title {
+    margin: 0 0 65px;
+    grid-row: 1;
+    grid-column: 1/span 2;
+    max-width: 540px;
+  }
+
+  &__pic {}
+
+  &__img {}
+
+  &__descr {
+    margin: 0;
+
+    &::before {
+      font-size: 120px;
+    }
+  }
+
+  &__links {
+    margin: 40px 0 0 0;
+    grid-row: 3;
+    flex-flow: row;
+    width: 100%;
+  }
+
+  &__submit-link {
+    width: 180px;
+    height: 50px;
+  }
+
+  &__file-link {
+    margin: 0 0 0 20px;
+    width: 180px;
+    height: 50px;
+  }
+
+  &.empty-image {}
+
+  &.image-left {
+    .studying-program__title {}
+
+    .studying-program__pic {}
+
+    .studying-program__img {}
+
+    .studying-program__descr {}
+
+    .studying-program__links {}
+
+    &.empty-image {
+      .studying-program__title {}
+
+      .studying-program__pic {
+        margin: 0 50px 0 0;
+        grid-row: 2/span 2;
+        width: 285px;
+        height: 100%;
+      }
+
+      .studying-program__img {
+        padding: 0;
+        width: 240px;
+        height: 240px;
+      }
+
+      .studying-program__descr {}
+
+      .studying-program__links {
+        grid-column: 2;
+      }
+    }
+
+  }
+
+  &.image-right-small {
+    .studying-program__title {}
+
+    .studying-program__pic {
+      margin: 0 0 0 45px;
+      grid-row: 2/span 2;
+      grid-column: 2;
+      width: 290px;
+      height: 100%;
+    }
+
+    .studying-program__img {}
+
+    .studying-program__descr {
+      grid-row: 2;
+      grid-column: 1;
+    }
+
+    .studying-program__links {
+      grid-row: 3;
+      grid-column: 1;
+    }
+
+    &.empty-image {
+      .studying-program__title {}
+
+      .studying-program__pic {
+      }
+
+      .studying-program__img {}
+
+      .studying-program__descr {}
+
+      .studying-program__links {}
+    }
+
+  }
+
+  &.image-right {
+    .studying-program__title {}
+
+    .studying-program__pic {
+      margin: 0 0 0 45px;
+      grid-row: 2;
+      grid-column: 2;
+      width: 325px;
+      height: 100%;
+
+      &::before {
+        display: none;
+      }
+    }
+
+    .studying-program__img {}
+
+    .studying-program__descr {
+      grid-row: 2;
+      grid-column: 1;
+    }
+
+    .studying-program__links {
+      grid-column: 1/span 2;
+    }
+
+    &.empty-image {
+      .studying-program__title {}
+
+      .studying-program__pic {}
+
+      .studying-program__img {}
+
+      .studying-program__descr {}
+
+      .studying-program__links {}
+    }
+
+  }
+
+}
+
+.submit-sect {
+  &__left {}
+
+  &__title {}
+
+  &__descr {
+    margin: 0 0 45px;
+    max-width: 465px;
+  }
+
+  &__right {
+  }
+
+  &__right-title {}
+
+  &__tel {}
+
+  &__email {}
+
+  &__address {}
+}
+
+.submit-form-wrap {
+  display: grid;
+  grid-template-rows: 100%;
+  grid-template-columns: 100%;
+  > .wpcf7 {
+    grid-row: 1;
+    grid-column: 1;
+  }
+}
+
+.submit-form {
+  display: flex;
+  flex-wrap: wrap;
+  &__select {
+    grid-row: 1;
+    grid-column: 1;
+    width: calc((100% - 20px) / 2);
+    height: 50px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .field {
+    margin: 0 0 30px;
+    width: calc((100% - 20px) / 2);
+    height: 50px;
+    &__inp {}
+  }
+
+  .field-name {
+    margin-left: calc(100% - ((100% - 20px) / 2));
+  }
+
+  .field-tel {
+    margin-right: 20px;
+  }
+
+  .field-email {}
+
+  .form-bottom {}
+
+  .check {
+    margin: 0;
+    &__inp {}
+
+    &__pseudo-inp {}
+
+    &__text {}
+
+    &__link {}
+  }
+
+  .btn {
+    width: 145px;
+  }
+}

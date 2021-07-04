@@ -1,0 +1,240 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.studying-programs-sect {
+  padding-bottom: 50px;
+  &__title {}
+
+  &__descr {}
+
+  &__programms {
+    font-size: 20px;
+  }
+
+  &__programm {
+    margin: 30px 30px 0 0;
+    padding: 30px;
+    width: calc((100% - 60px) / 3);
+  }
+
+  &__programm-number {}
+
+  &__programm-text {}
+}
+
+
+.studying-program {
+  &__title {
+    max-width: 580px;
+  }
+
+  &__pic {}
+
+  &__img {}
+
+  &__descr {
+    align-self: end;
+  }
+
+  &__links {
+    align-self: start;
+  }
+
+  &__submit-link {
+    width: 220px;
+    height: 55px;
+  }
+
+  &__file-link {
+    margin: 0 0 0 30px;
+    width: 220px;
+    height: 55px;
+  }
+
+  &.empty-image {}
+
+  &.image-left {
+    .studying-program__title {}
+
+    .studying-program__pic {}
+
+    .studying-program__img {}
+
+    .studying-program__descr {}
+
+    .studying-program__links {}
+
+    &.empty-image {
+      .studying-program__title {}
+
+      .studying-program__pic {
+        margin: 0 80px 0 0;
+        width: 385px;
+      }
+
+      .studying-program__img {
+        width: 250px;
+        height: 250px;
+      }
+
+      .studying-program__descr {}
+
+      .studying-program__links {}
+    }
+
+  }
+
+  &.image-right-small {
+    .studying-program__title {
+      margin: 0 0 20px;
+    }
+
+    .studying-program__pic {
+      padding: 0 0 45px 45px;
+      width: 425px;
+      &::before {
+        left: 0;
+        right: auto;
+        width: 305px;
+        height: 205px;
+      }
+    }
+
+    .studying-program__img {}
+
+    .studying-program__descr {
+      padding-top: 50px;
+      &::before {
+        top: 50px;
+      }
+    }
+
+    .studying-program__links {}
+
+    &.empty-image {
+      .studying-program__title {}
+
+      .studying-program__pic {}
+
+      .studying-program__img {}
+
+      .studying-program__descr {}
+
+      .studying-program__links {}
+    }
+
+  }
+
+  &.image-right {
+    .studying-program__title {}
+
+    .studying-program__pic {
+      margin: 0 0 0 55px;
+      grid-row: 2/span 2;
+      width: 440px;
+    }
+
+    .studying-program__img {}
+
+    .studying-program__descr {}
+
+    .studying-program__links {
+    }
+
+    &.empty-image {
+      .studying-program__title {}
+
+      .studying-program__pic {}
+
+      .studying-program__img {}
+
+      .studying-program__descr {}
+
+      .studying-program__links {}
+    }
+
+  }
+
+}
+
+.submit-sect {
+  display: flex;
+  align-items: flex-start;
+  &__left {
+    width: 465px;
+  }
+
+  &__title {}
+
+  &__descr {}
+
+  &__right {
+    margin: 125px 0 0 80px;
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+  }
+
+  &__right-title {
+    margin: 0 0 20px;
+    font: bold 20px/140% SourceSerifPro, serif;
+    text-transform: uppercase;
+  }
+
+  &__tel,
+  &__email,
+  &__address {
+    margin: 0 0 20px;
+    &::before {
+      margin: 0 20px 0 0;
+      width: 25px;
+      height: 25px;
+    }
+  }
+
+  &__tel {}
+
+  &__email {}
+
+  &__address {}
+}
+
+.submit-form-wrap {
+  display: flex;
+  flex-flow: column;
+}
+
+.submit-form {
+  &__select {
+    margin: 0 0 30px;
+    width: 100%;
+  }
+
+  .field {
+    &__inp {}
+  }
+
+  .field-name {
+    margin: 0 0 30px;
+    width: 100%;
+  }
+
+  .field-tel {}
+
+  .field-email {}
+
+  .form-bottom {}
+
+  .check {
+    &__inp {}
+
+    &__pseudo-inp {}
+
+    &__text {}
+
+    &__link {}
+  }
+
+  .btn {}
+}

@@ -1,0 +1,167 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.studying-programs-sect {
+  &__title {}
+
+  &__descr {}
+
+  &__programms {}
+
+  &__programm {}
+
+  &__programm-number {}
+
+  &__programm-text {}
+}
+
+
+.studying-program {
+  &__title {}
+
+  &__pic {}
+
+  &__img {}
+
+  &__descr {}
+
+  &__links {}
+
+  &.empty-image {}
+
+  &.image-left {
+    .studying-program__title {}
+
+    .studying-program__pic {
+
+    }
+
+    .studying-program__img {}
+
+    .studying-program__descr {}
+
+    .studying-program__links {}
+
+    &.empty-image {
+      .studying-program__title {}
+
+      .studying-program__pic {
+        width: 374px;
+      }
+
+      .studying-program__img {}
+
+      .studying-program__descr {}
+
+      .studying-program__links {}
+    }
+
+  }
+
+  &.image-right-small {
+    .studying-program__title {}
+
+    .studying-program__pic {
+      height: 385px;
+    }
+
+    .studying-program__img {}
+
+    .studying-program__descr {}
+
+    .studying-program__links {}
+
+    &.empty-image {
+      .studying-program__title {}
+
+      .studying-program__pic {}
+
+      .studying-program__img {}
+
+      .studying-program__descr {}
+
+      .studying-program__links {}
+    }
+
+  }
+
+  &.image-right {
+    .studying-program__title {}
+
+    .studying-program__pic {
+      height: 368px;
+      &::before {
+        left: $sectionHorizontalPaddingMinus576;
+      }
+    }
+
+    .studying-program__img {}
+
+    .studying-program__descr {}
+
+    .studying-program__links {}
+
+    &.empty-image {
+      .studying-program__title {}
+
+      .studying-program__pic {}
+
+      .studying-program__img {}
+
+      .studying-program__descr {}
+
+      .studying-program__links {}
+    }
+
+  }
+
+}
+
+.submit-sect {
+  &__left {}
+
+  &__title {}
+
+  &__descr {}
+
+  &__right {}
+
+  &__right-title {}
+
+  &__tel {}
+
+  &__email {}
+
+  &__address {}
+}
+
+.submit-form-wrap {}
+
+.submit-form {
+  &__select {}
+
+  .field {
+    &__inp {}
+  }
+
+  .field-name {}
+
+  .field-tel {}
+
+  .field-email {}
+
+  .form-bottom {}
+
+  .check {
+    &__inp {}
+
+    &__pseudo-inp {}
+
+    &__text {}
+
+    &__link {}
+  }
+
+  .btn {}
+}

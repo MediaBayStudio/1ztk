@@ -1,0 +1,207 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.studying-programs-sect {
+  &__title {}
+
+  &__descr {}
+
+  &__programms {}
+
+  &__programm {
+    margin: 35px 40px 0 0;
+    padding: 30px 30px 50px;
+    width: calc((100% - 80px) / 3);
+  }
+
+  &__programm-number {}
+
+  &__programm-text {}
+}
+
+
+.studying-program {
+  &__title {
+    max-width: 700px;
+  }
+
+  &__pic {}
+
+  &__img {}
+
+  &__descr {}
+
+  &__links {
+    margin-top: 50px;
+  }
+
+  &__submit-link {}
+
+  &__file-link {}
+
+  &.empty-image {}
+
+  &.image-left {
+    .studying-program__title {}
+
+    .studying-program__pic {}
+
+    .studying-program__img {}
+
+    .studying-program__descr {}
+
+    .studying-program__links {}
+
+    &.empty-image {
+      .studying-program__title {}
+
+      .studying-program__pic {
+        margin: 0 190px 0 0;
+        width: 480px;
+      }
+
+      .studying-program__img {
+        width: 275px;
+        height: 275px;
+      }
+
+      .studying-program__descr {}
+
+      .studying-program__links {}
+    }
+
+  }
+
+  &.image-right-small {
+    .studying-program__title {
+      margin: 0;
+    }
+
+    .studying-program__pic {
+      margin: 0 0 0 100px;
+      padding: 0 0 60px 60px;
+      width: 560px;
+
+      &::before {
+        width: 400px;
+        height: 270px;
+      }
+    }
+
+    .studying-program__img {}
+
+    .studying-program__descr {}
+
+    .studying-program__links {}
+
+    &.empty-image {
+      .studying-program__title {}
+
+      .studying-program__pic {}
+
+      .studying-program__img {}
+
+      .studying-program__descr {}
+
+      .studying-program__links {}
+    }
+
+  }
+
+  &.image-right {
+    .studying-program__title {
+    }
+
+    .studying-program__pic {
+      margin: 0 0 0 100px;
+      padding: 0 0 60px 60px;
+      width: 560px;
+
+      &::before {
+        display: block;
+        width: 360px;
+        height: 270px;
+        transform: none;
+        top: auto;
+        left: 0;
+        bottom: 0;
+      }
+    }
+
+    .studying-program__img {}
+
+    .studying-program__descr {}
+
+    .studying-program__links {}
+
+    &.empty-image {
+      .studying-program__title {}
+
+      .studying-program__pic {}
+
+      .studying-program__img {}
+
+      .studying-program__descr {}
+
+      .studying-program__links {}
+    }
+
+  }
+
+}
+
+.submit-sect {
+  padding-bottom: 80px;
+  &__left {
+    width: 560px;
+  }
+
+  &__title {}
+
+  &__descr {
+    max-width: 480px;
+  }
+
+  &__right {
+    margin: 225px 0 0 240px;
+  }
+
+  &__right-title {}
+
+  &__tel {}
+
+  &__email {}
+
+  &__address {}
+}
+
+.submit-form-wrap {}
+
+.submit-form {
+  &__select {}
+
+  .field {
+    &__inp {}
+  }
+
+  .field-name {}
+
+  .field-tel {}
+
+  .field-email {}
+
+  .form-bottom {}
+
+  .check {
+    &__inp {}
+
+    &__pseudo-inp {}
+
+    &__text {}
+
+    &__link {}
+  }
+
+  .btn {}
+}

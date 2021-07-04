@@ -1,0 +1,269 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.studying-programs-sect {
+  padding-top: 20px;
+  padding-bottom: 30px;
+  &__title {}
+
+  &__descr {
+  }
+
+  &__programms {
+    font: bold 16px/140% OpenSans, sans-serif;
+  }
+
+  &__programm {
+    margin-top: 20px;
+    padding: 20px 20px 30px;
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    background: $lightGreen;
+    border: 1px solid transparent;
+    transition: border-color .5s;
+  }
+
+  &__programm-number {
+    margin: 0 0 20px;
+    font: bold 48px/100% SourceSerifPro, serif;
+    color: $greyGreen;
+  }
+
+  &__programm-text {}
+}
+
+
+.studying-program {
+  &__title {}
+
+  &__pic {
+    display: flex;
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+  }
+
+  &__descr {
+    margin-top: 60px;
+    position: relative;
+    &::before {
+      content: attr(data-number);
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateY(-50%);
+      font: bold 75px/100% SourceSerifPro, serif;
+      color: $light;
+      z-index: -1;
+      pointer-events: none;
+    }
+  }
+
+  &__links {
+    margin: 30px auto;
+    display: flex;
+    flex-flow: column;
+    width: 280px;
+  }
+
+  &__submit-link {
+    width: 100%;
+    height: 45px;
+  }
+
+  &__file-link {
+    margin-top: 12px;
+    width: 100%;
+    height: 45px;
+  }
+
+  &.empty-image {}
+
+  &.image-left {
+    .studying-program__title {}
+
+    .studying-program__pic {}
+
+    .studying-program__img {}
+
+    .studying-program__descr {}
+
+    .studying-program__links {}
+
+    &.empty-image {
+      .studying-program__title {}
+
+      .studying-program__pic {
+        height: responsive('320->575', '181->374');
+        &::before {
+          top: 0;
+          left: 0;
+          width: 50%;
+          height: 100%;
+          background: $light;
+        }
+      }
+
+      .studying-program__img {
+        margin: auto;
+        padding: 15px 30px;
+        display: block;
+        width: 75%;
+        opacity: 0.5;
+      }
+
+      .studying-program__descr {}
+
+      .studying-program__links {}
+    }
+
+  }
+
+  &.image-right-small {
+    .studying-program__title {}
+
+    .studying-program__pic {
+      padding: 0 0 20px;
+      height: responsive('320->575', '212->385');
+      &::before {
+        right: -20px;
+        bottom: 0;
+        width: 65%;
+        height: 75%;
+        background: $greyGreen;
+      }
+    }
+
+    .studying-program__img {}
+
+    .studying-program__descr {}
+
+    .studying-program__links {}
+
+    &.empty-image {
+      .studying-program__title {}
+
+      .studying-program__pic {}
+
+      .studying-program__img {}
+
+      .studying-program__descr {}
+
+      .studying-program__links {}
+    }
+
+  }
+
+  &.image-right {
+    .studying-program__title {}
+
+    .studying-program__pic {
+      height: responsive('320->575', '192->367');
+      &::before {
+        top: 50%;
+        left: -20px;
+        transform: translateY(-50%);
+        width: 100vw;
+        height: 70%;
+        background: $greyGreen;
+      }
+    }
+
+    .studying-program__img {}
+
+    .studying-program__descr {}
+
+    .studying-program__links {}
+
+    &.empty-image {
+      .studying-program__title {}
+
+      .studying-program__pic {}
+
+      .studying-program__img {}
+
+      .studying-program__descr {}
+
+      .studying-program__links {}
+    }
+
+  }
+
+}
+
+.submit-sect {
+  &__left {}
+
+  &__title {}
+
+  &__descr {
+    margin: 0 0 30px;
+  }
+
+  &__right {
+    display: none;
+  }
+
+  &__right-title {}
+
+  &__tel {}
+
+  &__email {}
+
+  &__address {}
+}
+
+.submit-form-wrap {}
+
+.submit-form {
+  &__select {
+    max-width: 100%;
+  }
+
+  .field {
+    margin: 0 0 20px;
+    &__inp {}
+  }
+
+  .field-name {}
+
+  .field-tel {}
+
+  .field-email {}
+
+  .form-bottom {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  .check {
+    margin: 0 0 30px;
+    padding: 0 5px 0 0;
+    &__inp {}
+
+    &__pseudo-inp {}
+
+    &__text {}
+
+    &__link {}
+  }
+
+  .btn {
+    margin: 0 0 0 auto;
+    width: 130px;
+    height: 45px;
+  }
+}

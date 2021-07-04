@@ -3,7 +3,8 @@
   // Массив форм, на которые будет добавлена валидация
   let $forms = [
     q('.index-contacts-sect__form'),
-    id('applicants-form')
+    id('applicants-form'),
+    id('submit-form')
   ];
 
   let formValidator = function(params) {

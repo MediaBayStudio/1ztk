@@ -90,3 +90,9 @@
     border-bottom-color: currentColor;
   }
 }
+
+.studying-programs-sect__programm {
+  &:hover {
+    border-color: $black;
+  }
+}

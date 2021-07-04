@@ -19,7 +19,7 @@ add_action( 'post_updated', function( $post_ID, $post_after, $post_before ) {
     array_push( $sections, ['acf_fc_layout' => 'footer'] );
 
     // Получаем ярлык шаблона и убираем .php в нем (будет index, about и т.д.)
-    file_put_contents( php_path_join( $template_dir, 'file.php' ), $template_slug );
+    $template_slug = str_replace( '.php', '', get_page_template_slug( $post_ID ) );
 
     foreach ( $screen_widths as $width ) {
       if ( !$template_slug ) {

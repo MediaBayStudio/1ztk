@@ -14,7 +14,7 @@ if ( $section['from_index_page'] ) {
     foreach ( $section['faq'] as $li ) : ?>
       <li class="faq__item">
         <div class="faq__question"><span class="faq__question-text"><?php echo $li['q'] ?></span><span class="faq__question-cross"></span></div>
-        <p class="faq__answer"><?php echo $li['a'] ?></p>
+        <p class="faq__answer"><?php echo strip_tags( $li['a'], '<a><br><span>' ) ?></p>
       </li> <?php
     endforeach ?>
   </ul>

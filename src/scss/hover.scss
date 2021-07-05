@@ -96,3 +96,10 @@
     border-color: $black;
   }
 }
+
+.btn-ol {
+  &:hover {
+    background: $green;
+    color: #fff;
+  }
+}

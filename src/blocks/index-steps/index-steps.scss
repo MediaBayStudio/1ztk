@@ -14,6 +14,7 @@
   &__li {
     display: flex;
     align-items: flex-start;
+
     &:not(:last-child) {
       margin: 0 0 25px;
     }
@@ -21,19 +22,29 @@
     &::before {
       margin: 0 15px 0 0;
       counter-increment: list;
-      content: '0' counter(list);
+      content: '0'counter(list);
       font: bold 24px/100% SourceSerifPro, serif;
       letter-spacing: 0.05em;
       color: $green;
     }
   }
 
-  &__li-descr {}
+  &__li-descr {
+    >a {
+      border-bottom: 1px solid;
+      transition: border-bottom-color .5s;
+
+      &:hover {
+        border-bottom-color: transparent;
+      }
+    }
+  }
 
   &__note {
     margin: 30px 0 0;
     padding: 20px 0 0;
     position: relative;
+
     &::before {
       content: '';
       position: absolute;

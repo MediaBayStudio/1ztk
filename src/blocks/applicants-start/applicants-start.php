@@ -1,4 +1,4 @@
-<section class="applicants-start-sect sect container lazy" data-src="#">
+<section class="applicants-start-sect sect container lazy" data-src="#"<?php echo $section_id ?>>
   <picture class="applicants-start-sect__pic lazy">
     <source type="image/webp" srcset="#" data-srcset="<?php echo $template_directory ?>/img/applicants-start-img.webp">
     <img src="#" alt="#" data-src="<?php echo $template_directory ?>/img/applicants-start-img.jpg" class="applicants-start-sect__img">

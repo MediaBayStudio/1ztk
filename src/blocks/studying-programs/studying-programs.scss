@@ -68,6 +68,13 @@
       z-index: -1;
       pointer-events: none;
     }
+    > a {
+      border-bottom: 1px solid;
+      transition: border-bottom-color .5s;
+      &:hover {
+        border-bottom-color: transparent;
+      }
+    }
   }
 
   &__links {

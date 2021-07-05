@@ -2,7 +2,7 @@
   <h2 class="steps-sect__title sect-title sect-title-underline"><?php echo $section['title'] ?></h2>
   <ul class="steps-sect__list"> <?php
     foreach ( $section['list'] as $li ) : ?>
-      <li class="steps-sect__li"><p class="steps-sect__li-descr"><?php echo $li['descr'] ?></p></li> <?php
+      <li class="steps-sect__li"><p class="steps-sect__li-descr"><?php echo strip_tags( $li['descr'], '<a><br><span>' ) ?></p></li> <?php
     endforeach ?>
   </ul>
   <div class="steps-sect__note">

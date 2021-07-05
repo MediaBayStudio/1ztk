@@ -39,8 +39,21 @@
       $section_classes[] = 'image-right-small';
     }
 
-    if ( $programm_fields['file'] ) {
-      $file_link = '<a href="' . $programm_fields['file']['url'] . '" class="btn btn-ol studying-program__file-link">' . $programm_fields['title'] . '</a>';
+    if ( $programm_fields['file_is_uploaded'] ) {
+      if ( $programm_fields['file'] ) {
+        $file_url = $programm_fields['file']['url'];
+      }
+    } else {
+      $file_url = $programm_fields['file_link']['url'];
+    }
+
+    if ( $file_url ) {
+      if ( $programm_fields['file_link'] ) {
+        $target_blank = ' target="_blank"';
+      } else {
+        $target_blank = '';
+      }
+      $file_link = '<a href="' . $file_url . '" class="btn btn-ol studying-program__file-link"' . $target_blank . '>' . $programm_fields['title'] . '</a>';
     }
 
     if ( $programm_img_url ) {

@@ -74,5 +74,12 @@
 
   &__answer {
     padding: 0 0 20px;
+    > a {
+      border-bottom: 1px solid;
+      transition: border-bottom-color .5s;
+      &:hover {
+        border-bottom-color: transparent;
+      }
+    }
   }
 }

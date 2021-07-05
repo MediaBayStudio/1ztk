@@ -58,11 +58,9 @@
   }
 
   &__instagram {
-    filter: brightness(0);
-    transition: filter .5s;
-    background-image: url('../img/icon-instagram.svg') !important;
-    &:hover {
-      filter: brightness(1);
+    &-svg {
+      fill: $black;
+      pointer-events: none;
     }
   }
 

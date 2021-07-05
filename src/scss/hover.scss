@@ -1,9 +1,8 @@
-
 @import 'assets/colors';
 @import 'assets/mixins';
 @import 'assets/variables';
 
-.ftr__nav-li.has-submenu > .nav-link,
+.ftr__nav-li.has-submenu>.nav-link,
 .ftr__dev-link,
 .ftr__tel,
 .ftr__email,
@@ -16,6 +15,7 @@
   }
 }
 
+.check__link,
 .ftr__policy {
   &:hover {
     border-bottom-color: transparent;
@@ -73,6 +73,7 @@
 .hdr__address {
   &:hover {
     color: $green;
+
     &::before {
       filter: brightness(1);
     }
@@ -101,5 +102,45 @@
   &:hover {
     background: $green;
     color: #fff;
+  }
+}
+
+.hdr__instagram {
+  &:hover {
+    .instagram-path-grey,
+    .instagram-path-white {
+      opacity: 0;
+    }
+  }
+}
+
+.enjoy-links__instagram {
+  &:hover {
+    .instagram-rect {
+      fill: #fff;
+    }
+    .instagram-path-white {
+      opacity: 0;
+    }
+  }
+}
+
+.enjoy-links__youtube {
+  &:hover {
+    .youtube-svg-rect {
+      fill: #f00
+    }
+  }
+}
+
+.hdr__vk,
+.enjoy-links__vk {
+  &:hover {
+    .vk-svg-path {
+      fill: #5181b8;
+    }
+    .vk-svg-rect {
+      fill: #fff;
+    }
   }
 }

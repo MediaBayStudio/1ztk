@@ -23,6 +23,22 @@ body.no-scroll {
   transition: color .5s;
 }
 
+.instagram-path-grey,
+.instagram-path-white {
+  transition: opacity .5s;
+}
+
+.instagram-path-white {
+  fill: #fff;
+}
+
+.instagram-rect,
+.youtube-svg-rect,
+.vk-svg-path,
+.vk-svg-rect {
+  transition: fill .5s;
+}
+
 body {
   color: $black;
 }

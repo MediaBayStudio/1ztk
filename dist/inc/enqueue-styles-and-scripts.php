@@ -50,7 +50,7 @@ add_action( 'wp_enqueue_scripts', function() {
   // Подключаем скрипты циклом
   
 
-	$scripts = ['lazy.min', /*'fancybox.min',*/ 'Popup.min', 'slick.min', 'script', $GLOBALS['page_script_name']];
+	$scripts = ['lazy.min', 'tail.select.min', /*'fancybox.min',*/ 'Popup.min', 'slick.min', 'script', $GLOBALS['page_script_name']];
 
   foreach ( $scripts as $script ) {
     wp_enqueue_script( "{$script}", $template_directory . "/js/{$script}.js", [], null );
@@ -81,6 +81,7 @@ add_action( 'wp_enqueue_scripts', function() {
       case 'lazy.min':
       case 'Popup.min':
       case 'slick.min':
+      case 'tail.select.min':
       // case 'fancybox.min':
       case 'bvi-cookie':
       case 'bvi-init':

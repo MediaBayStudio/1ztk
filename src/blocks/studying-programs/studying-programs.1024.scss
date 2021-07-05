@@ -205,10 +205,14 @@
   flex-flow: column;
 }
 
+.tail-select {
+  margin: 0 0 30px;
+  width: 100%;
+}
+
 .submit-form {
   &__select {
-    margin: 0 0 30px;
-    width: 100%;
+    
   }
 
   .field {

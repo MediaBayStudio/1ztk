@@ -12,7 +12,7 @@
 
   $hero_sect = '';
   $blocks = '';
-  $select = '<select class="submit-form__select" form="submit-form">';
+  $select = '<select name="select" class="submit-form__select" form="submit-form">';
 
   $i = 1;
   $j = 0;
@@ -56,7 +56,7 @@
 
     $select .= '<option value="' . $programm_full_title . '">' . $programm_full_title . '</option>';
 
-    $blocks .= '<section class="' . join( ' ', $section_classes ) . '" id="' . $programm->post_name . '"><h2 class="studying-program__title sect-title sect-title-underline">' . $programm->post_title . '</h2>' . $programm_img . '<p class="studying-program__descr" data-number="0' . $i . '">' . $programm_fields['text'] . '</p><div class="studying-program__links"><a href="#submit-form" class="btn btn-blue studying-program__submit-link">' . $programm_fields['btn_text'] . '</a>' . $file_link . '</div></section>';
+    $blocks .= '<section class="' . join( ' ', $section_classes ) . '" id="' . $programm->post_name . '"><h2 class="studying-program__title sect-title sect-title-underline">' . $programm->post_title . '</h2>' . $programm_img . '<p class="studying-program__descr" data-number="0' . $i . '">' . $programm_fields['text'] . '</p><div class="studying-program__links"><a href="#submit-sect" class="btn btn-blue studying-program__submit-link" data-key="' . $programm_full_title . '">' . $programm_fields['btn_text'] . '</a>' . $file_link . '</div></section>';
     
     $i++;
     $j++;
@@ -80,11 +80,11 @@
   </div>
 </section> <?php
 echo $blocks ?>
-<section class="submit-sect container sect-lightgreen-bg">
+<section class="submit-sect container sect-lightgreen-bg" id="submit-sect">
   <div class="submit-sect__left">
     <h2 class="submit-sect__title sect-title sect-title-underline"><?php echo $section['form_title'] ?></h2>
     <p class="submit-sect__descr"><?php echo $section['form_descr'] ?></p>
-    <div class="submit-form-wrap"> <?php
+    <div class="submit-form-wrap lazy" data-src="#"> <?php
       echo $select;
       echo do_shortcode( '[contact-form-7 id="513" html_class="submit-form" html_id="submit-form"]' ) ?>
     </div>

@@ -44,11 +44,11 @@ document.addEventListener('DOMContentLoaded', function() {
     allowPageScroll: false
   });
 
-  let navLinks = qa('li:not(.has-submenu) > a[href^="#"]');
+  // let navLinks = qa('li:not(.has-submenu) > a[href^="#"]');
 
-  for (let i = 0, len = navLinks.length; i < len; i++) {
-    navLinks[i].addEventListener('click', scrollToTarget);
-  }
+  // for (let i = 0, len = navLinks.length; i < len; i++) {
+  //   navLinks[i].addEventListener('click', scrollToTarget);
+  // }
 
 
   sticky(hdr);

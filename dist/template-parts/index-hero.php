@@ -5,7 +5,7 @@
       <p class="index-hero-sect__descr"><?php echo $section['descr'] ?></p> <?php
     endif;
     if ( $section['btn'] ) : ?>
-      <button type="button" class="index-hero-sect__btn btn btn-blue" id="hero-btn"><?php echo $section['btn'] ?></button> <?php
+      <button type="button" class="index-hero-sect__btn btn btn-blue" id="hero-btn" data-scroll-target=".index-contacts-sect__title" onclick="scrollToTarget(event)"><?php echo $section['btn'] ?></button> <?php
     endif ?>
   </div>
   <div class="index-hero-sect__slider"> <?php

@@ -92,7 +92,7 @@ function create_picture( $section_class, $img_field, $lazy = true, $alt = '', $p
     if ( $img['media'] == '0' ) {
       $tag .= '<img ' . $img_attr . $img_url . '" alt="' . $img_alt . '"' . $media . ' class="' . $img_class . '"' . $fancybox_href . '>';
     } else {
-      $tag .= '<source ' . $source_attr . $img_url . '" type="' . $img['img']['mime_type'] . '"' . $media . '">';
+      $tag .= '<source ' . $source_attr . $img_url . '" type="' . $img['img']['mime_type'] . '"' . $media . '>';
     }
     
     unset( $img_url, $media, $img_alt );

@@ -92,7 +92,7 @@
 
     $select .= '<option value="' . $programm_full_title . '">' . $programm_full_title . '</option>';
 
-    $blocks .= '<section class="' . join( ' ', $section_classes ) . '" id="' . $programm->post_name . '"><h2 class="studying-program__title sect-title sect-title-underline">' . $programm->post_title . '</h2>' . $programm_img . '<p class="studying-program__descr" data-number="0' . $i . '">' . $programm_fields['text'] . '</p><div class="studying-program__links"><a href="#submit-sect" class="btn btn-blue studying-program__submit-link" data-key="' . $programm_full_title . '">' . $programm_fields['btn_text'] . '</a>' . $file_link . '</div></section>';
+    $blocks .= '<section class="' . join( ' ', $section_classes ) . '" id="' . $programm->post_name . '"><h2 class="studying-program__title sect-title sect-title-underline">' . $programm->post_title . '</h2>' . $programm_img . '<div class="studying-program__text"><p class="studying-program__descr" data-number="0' . $i . '">' . $programm_fields['text'] . '</p><div class="studying-program__links"><a href="#submit-sect" class="btn btn-blue studying-program__submit-link" data-key="' . $programm_full_title . '">' . $programm_fields['btn_text'] . '</a>' . $file_link . '</div></div></section>';
     
     $i++;
     $j++;

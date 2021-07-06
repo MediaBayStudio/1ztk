@@ -23,7 +23,8 @@
 
 .studying-program {
   &__title {
-    max-width: 700px;
+    // max-width: 700px;
+    padding-right: 1160px - 700px;
   }
 
   &__pic {}

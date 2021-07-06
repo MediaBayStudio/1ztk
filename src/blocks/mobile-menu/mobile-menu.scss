@@ -259,6 +259,7 @@ html body .bvi-body[data-bvi-theme] {
 
   .bvi-link-shortcode {
     margin: 0 0 15px;
+    flex-shrink: 0;
     width: 280px;
     height: 48px;
 
@@ -270,6 +271,7 @@ html body .bvi-body[data-bvi-theme] {
   }
 
   &__login {
+    flex-shrink: 0;
     width: 280px;
     height: 45px;
   }

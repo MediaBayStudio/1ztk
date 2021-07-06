@@ -27,7 +27,8 @@
 
 .studying-program {
   &__title {
-    max-width: 580px;
+    padding-right: 960px - 580px;
+    // max-width: 580px;
   }
 
   &__pic {}
@@ -35,11 +36,9 @@
   &__img {}
 
   &__descr {
-    align-self: end;
   }
 
   &__links {
-    align-self: start;
   }
 
   &__submit-link {
@@ -105,6 +104,12 @@
 
     .studying-program__img {}
 
+    .studying-program__text {
+      display: flex;
+      flex-flow: column;
+      justify-content: flex-end;
+    }
+
     .studying-program__descr {
       padding-top: 50px;
 
@@ -134,7 +139,7 @@
 
     .studying-program__pic {
       margin: 0 0 0 55px;
-      grid-row: 2/span 2;
+      // grid-row: 2/span 2;
       width: 440px;
     }
 

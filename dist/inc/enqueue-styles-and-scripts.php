@@ -1,5 +1,10 @@
 <?php
 
+// Удалить инлайновый стиль плагина bvi
+add_action( 'wp_print_styles', function() {
+  wp_style_is( 'bvi-style', 'enqueued' ) && wp_style_add_data( 'bvi-style', 'after', '' );
+} );
+
 // Скрипт и стиль в админку
 add_action( 'admin_enqueue_scripts', function() {
   global $template_directory;

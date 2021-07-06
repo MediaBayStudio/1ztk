@@ -276,3 +276,24 @@
     width: 145px;
   }
 }
+
+.editor-popup {
+  &__cnt {
+    font-size: 15px;
+
+    ul {}
+
+    li {}
+  }
+
+  &__close {}
+
+  &__close-svg {}
+
+  &__close-path {}
+
+  &__title {
+    margin: 20px 0 30px;
+    font-size: 22px;
+  }
+}

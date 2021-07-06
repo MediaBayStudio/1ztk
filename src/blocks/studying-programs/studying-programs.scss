@@ -352,3 +352,36 @@
     }
   }
 }
+
+
+.editor-popup {
+  background: transparentize($green, .6);
+  &__cnt {
+    padding: 20px 20px 40px;
+    display: flex;
+    flex-flow: column;
+    color: $black;
+    font: 14px/140% OpenSans, sans-serif;
+    ul {
+      padding: 0 0 0 20px;
+      list-style: disc;
+    }
+    li {
+      margin: 0 0 10px;
+    }
+  }
+  &__close {
+    margin: 0 0 0 auto;
+  }
+  &__close-svg {
+    pointer-events: none;
+    overflow: visible;
+  }
+  &__close-path {
+  }
+  &__title {
+    margin: 15px 0 10px;
+    text-align: center;
+    font: bold 20px/140% SourceSerifPro, serif;
+  }
+}

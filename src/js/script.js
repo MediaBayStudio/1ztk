@@ -18,8 +18,6 @@ document.addEventListener('DOMContentLoaded', function() {
     HTMLCollection.prototype.forEach = Array.prototype.forEach;
   }
 
-  id('bvi-style-inline-css').remove();
-
   fakeScrollbar = id('fake-scrollbar');
 
   hdr = q('.hdr');

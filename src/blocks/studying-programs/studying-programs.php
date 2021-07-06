@@ -12,6 +12,7 @@
 
   $hero_sect = '';
   $blocks = '';
+  $popups = '';
   $select = '<select name="select" class="submit-form__select" form="submit-form">';
 
   $i = 1;
@@ -39,7 +40,29 @@
       $section_classes[] = 'image-right-small';
     }
 
-    if ( $programm_fields['file_is_uploaded'] ) {
+    switch ( $programm_fields['type'] ) {
+      case 'file_is_uploaded':
+        $file_url = $programm_fields['file']['url'];
+        break;
+      case 'link':
+        $file_url = $programm_fields['file_link']['url'];
+        break;
+      case 'popup':
+        $file_url = '#popup-' . $i;
+        $popups .= '
+        <div class="editor-popup popup" id="popup-' . $i . '">
+          <div class="editor-popup__cnt popup__cnt">
+            <button type="button" class="editor-popup__close">
+              <svg width="21" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 20" class="editor-popup__close-svg"><path stroke="currentColor" d="M20.4455.353553L1.35359 19.4454M19.7384 19.4455L.646481.353591" class="editor-popup__close-path"/></svg>
+            </button>
+            <h2 class="editor-popup__title">Список предметов для перезачета</h2>' .
+              $programm_fields['popup_cnt'] . '
+          </div>
+        </div>';
+        break;
+    }
+
+    if ( $programm_fields['type'] ) {
       if ( $programm_fields['file'] ) {
         $file_url = $programm_fields['file']['url'];
       }
@@ -83,7 +106,7 @@
   }
 
   $select .= '</select>';
-
+  echo $popups;
  ?>
 <section class="studying-programs-sect sect container"<?php echo $section_id ?>>
   <h1 class="studying-programs-sect__title sect-h1 sect-title-underline"><?php echo $section['title'] ?></h1>

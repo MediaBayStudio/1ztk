@@ -4,6 +4,7 @@
 
 .studying-programs-sect {
   padding-bottom: 50px;
+
   &__title {}
 
   &__descr {}
@@ -93,6 +94,7 @@
     .studying-program__pic {
       padding: 0 0 45px 45px;
       width: 425px;
+
       &::before {
         left: 0;
         right: auto;
@@ -105,6 +107,7 @@
 
     .studying-program__descr {
       padding-top: 50px;
+
       &::before {
         top: 50px;
       }
@@ -139,8 +142,7 @@
 
     .studying-program__descr {}
 
-    .studying-program__links {
-    }
+    .studying-program__links {}
 
     &.empty-image {
       .studying-program__title {}
@@ -161,6 +163,7 @@
 .submit-sect {
   display: flex;
   align-items: flex-start;
+
   &__left {
     width: 465px;
   }
@@ -186,6 +189,7 @@
   &__email,
   &__address {
     margin: 0 0 20px;
+
     &::before {
       margin: 0 20px 0 0;
       width: 25px;
@@ -211,9 +215,7 @@
 }
 
 .submit-form {
-  &__select {
-    
-  }
+  &__select {}
 
   .field {
     &__inp {}
@@ -241,4 +243,26 @@
   }
 
   .btn {}
+}
+
+
+.editor-popup {
+  &__cnt {
+    padding: 30px 75px 50px;
+    font-size: 16px;
+
+    ul {}
+
+    li {}
+  }
+
+  &__close {
+    margin: 0 -45px 0 auto;
+  }
+
+  &__close-svg {}
+
+  &__close-path {}
+
+  &__title {}
 }

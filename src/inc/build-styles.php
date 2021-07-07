@@ -56,7 +56,7 @@ add_action( 'post_updated', function( $post_ID, $post_after, $post_before ) {
       // Делаем массив с информацией секций уникальным
       // $page_info_cnt[ $template_slug ] = array_unique( $page_info_cnt[ $template_slug ] );
 
-      $dest = php_path_join($template_dir, 'css', 'style-' . $slug . '.css' );
+      $dest = php_path_join( $template_dir, 'css', 'style-' . $slug . '.css' );
 
       if ( file_exists( $dest ) ) {
         unlink( $dest );

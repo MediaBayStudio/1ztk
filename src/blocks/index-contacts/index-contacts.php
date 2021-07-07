@@ -4,7 +4,7 @@
   } else {
     $class = ' without-map';
   } ?>
-<section class="index-contacts-sect sect-lightgreen-bg container lazy<?php echo $class ?>" data-src="#">
+<section class="index-contacts-sect sect-lightgreen-bg container lazy<?php echo $class ?>" data-src="#"<?php echo $section_id ?>>
   <h2 class="index-contacts-sect__title sect-title sect-title-underline"><?php echo $section['title'] ?></h2> <?php
   echo do_shortcode( '[contact-form-7 id="' . $section['form']->ID . '" html_class="index-contacts-sect__form"]' ) ?>
   <div class="index-contacts__bottom"<?php echo $section_id ?>> <?php

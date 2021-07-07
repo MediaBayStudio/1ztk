@@ -1,4 +1,4 @@
-<section class="contacts-hero-sect container">
+<section class="contacts-hero-sect container"<?php echo $section_id ?>>
   <h1 class="contacts-hero-sect__title sect-h1"><?php echo $section['title'] ?></h1>
   <p class="contacts-hero-sect__descr sect-title-underline"><?php echo $section['descr'] ?></p>
   <div class="contacts-hero-sect__bottom">

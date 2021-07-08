@@ -5,10 +5,10 @@
 .studying-programs-sect {
   padding-top: 20px;
   padding-bottom: 30px;
+
   &__title {}
 
-  &__descr {
-  }
+  &__descr {}
 
   &__programms {
     font: bold 16px/140% OpenSans, sans-serif;
@@ -41,6 +41,7 @@
   &__pic {
     display: flex;
     position: relative;
+
     &::before {
       content: '';
       position: absolute;
@@ -57,6 +58,7 @@
   &__descr {
     margin-top: 60px;
     position: relative;
+
     &::before {
       content: attr(data-number);
       position: absolute;
@@ -68,9 +70,11 @@
       z-index: -1;
       pointer-events: none;
     }
-    > a {
+
+    >a {
       border-bottom: 1px solid;
       transition: border-bottom-color .5s;
+
       &:hover {
         border-bottom-color: transparent;
       }
@@ -95,7 +99,27 @@
     height: 45px;
   }
 
-  &.empty-image {}
+  &.empty-image {
+    .studying-program__pic {
+      height: responsive('320->575', '181->374');
+
+      &::before {
+        top: 0;
+        // left: 0;
+        width: 50%;
+        height: 100%;
+        background: $light;
+      }
+    }
+
+    .studying-program__img {
+      margin: auto;
+      padding: 15px 30px;
+      display: block;
+      width: 75%;
+      opacity: 0.5;
+    }
+  }
 
   &.image-left {
     .studying-program__title {}
@@ -112,22 +136,23 @@
       .studying-program__title {}
 
       .studying-program__pic {
-        height: responsive('320->575', '181->374');
+        // height: responsive('320->575', '181->374');
+
         &::before {
-          top: 0;
+          //   top: 0;
           left: 0;
-          width: 50%;
-          height: 100%;
-          background: $light;
+          //   width: 50%;
+          //   height: 100%;
+          //   background: $light;
         }
       }
 
       .studying-program__img {
-        margin: auto;
-        padding: 15px 30px;
-        display: block;
-        width: 75%;
-        opacity: 0.5;
+        // margin: auto;
+        // padding: 15px 30px;
+        // display: block;
+        // width: 75%;
+        // opacity: 0.5;
       }
 
       .studying-program__descr {}
@@ -138,30 +163,37 @@
   }
 
   &.image-right-small {
-    .studying-program__title {}
+    &:not(.empty-image) {
+      .studying-program__title {}
 
-    .studying-program__pic {
-      padding: 0 0 20px;
-      height: responsive('320->575', '212->385');
-      &::before {
-        right: -20px;
-        bottom: 0;
-        width: 65%;
-        height: 75%;
-        background: $greyGreen;
+      .studying-program__pic {
+        padding: 0 0 20px;
+        height: responsive('320->575', '212->385');
+
+        &::before {
+          right: -20px;
+          bottom: 0;
+          width: 65%;
+          height: 75%;
+          background: $greyGreen;
+        }
       }
+
+      .studying-program__img {}
+
+      .studying-program__descr {}
+
+      .studying-program__links {}
     }
-
-    .studying-program__img {}
-
-    .studying-program__descr {}
-
-    .studying-program__links {}
 
     &.empty-image {
       .studying-program__title {}
 
-      .studying-program__pic {}
+      .studying-program__pic {
+        &::before {
+          right: 0;
+        }
+      }
 
       .studying-program__img {}
 
@@ -173,30 +205,37 @@
   }
 
   &.image-right {
-    .studying-program__title {}
+    &:not(.empty-image) {
+      .studying-program__title {}
 
-    .studying-program__pic {
-      height: responsive('320->575', '192->367');
-      &::before {
-        top: 50%;
-        left: -20px;
-        transform: translateY(-50%);
-        width: 100vw;
-        height: 70%;
-        background: $greyGreen;
+      .studying-program__pic {
+        height: responsive('320->575', '192->367');
+
+        &::before {
+          top: 50%;
+          left: -20px;
+          transform: translateY(-50%);
+          width: 100vw;
+          height: 70%;
+          background: $greyGreen;
+        }
       }
+
+      .studying-program__img {}
+
+      .studying-program__descr {}
+
+      .studying-program__links {}
     }
-
-    .studying-program__img {}
-
-    .studying-program__descr {}
-
-    .studying-program__links {}
 
     &.empty-image {
       .studying-program__title {}
 
-      .studying-program__pic {}
+      .studying-program__pic {
+        &::before {
+          right: 0;
+        }
+      }
 
       .studying-program__img {}
 
@@ -240,6 +279,7 @@
 
   .field {
     margin: 0 0 20px;
+
     &__inp {}
   }
 
@@ -259,6 +299,7 @@
   .check {
     margin: 0 0 30px;
     padding: 0 5px 0 0;
+
     &__inp {}
 
     &__pseudo-inp {}
@@ -356,29 +397,35 @@
 
 .editor-popup {
   background: transparentize($green, .6);
+
   &__cnt {
     padding: 20px 20px 40px;
     display: flex;
     flex-flow: column;
     color: $black;
     font: 14px/140% OpenSans, sans-serif;
+
     ul {
       padding: 0 0 0 20px;
       list-style: disc;
     }
+
     li {
       margin: 0 0 10px;
     }
   }
+
   &__close {
     margin: 0 0 0 auto;
   }
+
   &__close-svg {
     pointer-events: none;
     overflow: visible;
   }
-  &__close-path {
-  }
+
+  &__close-path {}
+
   &__title {
     margin: 15px 0 10px;
     text-align: center;

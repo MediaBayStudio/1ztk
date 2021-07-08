@@ -1,7 +1,7 @@
 <?php
 
   if ( $section['manual'] ) {
-
+    $programms = $section['programms'];
   } else {
     $programms = get_posts( [
       'post_type' => 'studying_program',
@@ -122,7 +122,7 @@ echo $blocks ?>
     <p class="submit-sect__descr"><?php echo $section['form_descr'] ?></p>
     <div class="submit-form-wrap lazy" data-src="#"> <?php
       echo $select;
-      echo do_shortcode( '[contact-form-7 id="513" html_class="submit-form" html_id="submit-form"]' ) ?>
+      echo do_shortcode( '[contact-form-7 id="' . $section['form']->ID . '" html_class="submit-form" html_id="submit-form"]' ) ?>
     </div>
   </div>
   <div class="submit-sect__right">

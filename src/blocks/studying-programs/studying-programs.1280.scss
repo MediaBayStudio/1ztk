@@ -41,62 +41,19 @@
 
   &__file-link {}
 
-  &.empty-image {}
-
-  &.image-left {
-    .studying-program__title {}
-
-    .studying-program__pic {}
-
-    .studying-program__img {}
-
-    .studying-program__descr {}
-
-    .studying-program__links {}
-
-    &.empty-image {
-      .studying-program__title {}
-
-      .studying-program__pic {
-        margin: 0 190px 0 0;
-        width: 480px;
-      }
-
-      .studying-program__img {
-        width: 275px;
-        height: 275px;
-      }
-
-      .studying-program__descr {}
-
-      .studying-program__links {}
+  &.empty-image {
+    .studying-program__pic {
+      width: 480px;
     }
 
+    .studying-program__img {
+      width: 275px;
+      height: 275px;
+    }
   }
 
-  &.image-right-small {
-    .studying-program__title {
-      margin: 0;
-    }
-
-    .studying-program__pic {
-      margin: 0 0 0 100px;
-      padding: 0 0 60px 60px;
-      width: 560px;
-
-      &::before {
-        width: 400px;
-        height: 270px;
-      }
-    }
-
-    .studying-program__img {}
-
-    .studying-program__descr {}
-
-    .studying-program__links {}
-
-    &.empty-image {
+  &.image-left {
+    &:not(.empty-image) {
       .studying-program__title {}
 
       .studying-program__pic {}
@@ -108,25 +65,41 @@
       .studying-program__links {}
     }
 
-  }
+    &.empty-image {
+      .studying-program__title {}
 
-  &.image-right {
-    .studying-program__title {
+      .studying-program__pic {
+        margin: 0 190px 0 0;
+        // width: 480px;
+      }
+
+      .studying-program__img {
+        // width: 275px;
+        // height: 275px;
+      }
+
+      .studying-program__descr {}
+
+      .studying-program__links {}
     }
 
-    .studying-program__pic {
-      margin: 0 0 0 100px;
-      padding: 0 0 60px 60px;
-      width: 560px;
+  }
 
-      &::before {
-        display: block;
-        width: 360px;
-        height: 270px;
-        transform: none;
-        top: auto;
-        left: 0;
-        bottom: 0;
+  &.image-right-small {
+    &:not(.empty-image) {
+      .studying-program__title {
+        margin: 0;
+      }
+
+      .studying-program__pic {
+        margin: 0 0 0 100px;
+        padding: 0 0 60px 60px;
+        width: 560px;
+
+        &::before {
+          width: 400px;
+          height: 270px;
+        }
       }
     }
 
@@ -139,7 +112,52 @@
     &.empty-image {
       .studying-program__title {}
 
-      .studying-program__pic {}
+      .studying-program__pic {
+        margin: 0 0 0 100px;
+      }
+
+      .studying-program__img {}
+
+      .studying-program__descr {}
+
+      .studying-program__links {}
+    }
+
+  }
+
+  &.image-right {
+    &:not(.empty-image) {
+      .studying-program__title {}
+
+      .studying-program__pic {
+        margin: 0 0 0 100px;
+        padding: 0 0 60px 60px;
+        width: 560px;
+
+        &::before {
+          display: block;
+          width: 360px;
+          height: 270px;
+          transform: none;
+          top: auto;
+          left: 0;
+          bottom: 0;
+        }
+      }
+
+      .studying-program__img {}
+
+      .studying-program__descr {}
+
+      .studying-program__links {}
+    }
+
+    &.empty-image {
+      .studying-program__title {}
+
+      .studying-program__pic {
+        margin: 0 0 0 190px;
+      }
 
       .studying-program__img {}
 
@@ -154,6 +172,7 @@
 
 .submit-sect {
   padding-bottom: 80px;
+
   &__left {
     width: 560px;
   }

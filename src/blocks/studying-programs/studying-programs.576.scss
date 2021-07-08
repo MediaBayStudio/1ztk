@@ -28,26 +28,32 @@
 
   &__links {}
 
-  &.empty-image {}
-
-  &.image-left {
-    .studying-program__title {}
-
+  &.empty-image {
     .studying-program__pic {
-
+      height: 374px;
     }
 
-    .studying-program__img {}
+  }
 
-    .studying-program__descr {}
+  &.image-left {
+    &:not(.empty-image) {
 
-    .studying-program__links {}
+      .studying-program__title {}
+
+      .studying-program__pic {}
+
+      .studying-program__img {}
+
+      .studying-program__descr {}
+
+      .studying-program__links {}
+    }
 
     &.empty-image {
       .studying-program__title {}
 
       .studying-program__pic {
-        width: 374px;
+        // height: 374px;
       }
 
       .studying-program__img {}
@@ -60,17 +66,19 @@
   }
 
   &.image-right-small {
-    .studying-program__title {}
+    &:not(.empty-image) {
+      .studying-program__title {}
 
-    .studying-program__pic {
-      height: 385px;
+      .studying-program__pic {
+        height: 385px;
+      }
+
+      .studying-program__img {}
+
+      .studying-program__descr {}
+
+      .studying-program__links {}
     }
-
-    .studying-program__img {}
-
-    .studying-program__descr {}
-
-    .studying-program__links {}
 
     &.empty-image {
       .studying-program__title {}
@@ -87,20 +95,24 @@
   }
 
   &.image-right {
-    .studying-program__title {}
 
-    .studying-program__pic {
-      height: 368px;
-      &::before {
-        left: $sectionHorizontalPaddingMinus576;
+    &:not(.empty-image) {
+      .studying-program__title {}
+
+      .studying-program__pic {
+        height: 368px;
+
+        &::before {
+          left: $sectionHorizontalPaddingMinus576;
+        }
       }
+
+      .studying-program__img {}
+
+      .studying-program__descr {}
+
+      .studying-program__links {}
     }
-
-    .studying-program__img {}
-
-    .studying-program__descr {}
-
-    .studying-program__links {}
 
     &.empty-image {
       .studying-program__title {}

@@ -17,7 +17,7 @@
           break;
       } ?>
       <li class="docs__item">
-        <a href="<?php echo $doc['file']['link'] ?>" class="docs__item-link">
+        <a href="<?php echo $doc['file']['url'] ?>" target="_blank" class="docs__item-link">
           <p class="docs__item-title"><?php echo $doc['title'] ?></p>
           <img src="#" alt="#" data-src="<?php echo $template_directory ?>/img/icon<?php echo $icon ?>.svg" class="docs__item-icon lazy">
         </a>

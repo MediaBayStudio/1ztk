@@ -46,11 +46,12 @@
           $href = null;
           break;
        } ?>
-      <li class="enjoy-links__li">
-        <a href="<?php echo $href ?>" target="_blank" class="enjoy-links__link <?php echo $class ?>">
-          <!-- <img src="#" alt="#" data-src="<?php #echo $template_directory . '/img/' . $src ?>" class="enjoy-links__img lazy"> -->
-          <?php echo $svg ?>
-        </a>
+      <li class="enjoy-links__li"> <?php
+        if ( $href ) : ?>
+          <a href="<?php echo $href ?>" target="_blank" class="enjoy-links__link <?php echo $class ?>"> <?php
+            echo $svg ?>
+          </a> <?php
+        endif ?>
       </li> <?php
     endforeach ?>
   </ul>

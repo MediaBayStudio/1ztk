@@ -47,6 +47,7 @@ add_filter( 'site_transient_update_plugins', function( $value ) {
   return $value;
 } );
 
+
 add_filter( 'template_include', function( $template ) {
   global $post;
   

@@ -47,10 +47,6 @@ add_filter( 'site_transient_update_plugins', function( $value ) {
   return $value;
 } );
 
-add_action( 'pre_get_posts', 'action_function_name_11' );
-function action_function_name_11( $query ) {
-  var_dump( $query );
-}
 
 add_filter( 'template_include', function( $template ) {
   global $post;

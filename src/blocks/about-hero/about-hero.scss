@@ -56,4 +56,15 @@
   &__bottom-img {}
 
   &__bottom-descr {}
+
+  &__top-descr,
+  &__bottom-descr {
+    a {
+      border-bottom: 1px solid;
+      transition: border-bottom-color .5s;
+      &:hover {
+        border-bottom-color: transparent;
+      }
+    }
+  }
 }

@@ -3,7 +3,7 @@
     <div class="about-hero-sect__top-text">
       <h1 class="about-hero-sect__top-title sect-h1 sect-title-underline"><?php echo $section['title'] ?></h1> <?php
       if ( $section['descr_1'] ) : ?>
-        <p class="about-hero-sect__top-descr"><?php echo $section['descr_1'] ?></p> <?php
+        <p class="about-hero-sect__top-descr"><?php echo strip_tags( $section['descr_1'], '<a><br><span>' ) ?></p> <?php
       endif ?>
     </div>
     <picture class="about-hero-sect__top-pic">
@@ -16,7 +16,7 @@
       <picture class="about-hero-sect__bottom-pic lazy">
         <img src="#" data-src="<?php echo $template_directory ?>/img/logo-three.svg" alt="#" class="about-hero-sect__bottom-img">
       </picture>
-      <p class="about-hero-sect__bottom-descr"><?php echo $section['descr_2'] ?></p>
+      <p class="about-hero-sect__bottom-descr"><?php echo strip_tags( $section['descr_2'], '<a><br><span>' ) ?></p>
     </div> <?php
   endif ?>
 </section> <?php

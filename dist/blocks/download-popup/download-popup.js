@@ -1,11 +1,13 @@
 ;
 (function() {
-  let links = qa('.docs__item-link:first-child, .faq__answer > a, .descr-sect__descr > a');
+  let links = qa('.docs__item:first-child > a, .faq__answer > a, .descr-sect__descr > a[href$=".zip"]');
 
   downloadPopup = new Popup('.download-popup', {
-    openButtons: '.docs__item-link:first-child, .faq__answer > a, .descr-sect__descr > a',
+    openButtons: '.docs__item:first-child > a, .faq__answer > a, .descr-sect__descr > a[href$=".zip"]',
     closeButtons: '.download-popup__close'
   });
+
+  console.log(links);
   
   links.forEach(function(link) {
     link.addEventListener('click', function(e) {

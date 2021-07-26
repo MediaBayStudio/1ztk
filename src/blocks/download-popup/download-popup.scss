@@ -1,0 +1,74 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.download-popup {
+  padding: 20px;
+  background: transparentize($green, .6);
+  &__cnt {
+    padding: 40px 20px 60px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font: 14px/140% OpenSans, sans-serif;
+    position: relative;
+  }
+
+  &__close {
+    margin: -20px 0 0 auto;
+  }
+
+  &__close-svg {}
+
+  &__close-path {}
+
+  &__descr {
+    margin: 30px auto;
+    max-width: 375px;
+  }
+
+  &__form {
+    max-width: 375px;
+    text-align: left;
+    .form-title {
+      display: none;
+    }
+
+    .field {
+      &__inp {
+        border-bottom-color: $greyGreen;
+      }
+    }
+
+    .field-name,
+    .field-tel,
+    .field-email {
+      margin: 0 0 25px;
+    }
+
+    .field-name {}
+
+    .field-tel {}
+
+    .field-email {}
+
+    .form-bottom {}
+
+    .check {
+      &__inp {}
+
+      &__pseudo-inp {}
+
+      &__text {}
+
+      &__link {}
+    }
+
+    .btn {
+      margin: 25px auto 0;
+      padding: 14px 37px;
+    }
+  }
+}

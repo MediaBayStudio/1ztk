@@ -4,6 +4,7 @@
   let $forms = [
     q('.index-contacts-sect__form'),
     id('applicants-form'),
+    id('download-form'),
     id('submit-form')
   ];
 
@@ -194,15 +195,20 @@
 
         $form.classList.remove('loading');
 
-        setTimeout(function(){
+        setTimeout(function() {
           $form.classList.remove('sent');
         }, 3000);
 
         thanksPopup.openPopup();
-        thanksPopupTimer = setTimeout(function() {
-          thanksPopup.closePopup();
-        }, 3000);
 
+        if ($form.id === 'download-form') {
+          let text = q('.thanks-popup__descr', thanksPopup);
+          text.innerHTML = 'Теперь вы можее скачать документы по <a href="' + downloadPopup.caller.href + '" target="_blank" style="border-bottom:1px solid;">ссылке</a>'
+        } else {
+          thanksPopupTimer = setTimeout(function() {
+            thanksPopup.closePopup();
+          }, 3000);
+        }
 
       },
       toggleInputsClass = function() {

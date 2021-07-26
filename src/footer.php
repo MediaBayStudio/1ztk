@@ -39,6 +39,7 @@
       </footer>
       <div id="fake-scrollbar"></div> <?php
       require 'template-parts/thanks-popup.php';
+      require 'template-parts/download-popup.php';
       wp_footer() ?>
     </div>
   </body>

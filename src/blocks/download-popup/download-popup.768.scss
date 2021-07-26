@@ -1,0 +1,13 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+
+.download-popup {
+  &__cnt {
+    padding: 40px 40px 60px;
+  }
+  &__close {
+    margin: -20px -20px 0 auto;
+  }
+}

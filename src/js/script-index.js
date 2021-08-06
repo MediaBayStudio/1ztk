@@ -22,6 +22,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
 //=include ../blocks/download-popup/download-popup.js
 
+//=include ../blocks/studying-programs/studying-programs.js
+
+//=include ../blocks/about-docs/about-docs.js
+
 //=include ../blocks/footer/footer.js
 
 });

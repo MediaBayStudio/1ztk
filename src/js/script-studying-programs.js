@@ -10,6 +10,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
 //=include ../blocks/thanks-popup/thanks-popup.js
 
+//=include ../blocks/download-popup/download-popup.js
+
 //=include ../blocks/footer/footer.js
 
 });

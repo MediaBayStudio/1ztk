@@ -58,6 +58,8 @@ var
   overlay,
   body,
   fakeScrollbar,
+  downloadPopup,
+  thanksPopup,
   // Сокращение записи querySelector
   q = function(selector, element) {
     element = element || body;

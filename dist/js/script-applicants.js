@@ -1,1 +1,154 @@
-document.addEventListener("DOMContentLoaded",function(){var e,a,n,o,s,i,t,r,p;e=function(){initDropdownLinks(qa(".menu__nav-list .has-submenu",menu.menu)),menu.menu.removeEventListener("menubeforeopen",e)},menu.menu.addEventListener("menubeforeopen",e),o=q(".faq"),s=".faq__question",i=["faq__question","faq__question-text"],o&&(a=o.children,(n=function(e){if(e){var t=e.closest(".faq__item"),e=q(".active",o);t&&(t.classList.add("active"),t.style.maxHeight=t.scrollHeight+"px"),e&&(e.classList.remove("active"),e.style.maxHeight=q(s,e).scrollHeight+"px")}else for(var n=a.length-1;0<=n;n--)a[n].style.maxHeight=q(s,a[n]).scrollHeight+"px"})(),windowFuncs.resize.push(n),o.addEventListener("click",function(){var t=event.target;i.some(function(e){return t.classList.contains(e)})&&n(t)})),mapBlock=id("index-contacts-map"),mapBlock&&(t=function(){var e=document.createElement("script");e.setAttribute("src","https://api-maps.yandex.ru/2.1/?apikey=82596a7c-b060-47f9-9fb6-829f012a9f04&lang=ru_RU&onload=ymapsOnload"),body.appendChild(e),mapBlock.removeEventListener("lazyloaded",t)},mapBlock.addEventListener("lazyloaded",t)),thanksPopup=new Popup(".thanks-popup",{closeButtons:".thanks-popup__close"}),thanksPopup.addEventListener("popupbeforeopen",function(){var e=q(".thanks-popup__descr",thanksPopup);e.textContent=e.getAttribute("data-text")}),r='.studying-program__links > a[href$=".zip"], .steps-sect__li-descr > a[href$=".zip"], .docs__item:first-child > a, .faq__answer > a, .descr-sect__descr > a[href$=".zip"]',p=qa(r),downloadPopup=new Popup(".download-popup",{openButtons:r,closeButtons:".download-popup__close"}),p.forEach(function(e){e.addEventListener("click",function(e){e.preventDefault()})}),function(){for(var e=qa(".ftr__nav-li.has-submenu"),t=0,n=e.length;t<n;t++)for(var a=q('.nav-link[href^="h"]',e[t]),o=qa('.nav-link[href^="#"]',e[t]),s=a.getAttribute("href"),i=0,r=o.length;i<r;i++){var p=o[i].getAttribute("href").replace(/.+(?=#)/,"");o[i].href=s+p}}()});
+document.addEventListener('DOMContentLoaded', function() {
+
+//=include ../blocks/header/header.js
+
+(function() {
+  let menuInitDropdownLinks = function() {
+    initDropdownLinks(qa('.menu__nav-list .has-submenu', menu.menu));
+    menu.menu.removeEventListener('menubeforeopen', menuInitDropdownLinks);
+  };
+
+  menu.menu.addEventListener('menubeforeopen', menuInitDropdownLinks);
+})()
+
+//=include ../blocks/applicants-hero/applicants-hero.js
+
+//=include ../blocks/index-steps/index-steps.js
+
+//=include ../blocks/applicants-start/applicants-start.js
+
+;
+(function() {
+  let faqList = q('.faq'),
+    faqHdrClass = '.faq__question',
+    clickTragetClasses = [
+      'faq__question',
+      'faq__question-text'
+    ],
+    faqItemClass = '.faq__item';
+
+  if (faqList) {
+    let faqBlocks = faqList.children,
+      dropdownText = function(element) {
+
+        if (!element) {
+          for (var i = faqBlocks.length - 1; i >= 0; i--) {
+            faqBlocks[i].style.maxHeight = q(faqHdrClass, faqBlocks[i]).scrollHeight + 'px';
+          }
+          return;
+        }
+
+        let parent = element.closest(faqItemClass),
+          activeElement = q('.active', faqList);
+
+
+        if (parent) {
+          parent.classList.add('active');
+          parent.style.maxHeight = parent.scrollHeight + 'px'
+        }
+
+        if (activeElement) {
+          activeElement.classList.remove('active');
+          activeElement.style.maxHeight = q(faqHdrClass, activeElement).scrollHeight + 'px';
+        }
+
+      };
+
+    dropdownText();
+
+    windowFuncs.resize.push(dropdownText);
+
+    faqList.addEventListener('click', function() {
+      let target = event.target;
+
+      if (clickTragetClasses.some(className => target.classList.contains(className))) {
+        dropdownText(target);
+      }
+      
+    });
+
+  }
+})();
+
+;(function() {
+  mapBlock = id('index-contacts-map');
+
+  if (mapBlock) {
+    let ymapsInit = function() {
+      let tag = document.createElement('script');
+
+      tag.setAttribute('src', 'https://api-maps.yandex.ru/2.1/?apikey=82596a7c-b060-47f9-9fb6-829f012a9f04&lang=ru_RU&onload=ymapsOnload');
+      body.appendChild(tag);
+
+      mapBlock.removeEventListener('lazyloaded', ymapsInit);
+
+    };
+
+    mapBlock.addEventListener('lazyloaded', ymapsInit);
+  }
+})();
+
+//=include ../blocks/index-enjoy/index-enjoy.js
+
+thanksPopup = new Popup('.thanks-popup', {
+  closeButtons: '.thanks-popup__close'
+});
+
+thanksPopup.addEventListener('popupbeforeopen', function() {
+  let text = q('.thanks-popup__descr', thanksPopup);
+  text.textContent = text.getAttribute('data-text');
+});
+
+// thanksPopup.openPopup();
+
+;
+(function() {
+  let linksSelector = '.studying-program__links > a[href$=".zip"], .steps-sect__li-descr > a[href$=".zip"], .docs__item:first-child > a, .faq__answer > a, .descr-sect__descr > a[href$=".zip"]',
+    links = qa(linksSelector);
+
+  downloadPopup = new Popup('.download-popup', {
+    openButtons: linksSelector,
+    closeButtons: '.download-popup__close'
+  });
+
+  // console.log(links);
+  
+  links.forEach(function(link) {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+    });
+  });
+
+  // downloadPopup.openPopup();
+
+
+})();
+
+;(function() {
+
+  let itemsWithSubmenu = qa('.ftr__nav-li.has-submenu');
+
+  // itemsWithSubmenu.forEach(function(linkWithSubmenu) {
+  //   let pageLink = q('.nav-link[href^="h"]', linkWithSubmenu),
+  //     otherLinks = qa('.nav-link[href^="#"]', linkWithSubmenu),
+  //     hrefBody = pageLink.getAttribute('href');
+
+  //   otherLinks.forEach()
+  // });
+
+  for (let i = 0, len = itemsWithSubmenu.length; i < len; i++) {
+    console.log(itemsWithSubmenu[i]);
+    let pageLink = q('.nav-link[href^="h"]', itemsWithSubmenu[i]),
+      otherLinks = qa('.nav-link[href^="#"]', itemsWithSubmenu[i]),
+      hrefBody = pageLink.getAttribute('href');
+
+    for (let j = 0, jlen = otherLinks.length; j < jlen; j++) {
+      let hash = otherLinks[j].getAttribute('href').replace(/.+(?=#)/, '');
+      // otherLinks[j].setAttribute('href', hrefBody + hash);
+      otherLinks[j].href = hrefBody + hash;
+    }
+  }
+
+})();
+
+});

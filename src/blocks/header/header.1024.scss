@@ -65,12 +65,20 @@
   }
 
   &__instagram,
+  &__telegram,
   &__vk {
     width: 24px;
     height: 24px;
     display: flex;
   }
 
+  &__telegram {
+    .telegram-path {
+      transition: fill .5s;
+    }
+  }
+
+  &__instagram,
   &__vk {
     margin: 0 15px 0 0;
   }

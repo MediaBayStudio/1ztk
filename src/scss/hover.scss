@@ -117,6 +117,14 @@
   }
 }
 
+.hdr__telegram {
+  &:hover {
+    .telegram-path {
+      fill: #0088cc;
+    }
+  }
+}
+
 .enjoy-links__instagram {
   &:hover {
     .instagram-rect {
@@ -132,6 +140,18 @@
   &:hover {
     .youtube-svg-rect {
       fill: #f00
+    }
+  }
+}
+
+.enjoy-links__telegram {
+  &:hover {
+    .telegram-rect {
+      fill: #fff;
+    }
+    .telegram-path {
+      fill: #0088cc;
+      stroke: #0088cc;
     }
   }
 }

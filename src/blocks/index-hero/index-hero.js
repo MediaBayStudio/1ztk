@@ -18,8 +18,8 @@
           nextArrow: SLIDER.createArrow('index-hero-sect__next', arrowSvg),
           fade: true,
           draggable: false,
-          autoplay: true,
-          autoplaySpeed: 3000
+          // autoplay: true,
+          // autoplaySpeed: 3000
         });
       }
 

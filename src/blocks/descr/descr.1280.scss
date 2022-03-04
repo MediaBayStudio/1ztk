@@ -20,8 +20,13 @@
   >.descr-sect__descr {
     width: 460px;
   }
-
-  >.descr-sect__pic {
+  >iframe.descr-sect__pic {
+    margin: 0 0 auto auto;
+    padding: 0;
+    width: 530px;
+    height: 282px;
+  }
+  >.descr-sect__pic:not(iframe) {
     // margin-top: -145px;
     width: 500px + 30px;
     height: 340px + 50px;

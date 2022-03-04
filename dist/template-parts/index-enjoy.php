@@ -3,6 +3,14 @@
   <ul class="enjoy-sect__links enjoy-links"> <?php
     foreach ( $section['links'] as $link ) :
       switch ( $link ) {
+        case 'telegram':
+          $href = $telegram_link;
+          $class = 'enjoy-links__telegram';
+          $svg = '<svg class="telegram-svg" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect class="telegram-rect" width="40" height="40" rx="20" fill="transparent"/>
+            <path class="telegram-path" fill-rule="evenodd" clip-rule="evenodd" d="M20 40C31.0457 40 40 31.0459 40 20C40 8.9541 31.0457 0 20 0C8.95428 0 0 8.9541 0 20C0 31.0459 8.95428 40 20 40ZM22.1139 13.499C23.467 12.9404 28.0557 11.1597 28.0557 11.1597C28.0557 11.1597 30.1719 10.3799 29.9888 12.2666C29.9446 12.8315 29.6868 14.4214 29.3702 16.3745C29.2498 17.1182 29.1207 17.9141 28.9917 18.7261L27.5266 27.4663C27.5266 27.4663 27.4045 28.7471 26.4074 28.9683C25.4103 29.1895 23.7621 28.1885 23.467 27.9673C23.4103 27.9253 23.1218 27.7466 22.6955 27.4824C21.3624 26.6562 18.6816 24.9946 17.5253 24.0684C17.1183 23.7314 16.6503 23.0674 17.5864 22.2876C19.7026 20.4492 22.236 18.1675 23.7621 16.7236C24.4743 16.0498 25.1763 14.4902 22.236 16.3867L13.944 21.6621C13.944 21.6621 12.9977 22.2202 11.2376 21.7197C9.46729 21.2192 7.41211 20.5547 7.41211 20.5547C7.41211 20.5547 5.99786 19.7173 8.40918 18.832L22.1139 13.499Z" fill="#fff" stroke="transparent"/>
+            </svg>';
+          break;
         case 'vk':
           $href = $vk_link;
           $class = 'enjoy-links__vk';
@@ -45,14 +53,14 @@
         default:
           $href = null;
           break;
-       } ?>
-      <li class="enjoy-links__li"> <?php
-        if ( $href ) : ?>
+       }
+       if ( $href ) : ?>
+        <li class="enjoy-links__li">
           <a href="<?php echo $href ?>" target="_blank" class="enjoy-links__link <?php echo $class ?>"> <?php
             echo $svg ?>
-          </a> <?php
-        endif ?>
-      </li> <?php
+          </a>
+        </li> <?php
+      endif;
     endforeach ?>
   </ul>
 </section> <?php

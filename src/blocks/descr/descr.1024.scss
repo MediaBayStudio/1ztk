@@ -19,7 +19,12 @@
     width: 410px;
   }
 
-  >.descr-sect__pic {
+  >iframe.descr-sect__pic {
+    width: 495px;
+    height: 262px;
+  }
+
+  >.descr-sect__pic:not(iframe) {
     // На пол высоты первой строки
     margin-top: calc(15px * 1.4);
     grid-row: 1/span 3;

@@ -34,9 +34,11 @@ body.no-scroll {
 
 .instagram-rect,
 .youtube-svg-rect,
+.telegram-path,
+.telegram-rect,
 .vk-svg-path,
 .vk-svg-rect {
-  transition: fill .5s;
+  transition: fill .5s, stroke .5s;
 }
 
 body {

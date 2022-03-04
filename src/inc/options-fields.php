@@ -11,8 +11,9 @@
       'address'       =>  'Адрес',
       'address_link'  =>  'Ссылка на адрес',
       'instagram'     =>  'Сылка на инстаграм',
+      'telegram'      =>  'Сылка на telegram',
       'vk'            =>  'Сылка на вконтакте',
-      'youtube'            =>  'Сылка на youtube',
+      'youtube'       =>  'Сылка на youtube',
       'email'         =>  'E-mail',
       'coords'        =>  'Координаты маркера на карте',
       'zoom'          =>  'Увеличение карты'

@@ -271,6 +271,7 @@ html body .bvi-body[data-bvi-theme] {
   }
 
   &__login {
+    margin: 0 0 20px;
     flex-shrink: 0;
     width: 280px;
     height: 45px;
@@ -302,58 +303,58 @@ html body .bvi-body[data-bvi-theme] {
   //   }
   // }
 
-  // &__tel,
-  // &__email,
-  // &__address {
-  //   display: flex;
-  //   align-items: center;
-  //   max-width: 200px;
-  //   font: 14px/140% OpenSans, sans-serif;
-  //   // &:not(:last-child) {
-  //   margin: 0 0 20px 0;
+  &__tel,
+  &__email,
+  &__address {
+    display: flex;
+    align-items: center;
+    max-width: 200px;
+    font: 14px/140% OpenSans, sans-serif;
+    // &:not(:last-child) {
+    margin: 0 0 20px 0;
 
-  //   // }
-  //   &::before {
-  //     margin: 0 15px 0 0;
-  //     flex-shrink: 0;
-  //     width: 24px;
-  //     height: 24px;
-  //   }
-  // }
+    // }
+    &::before {
+      margin: 0 15px 0 0;
+      flex-shrink: 0;
+      width: 24px;
+      height: 24px;
+    }
+  }
 
-  // &__links {
-  //   // margin: 20px 0 0 0;
-  //   display: flex;
-  //   align-items: center;
-  // }
+  &__links {
+    // margin: 20px 0 0 0;
+    display: flex;
+    align-items: center;
+  }
 
-  // &__vk {
-  //   margin: 0 20px 0 0;
-  // }
+  &__vk {
+    margin: 0 20px 0 0;
+  }
 
-  // &__instagram,
-  // &__vk {
-  //   width: 24px;
-  //   height: 24px;
-  // }
+  &__instagram,
+  &__vk {
+    width: 24px;
+    height: 24px;
+  }
 
-  // &__tel {
-  //   &::before {
-  //     background-image: url('../img/icon-tel-green.svg');
-  //   }
-  // }
+  &__tel {
+    &::before {
+      background-image: url('../img/icon-tel-green.svg');
+    }
+  }
 
-  // &__email {
-  //   &::before {
-  //     background-image: url('../img/icon-email-green.svg');
-  //   }
-  // }
+  &__email {
+    &::before {
+      background-image: url('../img/icon-email-green.svg');
+    }
+  }
 
-  // &__address {
-  //   align-items: flex-start;
+  &__address {
+    align-items: flex-start;
 
-  //   &::before {
-  //     background-image: url('../img/icon-address-green.svg');
-  //   }
-  // }
+    &::before {
+      background-image: url('../img/icon-address-green.svg');
+    }
+  }
 }

@@ -25,9 +25,9 @@
     <!-- <a href="tel:<?php #echo $tel_dry ?>" class="tel menu__tel"><?php #echo $tel ?></a> -->
     <!-- <a href="mailto:<?php #echo $email ?>" class="email menu__email"><?php #echo $email ?></a> -->
     <!-- <a href="<?php #echo $address_link ?>" target="_blank" class="address menu__address"><?php #echo $address ?></a> -->
-    <!-- <div class="menu__links">
-      <a href="<?php #echo $vk_link ?>" traget="_blank" class="vk vk-green menu__vk"></a>
-      <a href="<?php #echo $instagram_link ?>" traget="_blank" class="instagram instagram-green menu__instagram"></a>
-    </div> -->
+    <div class="menu__links">
+      <a href="<?php echo $vk_link ?>" traget="_blank" class="vk vk-green menu__vk"></a>
+      <a href="<?php echo $instagram_link ?>" traget="_blank" class="instagram instagram-green menu__instagram"></a>
+    </div>
   </div>
 </aside>

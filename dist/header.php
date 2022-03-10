@@ -200,7 +200,7 @@ endif ?>
         </div>
         <div class="hdr__buttons"> <?php
           echo do_shortcode( '[bvi]' ) ?>
-          <button type="button" class="hdr__login btn btn-blue">Личный кабинет</button>
+          <a href="https://lk.1ztk-spb.ru/" class="hdr__login btn btn-blue">Личный кабинет</a>
         </div> <?php 
         wp_nav_menu( [
           'theme_location'  => 'header_menu',

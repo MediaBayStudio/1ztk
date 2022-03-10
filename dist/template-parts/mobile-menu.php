@@ -21,7 +21,7 @@
       'items_wrap'      => '<ul class="%2$s">%3$s</ul>'
     ] );
     echo do_shortcode( '[bvi]' ) ?>
-    <button type="button" class="menu__login btn btn-blue">Личный кабинет</button>
+    <a href="https://lk.1ztk-spb.ru/" class="menu__login btn btn-blue">Личный кабинет</a>
     <!-- <a href="tel:<?php #echo $tel_dry ?>" class="tel menu__tel"><?php #echo $tel ?></a> -->
     <!-- <a href="mailto:<?php #echo $email ?>" class="email menu__email"><?php #echo $email ?></a> -->
     <!-- <a href="<?php #echo $address_link ?>" target="_blank" class="address menu__address"><?php #echo $address ?></a> -->

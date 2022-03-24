@@ -474,6 +474,7 @@ document.addEventListener('DOMContentLoaded', function() {
           thanksPopup.openPopup();
   
           if ($form.id === 'download-form') {
+            console.log(downloadPopup.caller.href);
             let text = q('.thanks-popup__descr', thanksPopup);
             text.innerHTML = 'Теперь вы можее скачать документы по <a href="' + downloadPopup.caller.href + '" target="_blank" style="border-bottom:1px solid;">ссылке</a>'
           } else {

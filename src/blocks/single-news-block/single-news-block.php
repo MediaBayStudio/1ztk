@@ -10,7 +10,7 @@
         <img src="<?php echo $p_thumb ?>" alt class="news__header-img">
       </picture>
 
-      <!-- <time class="news__date" pubdate datetime="<?= #get_the_date( 'd-m-Y' ) ?>"><?= #the_time( 'j F Y' ) ?></time> -->
+      <!-- <time class="news__date" pubdate datetime="<?php #echo get_the_date( 'd-m-Y' ) ?>"><?php #echo the_time( 'j F Y' ) ?></time> -->
 
       <h1 class="news__title"><?= $post->post_title ?></h1>
     </header>

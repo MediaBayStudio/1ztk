@@ -1,0 +1,39 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.news-row-block {
+  &__link {
+    top: 30px;
+    right: calc(50vw - 480px);
+  }
+}
+
+.news-list {
+  &__item {
+    width: calc((100% - 60px) / 3);
+    margin-right: 30px;
+
+    &-link {
+      &:hover {
+        .news-list__item-title {
+          color: $green;
+        }
+      }
+    }
+
+    &:nth-child(1) {
+      margin-right: 30px;
+    }
+
+    &:nth-child(3) {
+      display: block;
+      margin-right: 0;
+    }
+
+    &-title {
+      font-size: 20px;
+      transition: color .2s;
+    }
+  }
+}

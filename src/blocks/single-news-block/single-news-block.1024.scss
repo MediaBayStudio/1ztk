@@ -1,0 +1,80 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.news {
+  padding-top: 40px;
+  margin-bottom: 100px;
+
+  &__header {
+    &-pic {
+      height: 370px;
+    }
+  }
+
+  &__cnt {
+    width: calc(60% - 25px);
+    margin-right: 50px;
+  }
+
+  &__side {
+    width: calc(40% - 25px);
+  }
+
+  &__title {
+    font-size: 30px;
+  }
+
+  &__body {
+    h2 {
+      font-size: 26px;
+    }
+
+    h3, h4 {
+      font-size: 28px;
+    }
+
+    h2, h3, h4 {
+      margin: 50px 0 20px;
+
+      + p,
+      + div {
+        margin-top: 20px !important;
+      }
+    }
+
+    div.wp-block-image {
+      figure {
+        width: 280px;
+      }
+    }
+  }
+}
+
+.related-news {
+
+  &__item {
+    &-link {
+      flex-flow: row;
+
+      &:hover {
+        .related-news__item-title {
+          color: $green;
+        }
+      }
+    }
+
+    &-pic {
+      display: block;
+    }
+
+    &-title {
+      font-size: 18px;
+      transition: color .2s;
+    }
+
+    &-date {
+      font-size: 14px;
+    }
+  }
+}

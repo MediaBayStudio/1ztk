@@ -1,0 +1,1 @@
+@charset "UTF-8";.news-row-block{position:relative}.news-row-block__link{position:absolute;top:30px;padding:5px 0 5px 15px;right:calc(50vw - 360px)}.news-list{display:flex}.news-list__item{width:calc(50% - 10px);margin-bottom:0}.news-list__item:nth-child(1){margin-right:20px}.news-list__item:nth-child(3){display:none}

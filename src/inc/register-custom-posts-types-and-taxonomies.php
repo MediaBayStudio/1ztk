@@ -38,6 +38,42 @@ add_action( 'init', function() {
     // 'query_var' => false
   ] );
 
+  // register_post_type( 'news', [
+  //   'label'  => null,
+  //   'labels' => [
+  //     'name'               => 'Новости',
+  //     'singular_name'      => 'Новость',
+  //     'add_new'            => 'Добавить',
+  //     'add_new_item'       => 'Добавление',
+  //     'edit_item'          => 'Редактирование',
+  //     'new_item'           => 'Новое ',
+  //     'view_item'          => 'Смотреть',
+  //     'search_items'       => 'Искать',
+  //     'not_found'          => 'Не найдено',
+  //     'not_found_in_trash' => 'Не найдено в корзине',
+  //     'parent_item_colon'  => '',
+  //     'menu_name'          => 'Новости',
+  //   ],
+  //   'description'         => '',
+  //   'public'              => true,
+  //   'show_in_menu'        => null,
+  //   'show_in_rest'        => true,
+  //   'rest_base'           => null,
+  //   'menu_position'       => null,
+  //   'menu_icon'           => null,
+  //   'hierarchical'        => false,
+  //   'supports'            => [ 'title', 'thumbnail', 'editor', 'excerpt' ],
+  //   'taxonomies'          => [],
+  //   'exclude_from_search' => false,
+  //   // 'has_archive' => true,
+  //   // 'rewrite' => [
+  //     // 'slug' => 'equipments/%equipments%',
+  //     // 'with_front' => true,
+  //     // 'pages' => false
+  //   // ],
+  //   // 'query_var' => false
+  // ] );
+
 
   // register_taxonomy( 'slug', ['slug_for'], [
   //   'label'                 => '',
@@ -60,4 +96,3 @@ add_action( 'init', function() {
   // ] );
 
 });
-

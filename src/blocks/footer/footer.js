@@ -11,7 +11,7 @@
   // });
 
   for (let i = 0, len = itemsWithSubmenu.length; i < len; i++) {
-    console.log(itemsWithSubmenu[i]);
+    // console.log(itemsWithSubmenu[i]);
     let pageLink = q('.nav-link[href^="h"]', itemsWithSubmenu[i]),
       otherLinks = qa('.nav-link[href^="#"]', itemsWithSubmenu[i]),
       hrefBody = pageLink.getAttribute('href');

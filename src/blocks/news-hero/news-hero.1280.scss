@@ -1,0 +1,27 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.news-list {
+
+  &__item {
+    width: calc((100% - 80px) / 3);
+    margin-right: 40px;
+
+    &:nth-child(odd) {
+      margin-right: 40px;
+    }
+
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+
+    &:nth-child(n+4) {
+      margin-top: 50px;
+    }
+
+    &-title {
+      margin: 20px 0;
+    }
+  }
+}

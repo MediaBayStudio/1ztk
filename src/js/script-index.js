@@ -14,6 +14,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
 //=include ../blocks/index-faq/index-faq.js
 
+//=include ../blocks/news-row-block/news-row-block.js
+
 //=include ../blocks/index-contacts/index-contacts.js
 
 //=include ../blocks/index-enjoy/index-enjoy.js
@@ -21,10 +23,6 @@ document.addEventListener('DOMContentLoaded', function() {
 //=include ../blocks/thanks-popup/thanks-popup.js
 
 //=include ../blocks/download-popup/download-popup.js
-
-//=include ../blocks/studying-programs/studying-programs.js
-
-//=include ../blocks/about-docs/about-docs.js
 
 //=include ../blocks/footer/footer.js
 

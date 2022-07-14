@@ -4,5 +4,5 @@
     <source type="image/webp" srcset="<?php echo str_replace( '.jpg', '.webp', $section['img']['url'] ) ?>">
     <img src="<?php echo $section['img']['url'] ?>" alt="#" class="applicants-hero-sect__img">
   </picture>
-  <p class="applicants-hero-sect__descr"><?php echo $section['descr'] ?></p>
+  <div class="applicants-hero-sect__descr"><?php echo $section['descr'] ?></div>
 </section>

@@ -1,0 +1,31 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.news-row-block {
+  position: relative;
+
+  &__link {
+    position: absolute;
+    top: 30px;
+    padding: 5px 0 5px 15px;
+    right: calc(50vw - 360px);
+  }
+}
+
+.news-list {
+  display: flex;
+
+  &__item {
+    width: calc(50% - 10px);
+    margin-bottom: 0;
+
+    &:nth-child(1) {
+      margin-right: 20px;
+    }
+
+    &:nth-child(3) {
+      display: none;
+    }
+  }
+}

@@ -35,12 +35,19 @@
     } else if ( is_page_template( 'studying-programs.php' ) ) {
       $style_name = 'style-studying-programs';
       $script_name = 'script-studying-programs';
+    // } else if ( is_page_template( 'single.php' ) ) {
+    } else if ( is_singular( 'post' ) ) {
+      $style_name = 'style-single';
+      $script_name = 'script-single';
+    } else if ( is_page_template( 'news.php' ) ) {
+      $style_name = 'style-news';
+      $script_name = 'script-news';
     }
 
     $GLOBALS['page_script_name'] = $script_name;
     $GLOBALS['page_style_name'] = $style_name;
-    $page_style = $GLOBALS['page_style_name'] ?>
-    
+    $page_style = $GLOBALS['page_style_name']?>
+
 <!DOCTYPE html>
 <html <?php language_attributes() ?>>
 <head>
@@ -114,6 +121,8 @@ endif ?>
     }
     unset( $item );
   } ?>
+
+  <?php echo is_singular() !== false ? '<script type="text/javascript" src="https://vk.com/js/api/openapi.js?168"></script>' : ''; ?>
   <!-- favicons -->
   <link rel="icon" type="image/png" sizes="32x32" href="<?php echo $site_url ?>/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="<?php echo $site_url ?>/favicon-16x16.png">
@@ -206,7 +215,7 @@ endif ?>
         <div class="hdr__buttons"> <?php
           echo do_shortcode( '[bvi]' ) ?>
           <a href="https://lk.1ztk-spb.ru/" class="hdr__login btn btn-blue">Личный кабинет</a>
-        </div> <?php 
+        </div> <?php
         wp_nav_menu( [
           'theme_location'  => 'header_menu',
           'container'       => 'nav',

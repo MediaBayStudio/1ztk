@@ -1,0 +1,25 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.news-row-block {
+  &__link {
+    top: 50px;
+    right: calc(50vw - 580px);
+  }
+}
+
+.news-list {
+  &__item {
+    width: calc((100% - 80px) / 3);
+    margin-right: 40px;
+
+    &:nth-child(1) {
+      margin-right: 40px;
+    }
+
+    &:nth-child(3) {
+      margin-right: 0;
+    }
+  }
+}

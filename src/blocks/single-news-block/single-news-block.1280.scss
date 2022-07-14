@@ -1,0 +1,40 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.news {
+  padding-top: 50px;
+  margin-bottom: 100px;
+
+  &__header {
+    &-pic {
+      height: 450px;
+    }
+  }
+
+  &__cnt {
+    width: calc(63% - 30px);
+    margin-right: 60px;
+  }
+
+  &__side {
+    width: calc(37% - 30px);
+  }
+
+  &__title {
+    font-size: 36px;
+  }
+
+  &__body {
+
+    h3, h4 {
+      font-size: 30px;
+    }
+
+    div.wp-block-image {
+      figure {
+        width: 320px;
+      }
+    }
+  }
+}

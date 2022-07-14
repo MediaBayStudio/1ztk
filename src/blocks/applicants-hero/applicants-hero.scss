@@ -7,14 +7,27 @@
   padding-bottom: 30px;
   color: $black;
   font: 14px/140% OpenSans, sans-serif;
-  &__text {
-  }
+
+  &__text {}
+
   &__title {
     text-transform: none;
   }
+
   &__descr {
     margin-top: 30px;
+
+    a {
+      color: $green;
+      text-decoration: underline;
+      transition: text-decoration-color .5s;
+
+      &:hover {
+        text-decoration-color: transparent;
+      }
+    }
   }
+
   &__pic {
     padding: 0 0 25px;
     display: block;
@@ -30,6 +43,7 @@
     //   background: $lightGreen;
     // }
   }
+
   &__img {
     position: relative;
     width: 100%;

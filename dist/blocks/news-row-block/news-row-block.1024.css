@@ -1,0 +1,1 @@
+@charset "UTF-8";.news-row-block__link{top:30px;right:calc(50vw - 480px)}.news-list__item{width:calc((100% - 60px)/ 3);margin-right:30px}.news-list__item-link:hover .news-list__item-title{color:#00696e}.news-list__item:nth-child(1){margin-right:30px}.news-list__item:nth-child(3){display:block;margin-right:0}.news-list__item-title{font-size:20px;transition:color .2s}
